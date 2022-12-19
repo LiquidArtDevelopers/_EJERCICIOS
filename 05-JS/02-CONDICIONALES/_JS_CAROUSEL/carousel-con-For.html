@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BUCLE FOR</title>
+    
+    <style>
+
+        .container{
+            padding: 20px;
+            font-family: helvetica;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            background-color: azure;
+            row-gap: 20px;
+            max-width: 1200px;
+        }
+        img{
+            cursor: pointer;
+        }
+
+        .superior{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .superior img{
+            width: 100%;            
+        }
+        .botonIzd{
+            position: absolute;
+            left:20px;
+            opacity: 50%;
+            width: 80px;
+        }
+        .botonDer{
+            position: absolute;
+            right: 20px;
+            opacity: 50%;
+            width: 80px;
+        }
+        .boton:hover{
+            opacity: 90%;
+        }
+        
+        .inferior{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .inferior img{
+            width: 20%;
+        }
+        .inferior img:hover{
+            opacity: 80%;
+        }
+        
+        .fade{
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.2s;
+            animation-name: fade;
+            animation-duration: 1.2s;
+        }
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+        .fadee{
+            -webkit-animation-name: fadee;
+            -webkit-animation-duration: 1.2s;
+            animation-name: fadee;
+            animation-duration: 1.2s;
+        }
+        @-webkit-keyframes fadee {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+        @keyframes fadee {
+            from {opacity: .4}
+            to {opacity: 1}
+        }        
+    </style> 
+
+</head>
+
+<body>
+    
+   <div class="container">
+
+       <div class="superior">
+            <img id="img00" orden="3" src="imagenes/foto03.jpg" alt="">
+            <div id="botIzd" class="botonIzd boton" onclick="carrusel('img00',-1)">
+                <img src="imagenes/izd.svg" alt="">
+            </div>
+            <div id="botDer" class="botonDer boton" onclick="carrusel('img00',1)">
+                <img src="imagenes/der.svg" alt="">
+            </div>
+       </div>
+
+       <div class="inferior">
+            <script>
+
+                /* //Creamos una tira de imágenes con for y con las comillas de izquierda ``
+                //Esta opción es adicional a la que está en el archivo JS
+                let fotospeques = "",numfotos2=10;
+                for(i=1;i<=numfotos2;i++){
+                    fotospeques += `<img id="img0${i}" orden="${i}" src="imagenes/foto0${i}.jpg" alt="" onclick="mostrar('img0${i}')">`
+                }
+                document.write(fotospeques); */
+                
+            </script>
+
+            <!-- <img id="img01" orden="1" src="imagenes/foto01.jpg" alt="" onclick="mostrar('img01')">
+            <img id="img02" orden="2" src="imagenes/foto02.jpg" alt="" onclick="mostrar('img02')">
+            <img id="img03" orden="3" src="imagenes/foto03.jpg" alt="" onclick="mostrar('img03')">
+            <img id="img04" orden="4" src="imagenes/foto04.jpg" alt="" onclick="mostrar('img04')">
+            <img id="img05" orden="5" src="imagenes/foto05.jpg" alt="" onclick="mostrar('img05')"> -->
+       </div>
+
+   </div>
+
+   <script src="js/app.js"></script>
+    
+</body>
+</html>

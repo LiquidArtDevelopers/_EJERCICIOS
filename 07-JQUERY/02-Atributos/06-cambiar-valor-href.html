@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+
+
+
+<body>
+   
+   <div class="container">
+      
+      <h1>Cambiar valor de un href</h1>
+      
+      <a href="http://www.sport.es" target="_blank" id="enlace">Sport</a>
+      <!-- se cambia el texto y el enlace -->
+
+      <br><br>
+      
+      <button id="btn">Cambiar</button>
+    
+<script>
+    $(function(){
+
+            $("#btn").click(function(){
+                
+                // cambiamos texto
+                $("#enlace").html("AREA");
+                // ponemos otro href en este vinculo
+                $("#enlace").attr("href","http://www.areafor.com");
+
+            });        
+    });       
+</script>
+      
+       
+   </div>
+    
+</body>
+</html>

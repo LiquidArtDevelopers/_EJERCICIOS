@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IF / ELSE</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        #roj{
+            background-color: red;
+            display: none;
+            padding: 10px;
+            width: 50%;
+            height: 50px;
+        }
+        #nar{
+            background-color: orangered;
+            display: none;
+            padding: 10px;
+            width: 50%;
+            height: 50px;
+        }
+        #ver{
+            background-color: green;
+            display: none;
+            padding: 10px;
+            width: 50%;
+            height: 50px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Condición Switch</h1>
+       <p>La sentencia switch se utiliza para realizar diferentes acciones basadas en diferentes condiciones.</p>
+       <p>Se utiliza la sentencia para seleccionar uno de los muchos bloques de código a ejecutar.</p>
+       <p>Así es como funciona:</p>
+       <ul>
+           <li>La condición se evalúa una vez.</li>
+           <li>El valor de la condición se compara con los valores de cada caso.</li>
+           <li>Si hay una coincidencia, se ejecuta el bloque asociado al código.</li>
+       </ul>
+       
+       <div id="roj"></div>
+       <div id="nar"></div>
+       <div id="ver"></div>
+       
+       
+       <script>
+           
+           color=prompt("Semáforo, en qué color está?","");
+           color=color.toLowerCase();
+           
+           switch (color){
+                   
+               case "rojo":document.getElementById("roj").style.display="block";
+               break;
+                   
+               case "naranja":document.getElementById("nar").style.display="block";
+               break;
+                   
+               case "verde":document.getElementById("ver").style.display="block";
+               break;
+                   
+               default: document.write("<p>NO es un color de semáforo</p>")
+                   
+           }
+      
+       </script>
+
+   </div>
+    
+</body>
+</html>

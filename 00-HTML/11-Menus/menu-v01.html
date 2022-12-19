@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Menu vertical 1</title>
+
+
+<style type="text/css">
+    
+    
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	}
+    
+	nav{	
+        margin: 50px;	
+    }
+	
+	nav ul{	
+        list-style-type: none;/*esto es para que no se vean los puntos de lista*/
+    }	
+
+	nav ul li a{
+		text-decoration: none;
+		display: block; /*obligatorio si queremos poner un width al botón*/
+		width: 130px;
+		font-family: Verdana, "sans-serif";
+		font-size: 14px;
+		color: rgba(0,0,0,1.00);
+		background-color: rgba(231,233,163,1.00);
+		padding: 10px;
+		margin-bottom: 5px; /* para separar los botones entre ellos en altura */
+	}
+	
+	nav ul li a:hover{
+		background-color:rgba(0,0,0,1.00);
+		color: rgba(255,255,255,1.00);
+		
+	}
+	</style>
+</head>
+
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="#">INICIO</a></li>
+			<li><a href="#">SERVICIOS</a></li>
+			<li><a href="#">BLOG</a></li>
+			<li><a href="#">CONTACTO</a></li>
+		</ul>
+	</nav>
+</body>
+</html>

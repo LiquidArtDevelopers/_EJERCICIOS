@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BUCLE FOR</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Bucle FOR</h1>
+       <p>El bucle FOR se utiliza para repetir una o más instrucciones un determinado número de veces. De entre todos los bucles, FOR se suele utilizar cuando sabemos seguro el número de veces que queremos que se ejecute. La sintaxis:</p>
+       <p>for (iniciación; condición; actualización;){ <br>
+       
+       // sentencias a ejecutar en cada interacción <br>
+       
+       }  </p> <br>
+       
+    
+       <script>
+           
+            // pedir dato
+           num=window.prompt("Escribe un número");
+           
+           // comprobar
+           if(isNaN(num) == true){
+               // si no es númerico
+               document.write("<p>solo NÚMEROS por favor</p>");
+               
+           }else{
+               // si es número bucle
+               for(n=1; n<=10; n++){
+                    document.write("<p>"+num+"x"+n+"="+(num*n)+"</p>");
+                }
+           }
+           
+           
+       </script>
+
+   </div>
+    
+</body>
+</html>

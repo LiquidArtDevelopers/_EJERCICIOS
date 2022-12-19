@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+    
+    <script>
+        
+    function cubo(){
+        // pedir dato
+        x=prompt("Escribe un número para calcular su cubo");
+        
+        // COMPROBAR SI EL DATO ES NUMERICO CON EL BUCLE WHILE
+        while(isNaN(x)==true){
+               x=prompt("Por favor, escribe un número");
+            }
+        
+        // calcular
+        total=x*x*x;
+        // mostrar 
+        document.getElementById("txt").innerHTML="El cubo de "+x+" es "+total;
+    }
+    
+    </script>
+    
+</head>
+
+<body>
+   
+   <div id="container">
+       
+       <h1>FUNCIÓN</h1>
+       <p>Las funciones son uno de los elementos más importantes de cualquier lenguaje de programación actual. <br>
+       Una función JavaScript es un fragmento de código que puede ser invocado para realizar tareas o devolver un resultado.</p>
+       
+        <a onclick="cubo()">Teclea un número</a>
+       
+       <p id="txt"></p>
+       
+      
+       
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULARIOS</title>
+    <style>
+    
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+
+    </style>
+    
+    <script>
+      function funcadena() {
+        var indice1, indice2; 
+        var salida = new String;
+        var  posi ;
+        cadena = document.forms[0].texto1.value;
+        vcaracter = document.forms[0].caracter.value;
+        indice1 = parseInt(document.forms[0].ind1.value);
+        if (isNaN(indice1)) {
+            alert("indice1 no es número");
+            document.forms[0].ind1.focus();
+            return false;
+        }
+        indice2 = parseInt(document.forms[0].ind2.value);
+        mensaje = "";
+        mensaje = "longitud : " + cadena.length + " " + "\n" 
+        salida = cadena.substring(indice1,indice2);
+        salida2 = cadena.substr(indice1,indice2);
+        salida3 = cadena.indexOf(vcaracter);
+        salida4 = cadena.charAt(indice1);
+        salida5 = cadena.indexOf(vcaracter,indice2);
+        mensaje += "\n substring : " + salida;
+        mensaje += "\n substr : " + salida2;
+        mensaje += "\n indexOf("+ vcaracter+ "): " + salida3;
+        mensaje += "\n  charAt(" + indice1 + " ):" + salida4;
+        mensaje += "\n indexOf("+ vcaracter+ ","+indice2+"): " + salida3;
+        alert(mensaje);
+        /* mismo mensaje a capa */
+        document.getElementById('txt2').innerHTML=mensaje;
+    
+        document.forms[0].texto2.disabled = false;
+        document.forms[0].texto2.value = salida;
+        document.forms[0].texto3.value = cadena.toUpperCase();
+        estilos = "parpadeo : " + cadena.blink() + "<br>";
+        estilos += "superindice : " + cadena.sup() + "<br>"
+        document.forms[0].textarea1.value = estilos;
+        //area = document.getElementById("Layer1");
+        area=document.getElementById("txt");
+        area.innerHTML = estilos;
+        area.style.backgroundColor="#FFFF00";
+    }
+        
+    </script>
+</head>
+<body>
+   
+   <div id="container">
+     
+     <h1>Formularios cadenas</h1>
+     <form name="form1" method="post" action="">
+        <p>entrada : 
+          <input type="text" name="texto1" size="80"><br>
+          indice1 : 
+          <input name="ind1" type="text" size="3">
+          indice2 : 
+          <input name="ind2" type="text" size="3">
+        <p>Caracter 
+          <input name="caracter" type="text" id="caracter" size="3">
+          <br>
+        <hr>
+      
+          <br>
+        Substring : 
+        <input name="texto2" type="text" disabled="true" >
+          Mayusculas : 
+          <input name="texto3" type="text">
+        <p>
+          <textarea name="textarea1" id="txta1" cols="30" rows="10"></textarea>
+          <br>
+          <input name="Submit" type="submit" disabled="true" value="enviar">
+          <input name="Reset" type="reset" disabled="true" value="Reset">
+          <input name="prueba" type="button" id="prueba" onClick="funcadena()" value="EJEMPLOS DE FUNCIONES DE CADENA " >
+      </form>
+     <p id="txt"></p>
+     <p id="txt2"></p>
+     <div id="Layer1" style="position:absolute; left:359px; top:255px; width:251px; height:70px; z-index:1;"></div> 
+       
+       
+       
+   </div>
+    
+</body>
+</html>

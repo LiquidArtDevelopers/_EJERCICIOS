@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        
+        .container{
+            width: 1000px;
+            display: block;
+            margin: 0px auto;
+            padding-top: 100px;
+            font-family: helvetica;
+        }
+        
+        .gris{
+            background-color: grey;
+            color: white;
+            font-size: 18px;
+        }
+        .azul{
+            background-color: blue;
+            color: white;
+            font-size: 18px;
+        }
+        .orange{
+            background-color: orange;
+            color: white;
+            font-size: 18px;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>SELECTORES $("selector")</h1>
+       
+
+  
+       
+    <p id="txt1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt mollitia rerum deleniti tenetur velit ex consequuntur modi itaque incidunt, voluptatum facilis! Sed perferendis saepe omnis corrupti labore nemo, earum deleniti!</p>
+      
+    <p id="txt2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt mollitia rerum deleniti tenetur velit ex consequuntur modi itaque incidunt, voluptatum facilis! Sed perferendis saepe omnis corrupti labore nemo, earum deleniti!</p>
+       
+    <p id="txt3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt mollitia rerum deleniti tenetur velit ex consequuntur modi itaque incidunt, voluptatum facilis! Sed perferendis saepe omnis corrupti labore nemo, earum deleniti!</p>
+       
+       <br><br>
+       
+       <a href="#" class="uno">PRIMERO</a>
+       <br><br>
+       <a href="#" class="dos">SEGUNDO</a>
+       <br><br>
+       <a href="#" class="tres">TERCERO</a>
+       
+       
+
+<script>
+           
+        $(function(){ // función de jquery
+               
+               $(".uno").click(function(){
+                   $("#txt1").addClass("gris");
+                   //$("#txt1").css("backgraund-color","gris");
+               })
+               
+               $(".dos").click(function(){
+                   $("#txt2").addClass("azul");
+               })
+               
+               $(".tres").click(function(){
+                   $("#txt3").addClass("orange");
+               })
+               
+        }); 
+           
+</script>
+  
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULARIOS</title>
+    <style>
+    
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+
+    </style>
+    
+    
+</head>
+<body>
+   
+   <div id="container">
+     
+     <h1>Formularios</h1>
+     <p>Sintaxis: <br>
+     variable=document.nombre_formulario.nombre_campo.value; <br>
+     variable=document.getElementById("id").value;
+     </p>
+      
+     <h2>JavaScript validar</h2>
+
+<p>Escribe números entre 1 y 10:</p>
+
+
+<form id="form" name="form">
+
+    <label for="Número">Número</label>
+    <input type="number" id="num">
+
+    <button type="button" onclick="validar()">Enviar</button>
+
+</form>
+
+<p id="txt"></p>
+
+
+
+<script>
+    
+function validar() {
+    // recibir dato
+  x = document.getElementById("num").value;
+    // comprobar
+  if (isNaN(x) == true) {
+    text = "ERROR, solo números";
+    } else if (x < 1 || x > 10) {
+      text = "ERROR, solo números entre 1 y 10.";
+        }else{
+            text = "OK, todo bien";
+        }
+    // mostrar mensaje
+  document.getElementById("txt").innerHTML = text;
+}
+ 
+</script>
+
+       
+       
+   </div>
+    
+</body>
+</html>

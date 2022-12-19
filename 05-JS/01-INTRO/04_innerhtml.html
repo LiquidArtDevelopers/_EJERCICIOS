@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<title>NOOOOO</title>
+<meta charset="utf-8">
+
+<style type="text/css">
+
+body {
+	background-color: #CCC;
+    font-size: 20px;
+}
+#conteiner {
+	max-width: 1000px;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFF;
+	padding: 10px;
+}
+
+   
+.x{
+    border: 1px solid red;
+    color:blueviolet;
+    width: 300px;
+    height: 30px;
+}
+    
+
+</style>
+
+</head>
+
+<body>
+<div id="conteiner">
+
+
+<h1>JavaScript posibilidades de visualización</h1>
+<p>JavaScript puede  "visualizar" datos  de diferentes maneras:</p>
+<ul>
+	<li>Escribiendo en un cuadro de alerta, utilizando window.alert().</li>
+	<li>Escribir en la salida HTML utilizando document.write().</li>
+	<li>Escribiendo en un elemento HTML, <strong>usando innerHTML.</strong></li>
+</ul>
+
+
+<h1>con innerHTML</h1>
+
+<p>El método getElementById() accede al primer elemento con el id especificado.
+<br>
+Sintaxis:<br>
+document.getElementById("id");
+</p>
+<p>innerHTML nos permite cambiar/insertar el contenido HTML de un elemento.<br>
+Sintaxis:<br>
+document.getElementById("id").innerHTML ="valor";
+</p>
+
+<p>Acceder a objeto de estilo de un elemento especificado<br>
+Sintaxis:<br>
+document.getElementById("nombre").style; <br>
+Para establecer las propiedades de estilo de un elemento existente <br>
+document.getElementById("nombre").style.color = "red"
+</p>
+
+<p>Aplicar un estilo de clase<br>
+Sintaxis:<br>
+document.getElementById("nombre").className; 
+<br>
+document.getElementById("myH1").className = "nombreestilo"
+</p>
+
+<br><br>
+
+<form id="form1" action="mailto:nombre@gmail.com" method="post">
+
+<label for="Nombre">Nombre</label>
+<input type="text" id="nom" name="nombre">
+<br><br>
+<label for="Email">Email</label>
+<input type="text" id="ema" name="email">
+<br><br>
+<input type="submit" value="Enviar">
+</form>
+
+
+</div>
+
+ <script type="text/javascript" src="prueba.js"></script>
+
+</body>
+</html>

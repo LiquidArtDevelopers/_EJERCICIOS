@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <form action="enviar.php" method="post" > <!-- configuramos para enviar a través de php -->
+            <h2>FORMULARIO</h2>
+            <fieldset class="cuadrado01">
+                <legend>Datos Personales</legend>
+    
+                <div class="caja-sup">
+                    <div class="caja-izd">
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" id="Nombre" name="Nombre" placeholder="Nombre" required>
+        
+                        <label for="Apellidos">Apellidos</label>
+                        <input type="text" id="Apellidos" name="Apellidos" placeholder="Apellidos" required>
+        
+                        <label for="Telefono">Teléfono</label>
+                        <input type="tel" id="Telefono" name="Telefono" placeholder="Telefono" required>
+                        
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="email" required>
+        
+                        <label for="Direccion">Dirección</label>
+                        <input type="text" id="Direccion" name="Direccion" placeholder="Direccion" required>
+        
+                        <label for="Poblacion">Población</label>
+                        <input type="text" id="Poblacion" name="Poblacion" placeholder="Poblacion" required>
+        
+                        <label for="Provincia">Población</label>
+                        <select Name="Provincia" Size="Number_of_options" id="Provincia" name="Provincia">  
+                            <option> Araba </option>  
+                            <option> Bizkaia </option>  
+                            <option> Gipuzkoa </option>
+                        </select>    
+                    </div>
+                    <div class="caja-der">
+                        <label for="cp">Código Postal</label>
+                        <input type="text" id="cp" name="cp" placeholder="Código postal" required>
+                    </div>
+                </div>
+                <div class="caja-inf">
+                    <label for="acepto"> Sí, deseo recibir información <br> publicitaria <input type="checkbox" name="acepto" id="acepto"></label>
+                    
+
+                    <label for="info">¿Cómo deseas recibir la información?:</label>
+                    <label for="info"><input type="radio" name="info" id="correo"> Correo Postal</label>
+                    <label for="info"><input type="radio" name="info" id="mail"> Email</label>
+                    <label for="info"><input type="radio" name="info" id="fax"> Fax</label>
+                </div>  
+    
+            </fieldset>
+    
+            <input type="submit" value="ENVIAR" id="boton">
+        </form>
+    </div>
+</body>
+</html>

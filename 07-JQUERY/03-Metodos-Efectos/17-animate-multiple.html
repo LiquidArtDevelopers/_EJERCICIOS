@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+            height: 1200px;
+        }
+        #p1{
+            background-color: greenyellow;
+        }
+
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+      
+      <h1>animate()</h1>
+      
+      <p id="p1">
+      PRIMERO<br>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis minus velit illum molestiae provident, harum autem eius iste ducimus enim explicabo fugiat doloribus reprehenderit, nostrum quo necessitatibus, ut inventore veritatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit debitis deleniti magni nesciunt repudiandae molestias id, delectus, quis natus minus quidem. Reiciendis facere suscipit dolorum. Eius voluptatibus sapiente dolore.</p>
+      
+      <p id="p2">SEGUNDO<br>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis minus velit illum molestiae provident, harum autem eius iste ducimus enim explicabo fugiat doloribus reprehenderit, nostrum quo necessitatibus, ut inventore veritatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero suscipit debitis deleniti magni nesciunt repudiandae molestias id, delectus, quis natus minus quidem. Reiciendis facere suscipit dolorum. Eius voluptatibus sapiente dolore.</p>
+      
+
+    </div>
+
+
+    <script>
+          
+            $(function(){
+             
+                $("#p1").animate({
+                    "width":"50%",
+                    "opacity":"0.7",
+                    "fontSize":"22px"
+                },4000);
+            });
+ 
+
+    </script>
+      
+ 
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        .oculto{
+            display: none;
+        }
+        .visible{
+            display: block;
+        }
+        
+        
+    </style>
+    
+    <script>
+    
+    function convertir(mp){
+        //pedir dato
+        dato=prompt("Introduce un número","");
+        // comprobar si el dato es numérico
+        while (isNaN(dato) == true){ 
+            window.alert("Tienes que escribir un número!!");
+            dato=prompt("Escribe un número!!");
+        }
+        
+        if(mp == "m"){
+            pulgada=(dato*100)/2.54;
+            pulgada=pulgada.toFixed(2);
+            document.getElementById("txt").innerHTML="Son "+pulgada+" pulgadas";
+            
+        }else{
+            metro=(dato*2.54)/100;
+            metro=metro.toFixed(2);
+            document.getElementById("txt").innerHTML="Son "+metro+" metros";  
+        }     
+    }
+        
+    </script>
+    
+</head>
+
+<body>
+   
+   <div id="container">
+       
+    <h1>Función METROS A PULGADAS</h1>
+    <p>Escribe el código de una función a la que se pasa como parámetro un número entero (metros) y devuelve como resultado el cálculo de metros a pulgadas. Mostrar el resultado en pantalla.</p>
+    
+    <p id="txt"></p>
+    
+    <button onclick="convertir('m')">Metros a pulgadas</button>
+    <button onclick="convertir('p')">Pulgadas a metros</button>
+    
+       
+       
+   </div>
+    
+</body>
+</html>

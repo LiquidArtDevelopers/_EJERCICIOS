@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+
+.formulario{  
+    background-image: url(../imags-web/mundo2.png);
+    background-size: 100vw 100vh;
+    background-attachment: fixed /* LA IMAGEN SE QUEDA FIJA */;
+    margin: 0;
+    padding: 20px 0;
+}
+
+form{
+    width: 450px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px; 
+    box-sizing: border-box; /* así el Padding es hacia dentro */
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+
+h2{
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#boton{
+    background-color: #6479ad;
+    color: snow;
+    padding: 20px;
+    opacity: .6;
+}
+
+#boton:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+#boton:active{    
+    transform: scale(0.97);
+}
+
+@media (max-width:480px){
+    form{
+        width: 100%;
+    }
+} /* estilo condicional responsive si la pantalla es menor de 480 px, el form tendrá el 100% de tamaño
+en vez de 450px */
+
+
+
+
+.contenedor{
+    background-color: #ffffff;
+    margin: 0 auto; /* centra todo lo que tenga el DIV en el medio */
+    width: 1000px;
+    height: 100%;
+}
+
+header{    
+    background-color: #ffffff;    
+    padding: 15px;
+    
+}
+
+h1{
+    color: #0f296f;
+    font-size: 30px;
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4{
+    color: #0f296f;
+    font-size: 15px;
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+nav{
+    width: 100%;    
+}
+
+.contenedor_nav{
+    background-color: #6479ad;
+    width:100%;
+    height:60px;
+    display:flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+.contenido_nav{
+    height:80%;
+    width:250%;
+    margin: auto 5px auto 5px;
+    font-size: 20px;
+    background-color:#ffffff;
+    border: 2px solid #ffffff;
+    text-align: center;  
+    font-size: 17px;    
+    color: #030643;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style:normal;
+    padding: 12px;
+    text-decoration: none;    
+}
+
+.contenido_nav:hover{
+    background-color: #6479ad;
+    border: 2px solid #ffffff;
+    color:#ffffff;
+}
+
+#contenedor_img_princial{
+    background-color: #ffffff;
+    width: 100%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#contenedor_img_princial img{
+    width: 100%;
+}
+
+
+.texto{
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: justify;
+    padding-top: 10px;
+}
+
+.ciudades{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display:flex;
+    justify-content: center;       
+    overflow: hidden;
+}
+.ciudades img{
+    margin-left: 2px;
+    margin-right: 2px;
+    border: 3px solid rgb(255, 255, 255);
+    
+    transition: 800ms;
+}
+.ciudades img:hover{
+    border: 3px solid #8a9fd5;
+    -webkit-transform:scale(1.3);transform:scale(1.3);
+}
+
+.ciudades a{   
+        
+    overflow: hidden;
+    transition:800ms;
+}
+
+.pie{
+    background-color: #d1d6dc;
+    height: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+

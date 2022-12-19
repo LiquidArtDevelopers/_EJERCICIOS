@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+      
+        
+        
+    </style>
+    
+<script>
+
+function calcular(x){
+    impuesto=x*0.21;
+    return impuesto; // IMPORTANTE 
+}
+
+    
+function iva(){
+    imp=prompt("introduce el importe","");
+    
+    if(isNaN(imp) == true){
+        document.getElementById("txt").innerHTML="No es número!!";
+        
+    }else{
+        imp=Number(imp);
+        total=imp+calcular(imp); // LLAMAR FUNCTION calcular(argumento)
+        //total=imp+(imp*0.21);
+        document.getElementById("txt").innerHTML=imp+"€ + 21% de IVA es "+total+"€."
+    }
+}
+        
+</script>
+    
+</head>
+
+<body>
+   
+   <div id="container">
+       
+    <h1>Funciones en cascada</h1>
+    <p>Un script para una tienda de comercio electrónico tiene que calcular el precio total de los productos varias veces.</p>
+    
+    <p id="txt"></p>
+    
+    <button onclick="iva()">IVA</button>
+    
+       
+       
+   </div>
+    
+</body>
+</html>

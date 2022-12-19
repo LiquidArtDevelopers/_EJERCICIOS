@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IF / ELSE</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Condición Switch</h1>
+       <p>La sentencia switch se utiliza para realizar diferentes acciones basadas en diferentes condiciones.</p>
+       <p>Se utiliza la sentencia para seleccionar uno de los muchos bloques de código a ejecutar.</p>
+       <p>Así es como funciona:</p>
+       <ul>
+           <li>La condición se evalúa una vez.</li>
+           <li>El valor de la condición se compara con los valores de cada caso.</li>
+           <li>Si hay una coincidencia, se ejecuta el bloque asociado al código.</li>
+       </ul>
+    <p>Sintaxis:</p>
+<p>
+switch(valor) {<br>
+    case "texto" : instrucción1; <br>
+        break; <br>
+    case 12 :instrucción2;  <br>
+        break; <br>
+    case "texto" :instrucción3;  <br>
+        break; <br>
+    default:default instrucción <br>    
+}
+</p>
+
+<h2>Mostrar ejemplo</h2> 
+       
+    <script>
+           
+    color=prompt("Semáforo, en qué color está?","");
+    color=color.toLowerCase();
+           
+    switch(color){
+         // case ESPACIO "rojo"          
+        case "rojo" : document.write("<p> ESTÁ EN ROJO </p>");
+        break;
+            
+        case "naranja": document.write("<p> ESTÁ EN NARANJA, TODAVÍA NO PUEDES PASAR</p>");
+        break;
+                   
+        case "verde": document.write("<p> ESTÁ EN VERDE, YA PUEDES PASAR</p>");
+        break;
+                   
+        default:document.write("<p> NO ES COLOR DE SEMÁFORO</p>");
+                   
+    }
+      
+    </script>
+
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ejemplo</title>
+    
+    <style>
+    
+        .rojo{
+            
+            border: 2px solid red;
+        }
+    
+    
+    </style>
+
+    
+    <script>
+        
+        function enviar(){ 
+            
+            // recibir datos, botones
+            uno=document.form1.sex[0].checked;
+            dos=document.form1.sex[1].checked;
+            //alert(uno);
+            //alert(dos);
+            document.getElementById("txt").innerHTML="";
+            
+             if(uno == false && dos == false){
+                alert("Por favor, escoge una de las opciones");
+                document.getElementById("txt").innerHTML="Elegir una de las opciones";
+                document.getElementById("txt").style.color="red";
+                
+            } else {
+                alert("ok");
+                // si no ponemos action en el formulario lo ponemos aquí.
+                //document.form1.action="mailto:nombre@gmail.com"; 
+               
+            }
+                
+        }
+        
+    </script>
+    
+</head>
+
+<body>
+   
+   <h1>Formularios</h1>
+
+   
+   <form id="form1" name="form1" enctype="text/plain"> 
+     
+           <label>Elegir un de las dos opciones:</label>
+           <br><br>
+           
+           <p id="txt"></p>
+           
+           <input value="mujer" type="radio" name="sex"> 
+           <label>Mujer</label>
+           
+           <input value="hombre" type="radio" name="sex"> 
+           <label>Hombre</label>
+           <br><br>
+           
+           <input type="button" onclick="enviar()" value="Enviar">
+                 
+   </form>
+   
+    
+</body>
+</html>

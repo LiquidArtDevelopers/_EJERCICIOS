@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        
+        .container{
+            width: 1000px;
+            display: block;
+            margin: 0px auto;
+            padding-top: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>SELECTORES $ ("selector")</h1>
+       
+       <h2>ULocalizar elementos de un FORM, un array</h2>
+       
+       <form id="form1" name="form1" action="pepe@gmail.com">
+           
+           <label>Nombre:</label>
+           <input type="text" name="nom">
+           <br><br>
+           <label>Apellido:</label>   
+           <input type="text" name="ape"> 
+           <br><br>
+           <label>Email:</label>       
+           <input type="email" name="ema">
+           <br><br>
+           <input type="button" value="Enviar">
+
+       </form>
+       
+       <br><br>
+       
+        <form id="form2" name="form2" action="pepe@gmail.com">
+           
+           <label>Nombre:</label>
+           <input type="text" name="nom2">
+           <br><br>
+           <label>Apellido:</label>   
+           <input type="text" name="ape2"> 
+           <br><br>
+           <label>Email:</label>       
+           <input type="email" name="ema2">
+           <br><br>
+           <input type="button" value="Enviar">
+
+       </form>
+       
+
+       <script>
+           
+        $(function(){ // función de jquery
+               
+            // localizar primer formulario
+            $(document.forms[0]).css("border", "2px solid blue");
+               
+            // localizar primer elemento input en el segundo formulario
+            $(document.forms[1].elements[0]).css("border", "2px solid red");
+  
+        }); 
+
+       </script>
+  
+   </div>
+    
+</body>
+</html>

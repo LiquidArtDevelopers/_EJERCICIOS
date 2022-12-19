@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Responsive</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1, user-scalable=no">
+    
+<style>
+    
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box; 
+    }
+    
+    header, footer {
+      background-color: yellowgreen;
+    }
+    nav{
+        background-color: aqua;
+    }
+    aside{
+        background-color: bisque;
+    }
+    header, footer, article, nav, aside {
+        padding: 20px;
+    }
+ 
+    
+    .contenido {
+        display: flex; 
+        justify-content:center;
+        column-gap: 10px;
+        flex-wrap: wrap;
+    }
+    .contenido article {
+        
+        flex-basis : 300px;
+
+    }
+   
+     
+ @media screen and (max-width: 640px) {
+    
+    .contenido  {
+        /*display: block;*/
+        flex-direction: column;
+        row-gap: 10px;
+
+        
+    } 
+    
+    }
+</style>
+</head>
+
+
+
+<body>
+   
+   
+    <header><h1>HEADER</h1></header>
+    
+    <nav>NAV</nav>
+    
+    <section class="contenido">
+        <article id="art01">
+        <h1>Article 1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, autem dolorem voluptatum repellendus animi atque inventore error, earum ullam quae ratione beatae rem aliquam perferendis quibusdam doloribus, maxime quis tempora.</p>
+    </article>
+        <article id="art02">
+       <h1>Article 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, autem dolorem voluptatum repellendus animi atque inventore error, earum ullam quae ratione beatae rem aliquam perferendis quibusdam doloribus, maxime quis tempora.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, autem dolorem voluptatum repellendus animi atque inventore error, earum ullam quae ratione beatae rem aliquam perferendis quibusdam doloribus, maxime quis tempora.</p></article>
+        <article id="art03">
+       <h1>Article 3</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, autem dolorem voluptatum repellendus animi atque inventore error, earum ullam quae ratione beatae rem aliquam perferendis quibusdam doloribus, maxime quis tempora.</p></article>
+        <article id="art04">
+         <h1>Article 4</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, autem dolorem voluptatum repellendus animi atque inventore error, earum ullam quae ratione beatae rem aliquam perferendis quibusdam doloribus, maxime quis tempora.</p></article>
+        <article id="art05">
+        <h1>Article 5</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, autem dolorem voluptatum repellendus animi atque inventore error, earum ullam quae ratione beatae rem aliquam perferendis quibusdam doloribus, maxime quis tempora.</p></article>
+    </section>
+  
+   <aside><p>ASIDE</p></aside>
+   
+  <footer><p>FOOTER</p></footer>  
+  
+  
+</body>
+</html>

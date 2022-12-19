@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        .container{
+            
+            padding: 100px;
+            font-family: helvetica;
+            height: 1200px;
+        }
+
+        #div1{
+            width: 100%;
+            padding: 100px 20px;
+        }
+        
+        .verde{
+            background-color: green;
+        }
+        .orange{
+            background-color: orange;
+        }
+        .pink{
+            background-color: pink;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+      
+      <h1>width() y height()</h1>
+
+      <div id="div1">
+          <p> Hoy llueve menos!!! </p>
+      </div>
+      
+<button id="btn">toggleClass</button>
+
+<script>
+          
+        $(function(){
+            
+             // pantalla completa width menor que 640
+             if($(window).width() < 640){ 
+                 
+                $("#div1").addClass("verde");
+                 // botón
+                 $("#btn").click(function(){
+                    $("#div1").toggleClass("orange"); 
+                });
+             }
+            
+            
+             if($(window).width() > 640 && $(window).width() < 1024){ 
+                $("#div1").addClass("orange");
+             }
+            
+             if($(window).width() > 1024){ 
+                $("#div1").addClass("pink");
+             }
+             
+        });
+ 
+
+</script>
+      
+       
+   </div>
+    
+</body>
+</html>

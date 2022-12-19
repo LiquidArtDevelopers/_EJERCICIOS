@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>SELECTORES $("selector")</h1>
+       <h2>Mostrar ejemplo</h2>
+       <h3>Oculta todas las etiquetas p</h3>
+       
+       <p id="txt01">PRIMERO ipsum dolor sit amet, consectetur adipisicing elit. Saepe molestias, quasi laudantium deserunt dignissimos libero sed error id necessitatibus commodi totam deleniti consequatur similique, odio quas. Unde corrupti, voluptatem et. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, recusandae. Eos voluptatum officia minima nesciunt ab quidem nisi sit possimus, dolor eaque obcaecati inventore impedit cum beatae delectus voluptates maiores!</p>
+       
+       <p id="txt02">SEGUNDO ipsum dolor sit amet, consectetur adipisicing elit. Saepe molestias, quasi laudantium deserunt dignissimos libero sed error id necessitatibus commodi totam deleniti consequatur similique, odio quas. Unde corrupti, voluptatem et. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eveniet error unde veritatis minima consectetur cumque iste commodi officia maxime, maiores eligendi, necessitatibus repellendus, eum facilis amet fugit consequatur nisi.</p>
+       
+       
+       <br><br>
+       
+       <button type="button">Ocultar P2</button>
+       
+       
+<script>
+       // este script puede estar en cualquier parte de la página
+           
+           $(function(){ // función de jquery
+               
+               $("button").click(function(){
+                   $("#txt02").hide();
+               });
+               
+           });
+
+
+</script>
+  
+   </div>
+    
+</body>
+</html>

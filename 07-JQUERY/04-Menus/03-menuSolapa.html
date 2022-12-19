@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+
+<title>Menu</title>
+
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+
+
+<style>
+    
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    
+#menu{
+	width: 300px;
+	background-color:greenyellow;
+	border: 1px solid #CCC;
+	position: absolute; /* importante */
+	top: 70px;
+	left: -200px;
+}  
+#menu ul {
+	float: left;
+	height: 200px;/* auto */
+	width: 200px;
+	background-color: #999;
+	list-style-type: none;
+}
+#menu #solapita a{
+	display: block;
+	width: 80px;
+	float: right;
+	text-align: center;
+}
+
+</style>
+
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+
+
+</head>
+<body>
+
+<h1>animate()</h1>
+
+
+<nav id="menu">
+ 
+  <ul>
+    <li><a href="#">PRIMERA</a></li>
+    <li><a href="#">SEGUNDA</a></li>
+    <li><a href="#">TERCERA</a></li>
+    <li><a href="#">CUARTA</a></li>
+  </ul>
+  
+  <div id="solapita">
+      <a href="#" id="btn">MENU</a>
+  </div>
+   
+</nav>
+
+
+
+<script>
+
+$(function(){
+	
+	var x = 0;// esta oculto
+    
+ 	$("#btn").click(function(){
+        
+	 	if(x == 0){
+	 	     $("#menu").animate({left:"0px"}, 1000);
+	 	     x = 1;// esta visible
+ 		} else {
+	 	     $("#menu").animate({left:"-200px"}, 1000);
+	 	     x = 0;// esta oculto
+ 		}
+ 	});
+  
+});
+
+</script>
+
+
+ </body>
+</html>

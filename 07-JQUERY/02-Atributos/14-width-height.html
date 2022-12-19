@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    
+    
+    
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+        #div1{
+            background-color: orange;
+            width: 600px;
+            height: 200px;
+            padding: 20px;
+        }
+        
+    </style>
+    
+    
+    
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> 
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+      
+      <h1>width() - height()</h1>
+
+      <div id="div1">
+      
+      </div>
+      
+      <br>
+      
+      <button id="btn">Mostrar tamaño</button>
+      
+
+     
+     
+     
+<script> 
+       
+    $(function(){
+              
+            $("#btn").click(function(){
+                  
+                // an = $("#div1").width();
+                // al = $("#div1").height();
+                  
+                //guardar ancho
+                an="Ancho: " +$("#div1").width()+ "<br>";
+                //guardar alto
+                al="Alto: " +$("#div1").height();
+                
+                //mostrar
+                $("#div1").html(an + al);
+                   
+            });
+                         
+    });
+       
+</script>
+      
+       
+   </div>
+    
+</body>
+</html>

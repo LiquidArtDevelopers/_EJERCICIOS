@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: "arizona";
+    src: url("../fuentes/Arizonia-Regular.ttf");
+  }
+  
+  .super-contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .cabecera{
+    position: relative;
+    img{
+      width: 100%;
+      position: relative;
+    }
+    .texto{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 20px;
+      h1{
+        font-family: "arizona";
+        color: blue;
+        font-size: 100px;
+      }
+      p{
+        font-family: Verdana;
+        color: gold;
+      }
+    }
+    
+  }
+
+  

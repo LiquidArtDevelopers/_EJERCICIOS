@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULARIOS</title>
+    <style>
+    
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+
+    </style>
+    
+    <script>
+        function mostrar(){
+            
+         //recoger los valores de los campos del formulario
+         //valor1=document.formu.num1.value; // recibir datos por su name
+         ///valor2=document.formu.num2.value;
+            
+        // recoger los valores de los campos del formulario de otra forma
+        valor1=document.getElementById("num1").value;
+        valor2=document.getElementById("num2").value;
+            
+        //alert(valor1);
+        //alert(valor2);
+            
+        valor1=Number(valor1);
+        valor2=Number(valor2);
+            
+        suma=(valor1+valor2);
+            
+        document.getElementById("txt").innerHTML="El resultado de la suma es:"+suma;
+        document.getElementById("txt").style.backgroundColor="green";
+        document.getElementById("txt").style.color="white";
+        document.getElementById("txt").style.padding="10px";
+
+        }
+        
+    </script>
+</head>
+<body>
+   
+   <div id="container">
+     
+     <h1>Formularios</h1>
+     <p>Sintaxis: <br>
+     variable=document.nombre_formulario.nombre_campo.value; <br>
+     variable=document.getElementById("id").value;
+     </p>
+     <p>Introduce dos números:</p>
+      
+<!-- recibir datos por su nombre "name" -->
+     
+<form id="formu" name="formu"> 
+       
+        <label for="Número 1">Número 1:</label>
+        <input type="number" name="num1" id="num1">
+        <br><br>
+        
+        <label for="Número 2">Número 2:</label>
+        <input type="number" name="num2" id="num2">
+        <br><br>
+        
+        <button type="button" onclick="mostrar()" value="sumar">Sumar</button>
+        <!-- puede ser también un input type=buttom / type=submit prohibido, hay que chequearlo desde javascript-->
+
+</form>
+      
+<p id="txt"></p>
+       
+       
+       
+       
+   </div>
+    
+</body>
+</html>

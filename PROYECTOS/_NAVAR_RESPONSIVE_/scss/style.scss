@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+$movil: 480px;
+$colorFondo: rgb(200, 183, 240);
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 30px;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $colorFondo;
+    color: rgb(105, 36, 36);
+    padding: 20px 0 20px 0;
+    font-family: arial;
+    cursor: pointer;
+    a{
+        text-decoration: none;
+        color: inherit; /* COLOR DE SU PADRE */
+        &:visited{ /* si he visitado, me mantiene color de su padre*/
+            color: inherit;
+        }
+        &:hover{ /* si pongo ratón encima me cambia a amarillo*/
+            color: yellow;
+        }        
+    }
+    .logo{
+        padding-left: 20px;
+        margin-right: 100px;
+    }
+    .menu{
+        .list{
+            list-style: none;
+            display: flex;
+            column-gap: 30px;
+        }
+    }
+    #toggler, label{
+        display: none;        
+        align-items: center;        
+        cursor: pointer;
+        padding-right: 20px;
+    }
+
+    /*  RESPONSIVE A 540PX */
+    @media screen and (max-width: $movil){
+        position: fixed; /* ponemos fijo el nav */
+        top: 0px;
+        .menu{
+            width: 100%;
+            height: 100vh; /* que ocupe todo el alto */
+            background-color: $colorFondo;
+            position: fixed; /* ponemos fijo el menú */
+            top: 58.4px; 
+            z-index: 10;/*  */
+            transform: translateX(-100%);/* que se mueva a su izd su ancho total */
+            transition: .2s;
+            .list{
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                column-gap: 0px;
+                row-gap: 30px;
+            }
+        }
+        label{
+            display: inline-flex;
+        }
+        /* Al hacer click en el toggle, transladamos en el eje X el div a su posición original (de normal estaba -100vw a su izda (fuera de visión), ahora pasa hacia la derecha a su estado de visualización */
+        #toggler:checked ~.menu{
+            transform: translateX(0);/* que se mueva a su derecha su ancho total */
+        }
+    }
+}
+.contenido{
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+    border: 2px dashed rgb(73, 73, 73);
+    padding: 20px;
+    font-size: 20px;
+    h1{
+        font-size: 30px;
+    }
+    p{
+        color:chocolate;
+    }
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    /*  RESPONSIVE A 540PX */
+    @media screen and (max-width: $movil){
+        margin-top: 78px;
+    }
+}
+.ejemplo{
+    margin: 30px auto;
+    padding: 20px;
+    width: 80%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 20px;
+    .hijo{
+        width: 150px;
+        height: 150px;
+        background-color: rgb(235, 160, 22);
+        color: white;
+        font-size: 100px;
+        font-family: arial;
+        font-weight: 900;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:first-child{ /* el primer hijo */
+            background-color: aqua
+        }
+        &:nth-child(5){ /*  el hijo número 5 */
+            background-color: green;
+        }
+        &:last-child{ /* el último hijo */
+            background-color: black;
+        }
+        &:nth-child(odd){ /* hijos impares */
+            color: rgb(145, 26, 46); 
+        }
+        &:nth-child(even){ /*  hijos pares */
+            color: blue; 
+        }
+        &:nth-child(4n){ /* referencia a los hijos 4, 8, 12, etc */
+            border: 10px solid black; 
+        }
+        &:nth-child(5n+3){/* empezando por el 3 y cada 5 hijos: 3, 8, 13, 18, etc */
+            border: 10px dashed grey;
+        }
+        &:nth-last-child(3){ /* el tercer hijo empezando por atrás */
+            border-radius: 20px;
+        }        
+        
+    }
+    
+}
+.ejemplo2{
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid red;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: rgb(0, 122, 230);
+    font-size: 60px;
+    & div{ /* REFERENCIA A TODOS LOS DIV, INCLUIDOS NIETOS */
+        color: white;
+        background-color: cadetblue;
+    }
+    & > div{ /* REFERENCIA SÓLO A LOS DIV HIJOS DIRECTOS, NO A SUS NIETOS */
+        width: 300px;
+        height: 300px;
+        background-color: black;
+    }
+    /* & ~ div{ */ /* referencia a todos los hermanos DIV que tenga a continuación, en este caso a los div .ejemplo3 y .ejemplo4*/
+        /* background-color: red;
+        width: 200px;
+        height: 200px;
+    } */
+    & + div{ /* referencia SÓLO al siguiente DIV hermano que tenga a continuación, en este caso al div .ejemplo3 */
+        background-color: blue;
+    }
+}
+
+
+.ejemplo5{
+
+    width: 90%;
+    height: 700px;
+    background-color: aliceblue;
+    border: 2px dashed black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    font-size: 50px;
+    color: aliceblue;
+    text-align: center;
+    .contenedor{
+        position: relative;
+        width: 500px;
+        height: 500px;
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: 2px dashed black;
+        .caja{
+            position: absolute;
+            top:0px;
+            right: 0px;
+            width: 300px;
+            height: 300px;
+            background-color: blueviolet;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.ejemplo6{
+    width: 800px;
+    height: 400px;
+    background-color: aquamarine;
+    border: 2px dashed black;
+    border-radius: 50px;
+    margin-bottom: 60px;
+    .contenedor{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 200px;
+        background-color: rgb(207, 149, 221);
+        border: 2px dashed black;
+        border-radius: 50px;
+    }
+}
+
+

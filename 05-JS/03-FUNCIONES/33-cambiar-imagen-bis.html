@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BUCLE FOR</title>
+    <style>
+    
+        .container{
+            padding: 50px;
+        }
+        img{
+            cursor: pointer;
+            width: 150px;
+        }
+    
+        .n{
+            background-color: black;
+        }
+        .b{
+            background-color: white;
+        }
+        .txtb{
+            color: white;
+        }
+         .txtn{
+            color: black;
+        }
+    
+    </style>
+    
+<script>
+    
+    function on(){
+        document.getElementById('foto').src='imagenes/bombilla-on.gif';
+        document.getElementById('bo').className = "n";
+        document.getElementById('tit').className = "txtb";
+        document.getElementById('txt').className = "txtb";
+    }
+        
+    function off(){
+        document.getElementById('foto').src='imagenes/bombilla-off.gif';
+        document.getElementById('bo').className="b";
+        document.getElementById('tit').className="txtn";
+        document.getElementById('txt').className="txtn";
+    }
+    
+</script>
+    
+    
+</head>
+
+<body id="bo">
+   
+<div class="container">
+       
+<h1 id="tit">Con JavaScript vamos a cambiar la imagen</h1>
+      
+<p id="txt">.src - devuelve una URL absoluta completo</p>
+
+
+<button onclick="on()">PIZTU ARGIA</button>
+
+<img id="foto" src="imagenes/bombilla-off.gif">
+
+<button onclick="off()">ITZALI ARGIA</button>
+     
+
+   </div>
+    
+</body>
+</html>

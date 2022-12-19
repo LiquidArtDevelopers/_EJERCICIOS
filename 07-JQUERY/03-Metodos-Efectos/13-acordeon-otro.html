@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejemplo de funciones</title>
+
+<style type="text/css">
+
+#container {
+	max-width: 1200px;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px;
+    font-family: Helvetica;
+    padding: 100px;
+    color: black;
+}
+p{
+    line-height: 20px;
+    margin: 0px;    /*IMPORTANTE Poner margin 0px; porque sino me deja un margen*/
+}
+button{
+    background-color: #7bd0bc;
+    padding: 10px;
+    font-family: Helvetica;
+    font-size: 15px;
+/*    border-radius: 20px;*/
+    margin-bottom: 20px;
+}
+.ocultar{
+    display: none;
+}
+.mostrar{
+    display: block;
+}
+.fx{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.f20{
+    width: 20%;
+}
+.negrita{
+    font-weight: bold;
+}
+
+input{
+    margin: 10px;
+    padding: 5px;
+}
+.rojo{
+    border: 2px solid red;
+}
+.climg{
+    width: 100%;
+}
+    
+  
+ #arriba{
+    background-color: orange;
+   text-align: center;
+     padding: 20px;
+     cursor: pointer;
+}  
+.izq{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+} 
+ #txt1{
+    background-color: #a7a78c;
+
+}
+#txt2{
+    background-color: #dede95;
+    
+}
+#txt3{
+    background-color: #525230;
+
+
+}
+#abajo{
+    background-color: gray;
+    padding: 20px;
+}
+#pri, #seg, #ter{
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}  
+    
+
+#pri, #seg, #ter p{
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: bold;
+}  
+.x{
+    background-color: greenyellow;
+}   
+    .medio{
+        margin: 0px auto;
+        text-align: center;
+    } 
+    .over{
+        overflow: auto;
+    }
+</style>
+
+
+ <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+<!--puedo poner el link online -->
+<!--  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+</head>
+
+
+
+<body>
+
+<div id="container">
+
+<h1>slideToggle ( ) - Acordeon - 3 PASOS</h1>
+
+
+
+<div id="pri">
+    <p>PRIMERO</p>
+</div>
+
+<div id="txt1">
+  <div class="over">
+  <h2>PRIMER PASO</h2>
+   <img class="izq" src="imagenes/01-burger.jpg" alt="1" width="10%">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus harum dolorum quos. Pariatur inventore ut vitae nesciunt assumenda, ea commodi similique reprehenderit. Voluptatem maiores, debitis commodi itaque quibusdam veniam et. </p>
+    
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus harum dolorum quos. Pariatur inventore ut vitae nesciunt assumenda, ea commodi similique reprehenderit. Voluptatem maiores, debitis commodi itaque quibusdam veniam et.</p>
+    <br>
+</div>
+    <div class="medio">
+        <button id="b1">Siguiente</button>
+    </div>
+    
+</div>
+
+
+<div id="seg">
+    <p>SEGUNDO</p>
+</div>
+<div id="txt2">
+ <div class="over">
+   <h2>SEGUNDO PASO</h2>
+   <img class="izq" src="imagenes/02-burger.jpg" alt="1" width="10%">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus harum dolorum quos. Pariatur inventore ut vitae nesciunt assumenda, ea commodi similique reprehenderit. Voluptatem maiores, debitis commodi itaque quibusdam veniam et. 
+    
+   <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus harum dolorum quos. Pariatur inventore ut vitae nesciunt assumenda, ea commodi similique reprehenderit. Voluptatem maiores, debitis commodi itaque quibusdam veniam et.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus harum dolorum quos. Pariatur inventore ut vitae nesciunt assumenda, ea commodi similique reprehenderit. Voluptatem maiores, debitis commodi itaque quibusdam veniam et. </p>
+ </div>   
+    <br>
+    <div class="medio">
+        <button id="b2">Siguiente</button>
+    </div>
+</div>
+
+
+<div id="ter">
+    <p>TERCERO</p>
+</div>
+<div id="txt3">
+   <div class="over">
+    <h2>TERCER PASO</h2>
+   <img class="izq" src="imagenes/03-burger.jpg" alt="1" width="10%">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus harum dolorum quos. Pariatur inventore ut vitae nesciunt assumenda, ea commodi similique reprehenderit. Voluptatem maiores, debitis commodi itaque quibusdam veniam et. 
+    
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus harum dolorum quos. Pariatur inventore ut vitae nesciunt assumenda, ea commodi similique reprehenderit. Voluptatem maiores, debitis commodi itaque quibusdam veniam et.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus harum dolorum quos. Pariatur inventore ut vitae nesciunt assumenda, ea commodi similique reprehenderit. Voluptatem maiores, debitis commodi itaque quibusdam veniam et. </p>
+    <br>
+</div>
+    <div class="medio">
+        <button id="b3">Terminar</button>
+    </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<script>
+
+    $(function(){ 
+       
+        $("#txt2, #txt3").hide();
+        $("#pri, #seg, #ter").addClass("x");
+        
+        $("#b1").click(function(){  
+            $("#txt2").slideDown(1000);
+        });
+        
+        $("#b2").click(function(){   
+            $("#txt3").slideDown(1000);
+        });
+                
+
+         $("#b3").click(function(){   
+             alert("ok");
+        });
+      
+});   
+        
+        
+        
+        
+
+</script>
+
+
+
+
+
+</body>
+</html>

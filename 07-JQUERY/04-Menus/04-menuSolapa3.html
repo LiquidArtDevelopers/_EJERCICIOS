@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+
+<title>Menu</title>
+
+
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+
+
+<style type="text/css">
+
+#menu{
+	width: 200px;
+	height: 250px;/* auto */
+	background-color:gainsboro;
+	border: 1px solid black;
+	position: absolute; /* importante */ 
+	right: -200px; /* ocultar menu, moverlo fuera a la izq. */
+	top: 70px; /*  esta distancia es variable !!! */
+	z-index:999;/* para mostrarlo encima de otros contenidos  */ 
+}
+    ul{
+        list-style-type: none;
+    }
+    
+	#btn{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+		cursor: pointer;
+	}
+    .container{
+        max-width: 1920px;
+        overflow-x: inherit;
+    }
+    
+</style>
+
+
+</head>
+
+<body>
+
+<div class="container">
+<!-- <span>&#9776;</span> -->
+
+<img id="btn" src="bot_menu.png" width="60" height="60">
+
+<nav id="menu">
+ 
+  <ul>
+    <li><a href="#">PRIMERA</a></li>
+    <li><a href="#">SEGUNDA</a></li>
+    <li><a href="#">TERCERA</a></li>
+    <li><a href="#">CUARTA</a></li>
+  </ul>
+  
+</nav>
+
+</div>
+
+
+<script>
+    
+$(function(){
+	
+    var x=0;
+    
+    $("#btn").click(function(){
+	   if(x == 0){
+	 	 $("#menu").animate({right:'0px'}, 1000);
+	 	 x = 1;
+ 	  }else{
+	 	 $("#menu").animate({right:'-200px'}, 1000);
+	 	 x = 0;
+ 	  }
+ 
+    })
+  
+});
+
+</script>
+
+
+ </body>
+</html>

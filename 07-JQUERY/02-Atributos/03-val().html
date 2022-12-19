@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+      
+      <h1>Atributo val(), para recoger los datos de un formulario</h1>
+      
+      <form id="form1" name="form1" action="mailto:pepe@gmail.com">
+          
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nom">
+          <br><br>
+          
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="ape">
+          <br><br>
+          
+          <input type="button" value="Mostrar" id="btn">
+          
+      </form>
+
+      <p id="txt1"></p>
+      
+      
+<script>
+       
+        $(function(){
+
+              $("#btn").click(function(){
+                  
+                //recibir el valor de un input
+                n = $("#nom").val();
+                a = $("#ape").val();
+                //n= document.getElementById("#txt1").value 
+                  
+                $("#txt1").html(n+" "+a);
+                //document.getElementById("#txt1").innerHTML= n+" "+a;
+            });
+          
+    });
+         
+</script>
+      
+       
+   </div>
+    
+</body>
+</html>

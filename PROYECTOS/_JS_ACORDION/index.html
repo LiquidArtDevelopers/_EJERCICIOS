@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>_JS_ACORDEÓN</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          outline: 0;
+          box-sizing: border-box;
+        }
+        .contenedor{
+            margin: 100px auto;
+            background-color: violet;
+            width: 600px;
+            height: 600px;
+            border: 2px solid rgb(199, 68, 199);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-start;
+            align-items: center;
+            z-index: 10;
+        }
+        .pestana{
+            background-color: rgb(94, 77, 94);
+            border: 1px solid violet;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 30px;
+            overflow: hidden;
+            z-index: 5;
+        }
+        .pestana:hover{
+            opacity: 50%;
+        }
+        .texto{
+            background-color: rgb(248, 230, 248);
+            padding: 30px;
+            width: 100%;
+            height: 300px;
+            text-align: justify;
+            font-size: 20px;
+            display: none;
+            overflow: scroll;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;            
+        }
+        .texto::-webkit-scrollbar{
+            display: none;
+        }
+        .texto_activo{
+            display: block;
+        }
+        .bordeSup{
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .bordeInf{
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .cookie{
+            width: 100%;
+            height: 200px;
+            position:absolute;
+            bottom: 0px;
+            background-color:rgba(0, 255, 255, 0.493)
+
+        }   
+    </style>
+</head>
+<body>
+    <div class="contenedor"></div>
+</body>
+
+<script>
+
+    //VARIABLES
+    let num = 7, i = 0;
+    let htmlPest="", htmlText="",htmlTotal="", lorem="";
+    lorem = "<br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A pariatur alias dignissimos quo, voluptates quos aliquid culpa similique fugit at beatae minima. Praesentium iusto doloremque aspernatur itaque, enim aut quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere asperiores, aperiam, deleniti molestias vel reprehenderit quis, doloribus iste rem commodi molestiae. Molestias nemo incidunt dolore temporibus aliquam eum quaerat!</p>"
+
+    //RECORREMOS ITERACIÓN Y CREAMOS HTML.
+    for(i=1;i<=num;i++){
+        //En caso de que sean o la primera o la última pestaña, añadimos un estilo de redondeo de bordes
+        switch(i){
+            case 1:
+                htmlPest = `<div id="${i}" class="pestana bordeSup">${i}</div>`;
+                break;
+            case num:
+                htmlPest = `<div id="${i}" class="pestana bordeInf">${i}</div>`;
+                break;
+            default:
+                htmlPest = `<div id="${i}" class="pestana">${i}</div>`;
+                break
+        }        
+        htmlText = `<div id="T${i}" class="texto">${i+lorem}</div>`;
+        //Concatenamos todo el html
+        htmlTotal += htmlPest+htmlText;
+    }
+    //escribimos el html
+    document.querySelector(".contenedor").innerHTML=htmlTotal;
+
+
+    //escuchamos al evento click
+    document.body.addEventListener("click",function(event){
+        //Si se ha pulsado un elemento de clase pestana entramos
+        if(event.target.classList.contains("pestana")){
+            //Limpiamos clases de otros eventos de click
+            for(const item of document.querySelectorAll(".texto")){
+                item.classList.remove("texto_activo");
+                item.classList.remove("bordeInf");
+            }
+            //añadimos clase al objeto del envento click
+            document.querySelector(`#T${event.target.id}`).classList.add("texto_activo");
+            //Si es el último tab,añadimos además una clase de redondeo de borde inferior
+            if(event.target.id==String(num)){
+                document.querySelector(`#T${event.target.id}`).classList.add("bordeInf");
+                event.target.classList.remove("bordeInf");
+            }else{ //en caso de que no sea el último tab, damos al último tab de nuevo el borde inferior
+                document.getElementById(num).classList.add("bordeInf");
+            }
+        }        
+    })
+
+</script>
+
+</html>

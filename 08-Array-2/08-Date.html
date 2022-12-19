@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Array-Matrices</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+        .ocultar{
+            display: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+   
+   <div class="container">
+       
+       <h1>Array - Matrices</h1> 
+               
+       <p id="txt"></p>      
+ 
+<script>
+           
+    meses=["Enero", "Febrero", "Marzo", "Abtil", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+           
+    data=new Date();
+    dia=data.getDate();
+    mes=data.getMonth();
+    an=data.getFullYear();
+    // alert(mes);
+    document.getElementById("txt").innerHTML=dia+" de "+meses[mes]+" del "+an;
+              
+
+</script>
+       
+       
+       
+   </div>
+    
+</body>
+</html>

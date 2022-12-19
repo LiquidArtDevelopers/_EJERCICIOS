@@ -1,0 +1,128 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body{
+    background-color:grey;
+}
+#container{
+	max-width: 1000px;
+	margin: 0px auto;
+	background-color: rgba(255,255,255,1.00);
+}
+header{
+    text-align: center;
+}
+nav{
+    text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 20px 0px;
+}
+
+section{
+    padding: 20px;
+
+}
+.sec70{
+    width: 70%;
+    margin: 0px auto;
+}
+img{
+    width: 100%;
+}
+.img-50{
+    width: 50%;
+}
+/*
+.p-mb{
+	margin-bottom: 300px;
+}
+*/
+#pri,#seg,#ter{
+    margin-bottom: 300px; 
+}
+/*
+#pri{
+    margin-bottom: 300px; 
+}
+#seg{
+    margin-bottom: 300px; 
+}
+#ter{
+    margin-bottom: 300px; 
+}
+*/
+
+h1{
+    font-family: Impact;
+    font-size: 50px;
+    letter-spacing: 4px;
+    color:black;
+    padding: 20px 0px;
+}
+
+h2{
+    font-family: Impact;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color:black;
+    margin: 20px 0px;
+}
+p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+a{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(11, 235, 67);
+	font-size: 22px;
+    text-decoration: none;
+}
+.w60{
+    width: 60%;
+    margin: 0px auto;
+}
+
+
+
+
+nav a{
+	color: red;
+    font-family: Impact;
+	font-size: 20px;
+    text-decoration: none;
+}
+.periodicos{
+    color: chartreuse;
+    font-family: Roboto;
+	font-size: 22px;
+    text-decoration:none ;
+}
+
+
+ul{
+    margin: 50px;
+    list-style-type:circle;
+}
+.not{
+    width: 70%;
+    margin: 0px auto;
+}
+
+
+footer{
+    text-align: center;
+    background-color: darkorange;
+    padding: 20px 0px;
+}
+
+p:hover, .grande:hover{
+    font-size: 48px;
+}
+
+

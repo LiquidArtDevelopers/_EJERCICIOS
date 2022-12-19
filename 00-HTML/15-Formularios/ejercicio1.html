@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ejercicio 1 - Formularios</title>
+
+
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	.contacto{
+		width: 60%;
+		margin: auto;
+	}
+
+	#form1{
+		width: 100%; 
+		background-color: rgba(207,247,245,1.00);
+		padding: 20px;
+		font-family:  Verdana, "sans-serif";
+	}
+
+
+	#form1 fieldset{
+		border: 2px solid black;
+		padding: 10px;
+	}
+    
+	#form1 legend{
+		font-size: 18px;
+		color: rgba(0,0,0,1.00);
+		font-weight: bold;
+		margin-bottom: 15px;
+	}
+	
+
+
+	#form1 label{
+		/*display: block;*/
+        /*float: left;*/
+       
+        display: inline-block;
+		vertical-align: top;
+		width: 120px;
+		font-size: 18px;
+		padding: 5px;
+	}
+    
+    #form1 label.grande{
+		width: 200px;
+    }
+	
+	#form1 input{
+		/*display: block;*/
+		/*float: left;*/
+        
+        display: inline-block;
+		width: 200px;
+		height: 30px;
+		color: black;
+		font-size: 18px;
+		border: 1px solid rgba(72,72,72,1.00);
+		margin-bottom: 10px;
+	}
+    
+	#form1 textarea{
+        width: 300px;
+        height: 150px;
+    }
+	
+	#form1 input.boton{
+		background-color: rgba(245,247,248,1.00);
+		margin: 10px 10px;
+		color: rgba(0,0,0,1.00);
+		border: 1px solid rgba(51,50,50,1.00);
+		height: 30px;
+		width: 120px;
+      
+	}
+	
+	#form1 input.boton:hover{
+		background-color: red;
+	}
+    
+
+    .centrar{
+        text-align: center;
+    }
+    
+	
+	
+</style>
+
+</head>
+
+<body>
+
+<div class="contacto">
+
+
+<form id="form1" name="form1"  method="post" action="mailto:nombre@gmail.com">
+	<fieldset>
+		<legend>Datos Personales</legend>
+		
+	  <label for="nombre">Nombre:</label>
+	  <input type="text" name="Nombre" id="nom" tabindex="1" required>
+	  <br>
+	  
+	  <label for="apellidos">Apellidos:</label>
+	  <input type="text" name="ape" id="ape" tabindex="2" placeholder="Apellidos">
+	  <br>
+	  
+	  <label for="edad">Edad:</label>
+	  <input type="number" name="eda" id="eda" tabindex="3"> 
+	  <br>
+	  
+	  
+	  <label for="telefono">Teléfono:</label>
+	  <input type="tel" name="tel" id="tel" tabindex="4">
+	  <br>
+	  
+	  <label class="grande" for="fecha de nacimiento">Fecha de nacimiento:</label>
+	  <input type="date" name="nac" id="nac" tabindex="5">
+	  <br>
+	  
+	  
+	  <label for="Email">Email:</label>
+	  <input type="email" name="ema" id="ema" tabindex="6" required>
+	  <br>
+	  
+	  <label for="comentarios">Comentarios:</label>
+	  <br>
+
+<!-- esta etiqueta es diferente,textarea se cierra!! -->
+	  <textarea name="com" id="com" tabindex="7"> </textarea>
+	   
+	  <br>
+	
+	  <!-- botones -->
+	  <input type="submit" name="submit" id="submit" value="Enviar" class="boton">
+    <input type="reset" name="reset" id="reset" value="Borrar" class="boton">
+	</fieldset>
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        .oculto{
+            display: none;
+        }
+        .visible{
+            display: block;
+        }
+        
+        
+    </style>
+    
+    <script>
+        
+    function mostrar(){
+        document.getElementById("mastxt").className="visible";
+        document.getElementById("enlace2").className="visible";
+        document.getElementById("enlace").className="oculto";
+    }
+    
+    function ocultar(){
+        document.getElementById("mastxt").className="oculto";
+        document.getElementById("enlace2").className="oculto";
+        document.getElementById("enlace").className="visible";
+    }
+        
+    </script>
+    
+</head>
+
+<body>
+   
+   <div id="container">
+       
+    <h1>Funciones</h1>
+    <p>Llamamos a una función que calcula el cubo de un número y utilizamos return y utilizamos return para que me devuelva
+    el resultado para poder mostrarlo en la pantalla.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia modi ducimus, accusantium odit quod, reprehenderit consequatur distinctio dicta, animi voluptatum voluptate possimus. Provident molestiae, recusandae atque veniam maxime, itaque commodi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil rem expedita possimus dolorem aperiam necessitatibus similique nobis laborum eligendi alias perferendis et, ipsam facilis est, libero laboriosam consequuntur architecto quo.</p>
+    
+    
+    <p id="mastxt" class="oculto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia modi ducimus, accusantium odit quod, reprehenderit consequatur distinctio dicta, animi voluptatum voluptate possimus. Provident molestiae, recusandae atque veniam maxime, itaque commodi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil rem expedita possimus dolorem aperiam necessitatibus similique nobis laborum eligendi alias perferendis et, ipsam facilis est, libero laboriosam consequuntur architecto quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quas, minima asperiores vitae necessitatibus facilis consequatur, ipsam illo magnam nihil autem obcaecati at sunt a ad adipisci in quia reprehenderit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda ducimus similique debitis ipsam ullam laudantium. Quos magni pariatur, corporis dicta repudiandae mollitia minus ea, culpa a officiis! Mollitia, tempore, delectus!</p>
+       
+    <a id="enlace" href="#" onclick="mostrar()">+info</a>
+    
+    <a class="oculto" id="enlace2" href="#" onclick="ocultar()">-info</a>
+       
+       
+   </div>
+    
+</body>
+</html>

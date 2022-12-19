@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BUCLE FOR</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        img{
+            cursor: pointer;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Con JavaScript vamos a cambiar la imagen</h1>
+       <p>getAtrribute() - devuelve exactamente lo que habia en el código HTML. Puede ser una dirección URL relativa.</p>
+       <p>.src - devuelve una URL absoluta completo, incluso si lo habia en el código HTML en una URL relativa.</p>
+       <img id="foto" onclick="cambiar()" src="imagenes/bombilla-off.gif">
+       <p>Click en la foto para encender/apagar la luz.</p>
+
+       
+       <script>
+           
+           function cambiar(){
+               imagen = document.getElementById("foto"); // variable para localizar la id / ruta
+               
+               if (imagen.getAttribute("src")=="imagenes/bombilla-on.gif"){ 
+                   imagen.src = "imagenes/bombilla-off.gif";
+               }else{
+                   imagen.src = "imagenes/bombilla-on.gif";
+               }
+               
+               
+           }             
+
+           
+       </script>
+
+   </div>
+    
+</body>
+</html>

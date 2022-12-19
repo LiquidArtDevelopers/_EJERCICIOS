@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Array-Matrices</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+        .ocultar{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Array - Matrices</h1>               
+ 
+       <script>
+           
+        medallas=["ORO","PLATA"];
+           
+        document.write("<p>Los elementos del array son "+medallas+"</p>"); // oro plata
+        document.write("<p>Tenemos "+medallas.length+"elementos en la matriz!"); // 2
+          
+           
+           
+        medallas[1]="BRONCE"; // sustituir el elemento con indice 1
+        document.write("<p>Ahora el segundo elemento es: "+medallas+"</p>"); // oro bronce
+           
+           
+        // añadimos un nuevo elemento en el array!
+        medallas[2]="NUEVO";
+        document.write("<p>Nuevo elemento es "+medallas+"</p>"); // oro bronce nuevo
+           
+        document.write("<p>Ahora tenemos "+medallas.length+"en la matriz!</p>");//3
+
+           
+        // añadimos un elemento nuevo SIEMPRE en la última posición!
+        medallas[medallas.length]="ÚLTIMO"; //  IMPORTANTE !!
+        document.write("<p>Nuevo elemento es "+medallas+"</p>");// oro bronce nuevo último
+        document.write("<p>Ahora tenemos "+medallas.length+" en la matriz!</p>"); //4
+           
+           
+        // para saber cual es el último elemento !!
+    document.write("<p>El último elemento insertado es "+medallas[medallas.length-1]+"</p>");
+           
+
+       </script>
+       
+       
+       
+   </div>
+    
+</body>
+</html>

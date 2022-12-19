@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Array-Matrices</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+        .ocultar{
+            display: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+   
+   <div class="container">
+       
+       <h1>Array - Matrices</h1>         
+        
+       <img id="lafoto" src="imagenes/bar01.jpg" width="100%">
+       
+       <br><br>
+       
+       <a onclick="anterior()">Anterior</a>
+       <a onclick="siguiente()">Siguiente</a> 
+       
+       
+       
+<script>
+    
+//no puede estar dentro de la FUNCTION, siempre volvería a hacer 0+1=1 y no pasaría al siguiente  
+num=0;   
+           
+function siguiente(){
+//num=0; esto nunca ponemos dentro de la function !!!!!!     
+fotos=["bar01.jpg","bar02.jpg","bar03.jpg","bar04.jpg","bar05.jpg","bar06.jpg"];
+                 
+    num++; // al hacer click muestra la siguiente foto
+                  
+    if(num == fotos.length){ // si es la última foto
+        num=0; // mostramos la primera foto       
+    }
+    
+    document.getElementById("lafoto").src="imagenes/"+fotos[num];             
+}
+
+    
+function anterior(){ 
+fotos=["bar01.jpg","bar02.jpg","bar03.jpg","bar04.jpg","bar05.jpg","bar06.jpg"];        
+        num--; // al hacer click muestra la siguiente foto     
+        if(num < 0){ // si es la última foto, (num==0)
+            num=fotos.length-1; // mostramos la primera foto
+        }
+        document.getElementById("lafoto").src="imagenes/"+fotos[num];     
+}      
+
+</script>
+       
+       
+       
+   </div>
+    
+</body>
+</html>

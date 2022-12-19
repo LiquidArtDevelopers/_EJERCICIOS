@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+    
+<script>
+    function sumar(){
+        // PEDIR DATO
+        x=prompt("Primer número","");
+        // COMPROBAR DATO
+        while(isNaN(x)==true){
+            x=prompt("Por favor, escriba un número");
+        }
+        
+        // PEDIR DATO
+        y=prompt("Segundo número","");
+        // COMPROBAR DATO
+        while(isNaN(y)==true){
+            y=prompt("Por favor, escriba un número");
+        }
+
+        // SOLO PARA SUMAR, para no concatenar los valores de las variables
+        x=Number(x);
+        y=Number(y);
+        
+        // CALCULAR
+        total=(x+y);
+        // MOSTRAR
+        document.getElementById("txt").innerHTML=total;
+    }   
+</script>
+    
+</head>
+
+<body>
+   
+   <div id="container">
+       
+    <h1>Funciones</h1>
+    <p>Llamamos a una función que calcula el cubo de un número y utilizamos return y utilizamos return para que me devuelva <br>
+    el resultado para poder mostrarlo en la pantalla.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia modi ducimus, accusantium odit quod, reprehenderit consequatur distinctio dicta, animi voluptatum voluptate possimus. Provident molestiae, recusandae atque veniam maxime, itaque commodi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil rem expedita possimus dolorem aperiam necessitatibus similique nobis laborum eligendi alias perferendis et, ipsam facilis est, libero laboriosam consequuntur architecto quo.</p><br>
+    
+    <p id="txt"></p>
+       
+    <button onclick="sumar()">Sumar</button>
+       
+       
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        .oculto{
+            display: none;
+        }
+        .visible{
+            display: block;
+        }
+        
+        
+    </style>
+    
+<script>
+
+
+function descuento(x){
+    
+    por=prompt("dime el porcentaje del descuento",""); // porcentaje
+    por=Number(por)
+    
+    des=(x*por)/100; // descuento
+    return des //devuelve el dato a la función
+    
+}
+    
+function calcular(){
+    
+    imp=prompt("introduce el importe","");
+    imp=Number(imp);
+    
+    total=imp-descuento(imp); // llamamos a la función descuento y pasamos el dato
+    
+    document.getElementById("aki").innerHTML="Tienes el descuento del "+por+"% sobre "+imp+"€. <br> Tienes que pagar "+total+"€."  
+
+}
+        
+</script>
+    
+</head>
+
+<body>
+   
+   <div id="container">
+       
+    <h1>Funciones en cascada</h1>
+    <p>Un script para una tienda de comercio electrónico tiene que calcular el precio total de los productos varias veces.</p>
+    
+    <p id="aki"></p>
+    
+    <button onclick="calcular()">Descuento</button>
+    
+       
+       
+   </div>
+    
+</body>
+</html>

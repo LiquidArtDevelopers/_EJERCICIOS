@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+.contenedor-principal{
+  width: 1100px;
+  margin: 100px auto;
+
+}
+form{
+  width: 1100;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.473);
+  padding: 30px;
+}
+legend{
+  color: orange;
+  font-size: 25px;
+  font-family: Verdana;
+}
+.cuadrado01{
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  
+  color: black;
+  font-size: 20px;
+  font-family: Verdana;
+}
+.caja-sup{
+  display: flex;
+  flex-direction: row;
+}
+.caja-inf{
+  display:flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+.caja-izd{
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+.caja-der{
+  display: flex;
+  flex-direction: column;
+  padding-top: 287px;
+  padding-left: 30px;
+}
+input{
+  color: black;
+  font-size: 20px;
+  font-family: Verdana;
+}
+select{
+  color: black;
+  font-size: 20px;
+  font-family: Verdana;
+}
+label{  
+  margin-top: 20px;
+}
+.caja-der{
+  display: flex;
+  flex-direction: column;
+}

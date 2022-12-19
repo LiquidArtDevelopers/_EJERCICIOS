@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+
+button {
+ cursor: pointer;
+}
+
+body {
+	font-family:sans-serif;
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+	padding-bottom: 100em;
+}
+
+section {
+	border: 2px dashed steelblue;
+	width: 60%;
+	height: 440px;
+	margin:  1em;
+}
+
+
+
+div {
+	border-radius: 5px;
+	color: #444;
+	
+	padding: .5em;
+	font-weight: bold;
+	text-align: center;
+	background: rgba(173, 216, 230);
+	opacity: 1;
+	width:100px;
+	height: 100px;
+	/*position: relative;*/
+}
+
+
+/* Posicionamiento */
+.uno {
+	position: absolute;
+	background: palegreen;
+	top:  0px;
+	left:  0px;
+	z-index:  10;
+	border-radius: 25px;
+	}
+
+.dos {
+	position: fixed;
+	bottom: 80px;
+	right: -555px;
+	background: rgba(224, 113, 94, 0.466);
+	width: 650px;
+	height: 650PX;
+	z-index:  20;
+	Transition: 700ms;
+	border-radius: 50%;
+	padding-top: 85px;	
+	}
+
+.titulo-form{
+	color: rgb(0, 108, 209);
+	writing-mode: vertical-lr;
+    transform: rotate(180deg);
+	position: absolute;
+	top: 210px;
+	left: 40px;
+	font-size: 3rem;
+}
+
+	.dos:hover{
+		right: 0px;
+	}
+
+.tres{
+	position: relative;
+	background: lightblue;
+	top: 0px;
+	left: 0px;
+	z-index: 30;	
+}
+
+.formulario{  
+    background-image: url(../imags-web/mundo2.png);
+    background-size: 100vw 100vh;
+    background-attachment: fixed /* LA IMAGEN SE QUEDA FIJA */;
+    margin: 0;
+    padding: 20px;	
+}
+
+form{
+    width: 450px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px; 
+    box-sizing: border-box; /* así el Padding es hacia dentro */
+    margin-top: 20px;
+    border-radius: 20px;
+	display: block;
+}
+
+
+h2{
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#boton{
+    background-color: #6479ad;
+    color: snow;
+    padding: 20px;
+    opacity: .6;
+}
+
+#boton:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+#boton:active{    
+    transform: scale(0.97);
+}
+
+@media (max-width:780px){
+    section {
+        width: 90%;
+    }
+	form{
+		width: 400px;
+	}
+	.dos {
+		width: 650px;
+		right: -555px;
+	}
+	.dos:hover{		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		right: -85px;
+	}
+} 

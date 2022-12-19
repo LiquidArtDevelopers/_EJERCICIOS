@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+/* contenedores principales */
+
+body{
+    background-image: url(imagenes/fondo-web.jpg);
+    background-attachment: fixed;
+    background-size: 1000px;
+}
+aside{
+    max-width: 1000px;
+    width: 100%;
+    height: 120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+}
+aside img{
+    height: 80%;
+}
+
+
+/* Estilos cabecera */
+header{
+    width: 100%;
+    height: 155px;
+    background-color: black;
+}
+.cabecera{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.cabecera-logo{
+    width: 200px;
+    padding: 10px;
+}
+.cabecera-logo img{
+    height: 100%;
+}
+.cabecera-texto{
+    color: white;
+    margin:auto 0;
+    width: 70%;
+
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.cabecera-rss{
+    display: flex;
+    margin: auto 0;
+}
+a{
+    text-decoration: none;
+}
+
+/* estilos footer */
+footer{
+    background-color: black;
+    width: 100%;
+    height: 88px;
+    display: flex;
+    align-items: center;
+}
+.pie{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;   
+}
+.pie-logo{
+    width: 15%;
+    display: flex; 
+    justify-content: center;  
+}
+.pie-logo img{
+    height: 100%;     
+}
+.pie-texto{
+    color: white;
+    margin:auto 0;
+    width: 70%;
+
+    font-family: sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Estilos navegación */
+
+nav{
+    width: 100%;
+    height: 53px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul{
+    display:flex;
+    flex-direction: row;
+    column-gap: 40px; /* mete espacios entre columnas (sólo siendo flex) */
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+
+    font-family: sans-serif;
+    font-size: 20px;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+}
+a:hover{
+    color:#E3B52F;
+}
+
+/* estilos contenedores de fotos */
+
+.contenedor-principal{
+    /* max-width: 1400px; */
+    max-width: 1000px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.cuadricula-fotos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.cuadrado{
+    width: 250px;
+    height: 250px;
+    background: #E3B52F;
+}
+.negro{
+    background: black;
+}
+.cuadrado img{
+    width: 100%;
+}
+.mitad-cuadrado{
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end; 
+}
+.mitad-cuadrado img{
+    width: 100px;
+}
+.mitad-cuadrado-text{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: white;
+    font-family: sans-serif;
+}
+.cuadrado h1{
+    font-size: 18px;
+    padding-left: 5px;
+}
+.cuadrado p{
+    font-size: 16px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+/* estilos doble fotos */
+
+.doble-fotos{
+    width: 100%;
+    display: flex;
+}
+.cuadrado-grande{
+    width: 50%;
+}
+
+/* estilos contenedores de clasificaciones */
+.contenedor-resultados{
+    width: 100%;
+    height: 828px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-linea-exterior{
+    width: 95%;
+    height: 95%;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 20px;
+
+    font-size: 30px;
+    font-family: sans-serif;    
+}
+.dos-cuadros{
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cuadro{
+    border: 1px solid black;
+    border-radius: 10px;
+
+    width: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+.bloque-imagen-text{
+    width: 100%;
+    height: 25%;
+
+    display: flex;
+    flex-direction: row;
+}
+.bloque-tabla{
+    width: 100%;
+    height: 75%;
+
+    padding-top: 10px;
+    justify-content: flex-start;
+}
+.imagen-resultados{
+    width: 25%;
+}
+.imagen-resultados img{
+    width: 100%;
+}
+.texto-resultados{
+    width: 75%;
+    padding-left: 20px;
+}
+.texto-resultados h1{
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.texto-resultados p{
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.texto-resultados span{
+    font-family: monospace;
+    font-size: 15px;
+    color: white;
+    background-color: #E3B52F;
+    padding: 2px 20px;
+    border-radius: 5px;
+}
+.tabla{
+    width: 100%;
+    height: 100%;
+    border: hidden;
+    border-spacing: 0; /* quita los bordes interiores que pone por defecto la tabla  */
+    border-collapse: collapse; /* permite poner bordes interiores */
+    border-bottom: 1px solid black; /* la damos borde botton a la tabla */
+
+    font-family: sans-serif;
+    font-size: 13px;
+}
+.fila-sombreada{
+    background-color: darkgray;
+}
+.col01{
+    width: 10%;
+}
+tr{
+    border: 1px solid black; /* le damos borde a las filas */
+}
+td{
+    padding: 0 5px;
+}
+th{
+    height: 50px;
+}
+
+@media (max-width:768px){
+    /* Estilos navegación */
+
+    nav{        
+        height: 100%; /*  */        
+        padding: 10px 20px; /*  */
+    }
+    ul{
+        column-gap: 20px; /* mete espacios entre columnas (sólo siendo flex) */
+        font-size: 19px; /*  */
+    }
+
+    /* Estilos aside */
+    aside img{
+        height: auto;
+    }
+
+    /* estilos contenedores de fotos */
+
+    
+    .cuadrado{
+        width: 240px; /*  */
+        height: 240px; /*  */
+    }   
+    
+    /* estilos doble fotos */
+
+    .doble-fotos{
+        flex-direction: column; /*  */    
+    }
+    
+    /* estilos contenedores de clasificaciones */
+    .contenedor-resultados{
+        height: 100%; /*  */
+        padding-top: 20px; /*  */
+        padding-bottom: 20px;/*  */
+    }
+    .titulo{
+        padding-left: 0; /*  */
+        padding: 10px 20px; /*  */
+    }
+    .dos-cuadros{
+        flex-direction: column; /*  */
+    }
+    .cuadro{
+        width: 90%; /*  */
+    }
+
+    tr{
+        height: 25px; /*  */
+    }
+    
+    /* estilos footer */
+
+    footer{
+        
+        height: 100%; /*  */
+    }
+    .pie{
+       
+        flex-direction: column;/*  */
+        row-gap: 10px; /*  */
+        padding-bottom: 20px; /*  */
+        padding-top: 10px; /*  */
+    }
+    
+  
+}
+
+
+
+

@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mostrar flecha subir</title>
+</head>
+
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="js/scrolltop.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+
+
+<style>
+	* {
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+	}
+	
+	#container {
+		width: 80%;
+		margin: auto;
+		height: 2000px; /* auto  */
+		background-color: rgba(213,157,228,1.00);
+	}
+	
+	#flecha {
+		position: fixed;
+		/*display: none;*/
+		bottom: 50px;
+		right: 50px;
+		opacity: 0;
+		height: 50px;
+		width: 50px;
+        z-index: 99;
+        
+		transition: opacity 3s;
+	}
+	
+	img {
+		width: 100%;
+	}
+    
+	h1{
+			font-family: 'Luckiest Guy', cursive;
+			font-size: 80px;
+			padding: 25px;
+			color: white;
+		}
+	
+</style>
+
+<body>
+
+<div id="container">
+    <h1>INICIO</h1>
+</div>
+
+<a id="flecha" href="#container">
+	<img src="img/flecha.svg" alt="">
+</a>
+
+
+<script>
+    
+$(function(){
+	
+    $(window).scroll(function(){
+		
+	   if($(window).scrollTop() > 800) {
+           //alert("hola")
+		  $("#flecha").css({opacity: "1"});
+	   } else {
+		  $("#flecha").css({opacity: "0"});
+	   }
+
+    });
+	
+});
+	
+</script>
+
+</body>
+</html>

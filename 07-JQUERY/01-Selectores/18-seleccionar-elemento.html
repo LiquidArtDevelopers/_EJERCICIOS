@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        
+        .container{
+            width: 1000px;
+            display: block;
+            margin: 0px auto;
+            padding-top: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>SELECTORES $ ("selector")</h1>
+       
+       <p id="txt1">MENOS DE 10 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque dolore dolor, suscipit officiis? Vel in ad quod aliquid. Culpa repudiandae nihil sint expedita assumenda similique excepturi, debitis iusto ducimus rem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis rem aperiam porro dolore aliquid suscipit dolorem, voluptatem numquam laborum vel tempore maiores deleniti, provident fuga illo omnis officiis dignissimos praesentium.</p>
+       
+       <p id="txt2">MÁS DE 10 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque dolore dolor, suscipit officiis? Vel in ad quod aliquid. Culpa repudiandae nihil sint expedita assumenda similique excepturi, debitis iusto ducimus rem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis rem aperiam porro dolore aliquid suscipit dolorem, voluptatem numquam laborum vel tempore maiores deleniti, provident fuga illo omnis officiis dignissimos praesentium.</p>
+       
+
+       <script>
+           
+           $(function(){ // función de jquery
+               
+               num=prompt("escribe un número","");
+               
+               while(isNaN(num) == true){
+                   alert("sólo números por favor");
+                   num=prompt("escribe un número","");
+                   
+               }
+               
+               if(num <= 10){
+                   $("#txt1").css("background-color","green");
+                   //$("#txt1").hide(1000);
+               } else {
+                   $("#txt2").css("background-color","blue");
+                   //$("#txt2").hide(1000);
+               }
+                             
+            }); 
+
+
+       </script>
+  
+   </div>
+    
+</body>
+</html>

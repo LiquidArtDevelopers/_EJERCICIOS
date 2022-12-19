@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+
+<style>
+	
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+	
+html,body{
+height:100%;
+width:100%;	
+}
+#menu{
+	height:93%;
+	width:300px;
+	background-color: #D8AFFC;
+	border:1px solid #CCCCCC;
+	position: absolute; /*IMPORTANT*/
+	left:-300px;/*Ocultar neby, moverlo hacia la izq*//*tiene que ser mas del width*/
+	top: 50px;/*Esta distancia es variable, del icono al menu*/ 
+	z-index:999; /**para mostrarlo encima de otros contenidos*/
+}
+#menu ul li{
+	list-style-type:none;	
+}
+#menu ul li ul li a{
+	background-color: rgba(217,138,252,1.00);
+	padding-left:10px;
+	color:rgba(255,255,255,1.00);	
+}
+
+#menu ul li a{
+	display:block;
+	width:200px;
+	background-color: #9E14FB;
+	padding:10px 0px;
+	border-top:1px solid #7C7C7C;
+}
+</style>
+</head>
+
+<body>
+
+<img id="btn" src="bot_menu.png" width="50" height="50">
+<br>
+
+<nav id="menu">
+
+	<ul>
+		<li class="con"><a href="#">Primera</a>
+        		<ul>
+            		<li><a href="#">p-uno</a></li>
+                	<li><a href="#">p-dos</a></li>
+                	<li><a href="#">p-tres</a></li>
+              	</ul>
+          </li>
+        <li><a href="#" class="sin">Segunda</a></li> 
+        <li class="con"><a href="#">Tercera</a>
+        		<ul>
+            		<li><a href="#">t-uno</a></li>
+                	<li><a href="#">t-dos</a></li>
+                	<li><a href="#">t-tres</a></li>
+              	</ul>
+          </li>   
+        <li><a href="#">Cuarta</a></li>   
+	</ul>
+	
+</nav>
+
+
+<script>
+   
+$(function(){
+	
+	var x=0;
+	$("#btn").click(function(){
+		if(x == 0){
+		$("#menu").animate({left:"0px"},1000);
+		x = 1
+		} else {
+		$("#menu").animate({left:"-200px"},1000);
+		x = 0	
+		}
+	});
+	
+	//ocultar todos los submenus
+    $("ul li ul").hide();
+	 //al clickar en un li CON submenu
+	$(".con").click(function(){
+		//desplegar ul hijo
+		$(this).children("ul").slideToggle();
+		$(this).siblings().children("ul").slideUp();
+	});
+	
+
+});
+
+
+</script>
+
+</body>
+</html>

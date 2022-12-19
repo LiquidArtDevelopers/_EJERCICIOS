@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BUCLE FOR</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Bucle FOR</h1>
+       <p>Contraseña con 3 oportunidades de error</p>
+
+       
+    <script>
+            
+           psw=prompt("Escribe la contraseña,tienes 3 oprtunindades.");
+           psw=psw.toLowerCase();
+        
+           
+           for (x=1; psw!="area" && x<3; x++){
+               psw=prompt("ERROR: ¡contraseña incorrecta! \n Intenta otra vez. \n Te quedan "+(3-x)+" intentos.");
+                psw=psw.toLowerCase();
+           }
+        
+        /*
+            x=1;
+            while(psw!="area" && x<3){
+                psw=prompt("ERROR: ¡contraseña incorrecta! \n Intenta otra vez. \n Te quedan "+(3-x)+" intentos.");
+                psw=psw.toLowerCase();
+                x++;
+            }
+        */     
+                  
+        
+           
+           if (psw=="area"){
+               document.write("<p>Contraseña correcta</p>");
+           }else{
+               document.write("<p>Se han agotado los intentos</p>");
+           }
+
+           
+    </script>
+
+   </div>
+    
+</body>
+</html>

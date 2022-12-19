@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULARIOS</title>
+    <style>
+    
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        .visible{
+            display: block;
+        }
+        .oculto{
+            display: none;
+        }
+        input{
+            margin: 10px;
+        }
+        .rojo{
+            border: 2px solid red;
+            background-color:beige;
+        }
+        .bn{
+            border: 2px solid black;
+        }
+
+    </style>
+    
+    <script>
+        
+        function comprobar(){ 
+            
+          // recibir datos
+            nombre=document.getElementById("nom").value;
+            apellido=document.getElementById("ape").value;
+            
+            document.getElementById("nom").className=false;
+            document.getElementById("ape").className=false;
+            
+            if(nombre == ""){
+                alert("Campo Nombre vacío");
+                document.getElementById("nom").className="rojo";
+                document.getElementById("nom").focus(); 
+                // para que el cursor se quede dentro
+                
+                    }else if(apellido == ""){
+                        alert("Campo Apellido vacío");
+                        document.getElementById("ape").className="rojo";
+                        document.getElementById("ape").focus(); 
+                        // para que el cursor se quede dentro
+                
+                    }else{
+                    alert("Ok");
+                    //document.formu.action="mailto:nombre@gmail.com"; // formu = name
+                    //document.formu.submit(); // name + enviar
+                        
+            // input type=submit está prohibido poner porque debemos comprobar los datos antes de ser enviados.
+            // OBLIGATORIAMENTE PONER input type=buttom
+            }
+            
+        }
+
+        
+        
+    </script>
+</head>
+<body>
+   
+   <div id="container">
+     
+     <h1>Formularios</h1>
+     
+  <!-- action lo pondremos en javascript --> 
+     
+<form id="formu" name="formu" enctype="text/plain">
+      
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nom" id="nom">
+      <br>
+      
+      <label for="apellido">Apellido:</label>
+      <input type="text" name="ape" id="ape">
+      <br>
+            
+      <input type="button" onclick="comprobar()" value="Comprobar">
+       
+</form>
+   
+   </div>
+    
+</body>
+</html>

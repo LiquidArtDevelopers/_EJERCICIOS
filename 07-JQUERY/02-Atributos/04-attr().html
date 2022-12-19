@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js">
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+      
+      <h1>Atributo attr()</h1>
+      
+    <br><br>
+       
+    <a href="http://www.areafor.com" target="_blank" id="area">AREA</a>
+      
+    <br><br>
+     
+    <button type="button" id="btn">Mostrar href Valor</button>
+   
+<script>
+        $(function(){
+
+              $("#btn").click(function(){
+                  
+                  valor=$("#area").attr("href");
+                  alert(valor);
+                  
+                  alert($("#area").attr("target"));
+                  alert($("#area").attr("id"));
+                  
+                });
+           
+        });
+       
+</script>
+      
+       
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        a{
+            cursor: pointer;
+        }
+    </style>
+    
+    <script>
+        
+    function don(){
+    document.getElementById("tit").innerHTML="DONOSTIA";
+    document.getElementById("foto").src="imagenes/foto01.jpg";
+    document.getElementById("txt").innerHTML="DONOSTIA es Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt vel quis delectus, facere quasi doloremque inventore molestias accusantium tempora suscipit, unde quibusdam fugiat laborum nostrum ea, libero eius. Enim, quidem! ";
+    document.getElementById("txt").style.backgroundColor="red";
+    document.getElementById("txt").style.color="white";  
+    }
+ 
+    function bil(){
+    document.getElementById("tit").innerHTML="BILBAO";
+    document.getElementById("foto").src="imagenes/foto02.jpg";
+    document.getElementById("txt").innerHTML="BILBAO es Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt vel quis delectus, facere quasi doloremque inventore molestias accusantium tempora suscipit, unde quibusdam fugiat laborum nostrum ea, libero eius. Enim, quidem! ";
+    document.getElementById("txt").style.backgroundColor="green"; 
+    document.getElementById("txt").style.color="white"; 
+    }
+        
+    function iru(){
+    document.getElementById("tit").innerHTML="IRUÑA";
+    document.getElementById("foto").src="imagenes/foto03.jpg";
+    document.getElementById("txt").innerHTML="IRUÑA es Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt vel quis delectus, facere quasi doloremque inventore molestias accusantium tempora suscipit, unde quibusdam fugiat laborum nostrum ea, libero eius. Enim, quidem! ";
+    document.getElementById("txt").style.backgroundColor="blue";  
+    }
+    </script>
+    
+</head>
+
+
+
+
+<body>
+   
+   <div id="container">
+   
+    <a onclick="don()">Donostia</a> 
+    <a onclick="bil()">Bilbao</a> 
+    <a onclick="iru()">Iruña</a>
+
+    <br>
+       
+    <h1 id="tit">DONOSTIA</h1>
+    <br>
+    <img id="foto" src="imagenes/foto01.jpg" title="Donostia" width="50%">
+    <br>
+    <p id="txt">DONOSTIA ES Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt vel quis delectus, facere quasi doloremque inventore molestias accusantium tempora suscipit, unde quibusdam fugiat laborum nostrum ea, libero eius. Enim, quidem!</p>
+       
+  
+   </div>
+    
+</body>
+</html>

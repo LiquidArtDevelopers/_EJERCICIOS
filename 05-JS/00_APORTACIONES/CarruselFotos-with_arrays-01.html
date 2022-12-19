@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería FOTOS</title>
+    <style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .container {
+       position: relative;
+    }
+
+    #sep-title {
+        text-align: center;
+        font-size: 20px;
+        margin:0px;
+        height:40px;
+        border-width:0;
+        color:white;
+        background-color:rgb(27, 17, 51);
+        
+        /* display properties*/
+        display: flex;
+  			flex-direction: row;
+	  		flex-wrap: wrap;
+		  	justify-content: space-around;
+			  align-items: stretch;
+			  align-content: center;			
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    h3{ text-align: center; margin-top:0px; height: 15px;}
+
+    .misFotos {
+        display: none;
+    		width:90%;
+        height:auto;		    
+		    margin:auto;
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+
+    .num-text {
+        color: #f2f2f2;
+        font-size: 14px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .columna {
+        float: left;
+        width: 20%;
+    }
+
+    .carrusel{
+        opacity:0.7;   
+        height: 150px; 
+    }
+		
+    .ant, .sig {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;	  
+      color: rgb(149, 149, 238);
+      font-weight: bold;
+      font-size: 35px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;	  
+    }
+
+      /* Position the "next button" to the right */
+    .ant {
+      left: 20pX;
+    }
+
+
+    .sig {
+      right: 20px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    hr{
+      margin:0px;height:30px;border-width:0;color:rgb(88, 22, 241);background-color:rgb(48, 47, 47)
+    }
+
+
+    /* ZOOM EFFECTS */
+    .zoom {
+      /* padding: 50px;
+       background-color: green; */
+      transition: transform .2s;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;      
+    }
+
+    .zoom:hover {
+      -ms-transform: scale(1.2); /* IE 9 */
+      -webkit-transform: scale(1.2); /* Safari 3-8 */
+      transform: scale(1.2); 
+      opacity:1;
+    }
+
+    
+    </style>
+</head>
+
+<body>
+
+    <h3>GALERIA FOTOS</h3>
+    
+    <div class="container">
+      <div class="misFotos">
+        <div class="num-text">1</div>
+        <img src="imagenes/foto01.jpg" style="width:100%">
+      </div>
+    
+      <div class="misFotos">
+        <div class="num-text">2</div>
+        <img src="imagenes/foto02.jpg" style="width:100%">
+      </div>
+    
+      <div class="misFotos">
+        <div class="num-text">3</div>
+        <img src="imagenes/foto03.jpg" style="width:100%">
+      </div>
+        
+      <div class="misFotos">
+        <div class="num-text">4</div>
+        <img src="imagenes/foto04.jpg" style="width:100%">
+      </div>
+    
+      <div class="misFotos">
+        <div class="num-text">5</div>
+        <img src="imagenes/foto05.jpg" style="width:100%">
+      </div>
+      
+      <a class="ant" onclick="moverFoto(-1)">❮</a>
+      <a class="sig" onclick="moverFoto(1)">❯</a>
+    
+      <!-- <hr>  -->
+      <div id="sep-title"></div>
+
+      <div class="row">
+        <div class="columna">
+          <img id="foto1" class="carrusel cursor zoom" src="imagenes/foto01.jpg" style="width:100%" onclick="asignaFoto(1)" alt="fot01" title="foto01">
+        </div>
+        <div class="columna">
+          <img id="foto2" class="carrusel cursor zoom" src="imagenes/foto02.jpg" style="width:100%" onclick="asignaFoto(2)" alt="fot02" title="foto02">
+        </div>
+        <div class="columna">
+          <img id="foto3" class="carrusel cursor zoom" src="imagenes/foto03.jpg" style="width:100%" onclick="asignaFoto(3)" alt="foto03" title="foto03">
+        </div>
+        <div class="columna">
+          <img id="foto4" class="carrusel cursor zoom" src="imagenes/foto04.jpg" style="width:100%" onclick="asignaFoto(4)" alt="foto04" title="foto04">
+        </div>
+        <div class="columna">
+          <img id="foto5" class="carrusel cursor zoom" src="imagenes/foto05.jpg" style="width:100%" onclick="asignaFoto(5)" alt="foto05" title="foto05">
+        </div>    
+      </div>
+    </div>
+	
+    <script>
+		
+        var nFot=1;		
+		    asignaFoto(nFot);
+
+        function asignaFoto(numFot) {			
+			      
+            var fotosGrandes = document.getElementsByClassName("misFotos");
+            var fotosPequeñas = document.getElementsByClassName("carrusel");  
+            for (i=0; i<fotosGrandes.length; i++ ) {
+                // console.log('i es: '+ i);
+                fotosGrandes[i].style.display="none";  
+                fotosPequeñas[i].style.opacity="0.7";             
+            }
+            fotosGrandes[numFot-1].style.display="block";
+            fotosPequeñas[numFot-1].style.opacity="1";			      
+            document.getElementById('sep-title').innerHTML=fotosPequeñas[numFot-1].title; 
+            nFot=numFot;
+            
+        }
+
+        function moverFoto(m) {			
+          // console.log('nFot es: ' + nFot + ' m es: ' + m);          
+          if (nFot == 5 && m == 1) { 
+            nFot=1;
+            asignaFoto(nFot);				
+          } else if (nFot == 1 && m == -1) {
+            nFot=5;
+            asignaFoto(nFot);
+          } else {
+            nFot = nFot + m;
+            asignaFoto(nFot);
+          }				
+        }
+
+        
+    </script>
+
+    
+</body>
+</html>

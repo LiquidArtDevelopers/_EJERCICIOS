@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+      
+      <h1>Atributos text() y html()</h1>
+      
+      
+      <p id="txt1">Vamos a escribir algo en este párrafo</p>
+      
+      <p id="txt2">Vamos a escribir algo en este párrafo, otra vez</p>
+      
+      <div id="foto">
+          <img src="img/04-Jellyfish.jpg" width="30%">
+      </div>
+      
+      <div id="otra"></div>
+      
+      
+      <button id="btn1">Mostrar TEXT</button>
+      <button id="btn2">Mostrar HTML</button>
+      <button id="btn3">Mostrar IMG</button>
+
+    <script>
+       
+          $(function(){
+
+            $("#btn1").click(function(){
+                $("#txt1").text("<p>Otro texto para mostrar en <br> en dos lineas!!</p>");
+            });
+          
+            $("#btn2").click(function(){
+                $("#txt2").html("Otro texto para mostrar en <br> en dos lineas!!");
+            });
+          
+            $("#btn3").click(function(){
+                $("#otra").html("<img src='img/a.png' alt='área'>");
+                //$("#otra").text("<img src='img/a.png'>");
+            });
+              
+        });
+       
+    </script>
+      
+       
+   </div>
+    
+</body>
+</html>

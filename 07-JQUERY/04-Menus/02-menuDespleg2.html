@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+
+<title>Menú</title>
+
+
+<style type="text/css">
+.sub{
+	background-color: #CCC;
+	width: 100px;
+}
+ul{
+	font-size:20px;
+	margin-left: 30px;
+}
+</style>
+
+
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+
+
+</head>
+<body>
+
+<h1>Menu Desplegable Vertical </h1>
+
+<p><a href="#" id="abrir">abrir todos</a> - <a href="#" id="cerrar">cerrar todos</a></p>
+
+<ul>
+  <li class="con"><a href="#">Primera</a>
+	<ul>
+      <li><a href="#">p-uno</a></li>
+      <li><a href="#">p-dos</a></li>
+      <li><a href="#">p-tres</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Segunda</a></li>
+  <li class="con"><a href="#">Tercera</a>
+<ul>
+      <li><a href="#">t-uno</a></li>
+      <li><a href="#">t-dos</a></li>
+      <li><a href="#">t-tres</a></li>
+      <li><a href="#">t-cuatro</a></li>
+    </ul>
+  </li>
+  <li class="con"><a href="#">Cuarta</a>
+  	<ul>
+      <li><a href="#">c-uno</a></li>
+      <li><a href="#">c-dos</a></li>
+      </ul>
+  </li>
+</ul>
+
+<script>
+$(function(){
+    
+    $("li ul").hide();//ocultar todas las sublistas
+    
+    $("a#abrir").click(function(){
+	   $("li ul").slideDown();//desplegar todas las sublistas
+    })
+    
+    $("a#cerrar").click(function(){
+	   $("li ul").slideUp();//recoger todas las sublistas
+    })
+    
+    $(".con").click(function(){	//al clickar en un li con submenu
+  	     //desplegar la sublista(hija) que toca 
+	   $(this).children("ul").slideToggle();
+	   //recoger el resto de las sublistas
+	  $(this).siblings().children("ul").slideUp();
+    })
+});
+
+</script>
+
+</body>
+</html>

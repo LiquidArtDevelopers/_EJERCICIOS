@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        
+        .container{
+            width: 1000px;
+            display: block;
+            margin: 0px auto;
+            padding-top: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>SELECTORES $("selector")</h1>
+       
+       <h2>Utilizar métodos focus() y blur() en formularios</h2>
+       
+       <form id="form1" name="form1" action="pepe@gmail.com">
+           
+           <label for="nombre">Nombre:</label>
+           <input type="text" name="nom" id="nom">
+           <br><br>
+           <label for="apellido">Apellido:</label>   
+           <input type="text" name="ape"> 
+           <br><br>
+           <label for="email">Email:</label>       
+           <input type="email" name="ema">
+           <br><br>
+           <input type="button" value="Enviar">
+
+       </form>
+       
+
+       <script>
+           
+           $(function(){ // función de jquery
+               
+               // cursor dentro del campo de formulario
+               $("input").focus(function(){
+                    $(this).css("background-color","red");
+               });
+               
+               // cursor fuera del campo del formulario
+               $("input").blur(function(){
+                    $(this).css("background-color","grey");
+               });
+    
+               
+            }); 
+
+       </script>
+  
+   </div>
+    
+</body>
+</html>

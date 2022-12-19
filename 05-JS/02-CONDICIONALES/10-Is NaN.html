@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ejemplo</title>
+    
+</head>
+<body>
+  
+   <h1>Comprobar si el dato es número</h1>
+   <h2>isNaN()</h2>
+   <h2>toFixed(2)- fijar los decimales</h2>
+   
+   <p>La función isNaN() determina cuando el valor es NaN o no.
+   <br>
+    true si es valor dado es NaN, de otro modo, false.</p>
+
+
+   <script>
+    // pedir dato 
+    euros=prompt("Cuantos euros tienes??");
+       
+       // comprobar si es númerico
+       if(isNaN(euros) == true){
+           document.write("<p>Solo NÚMEROS por favor </p>");
+       }else{
+           iva=(euros*0.21);
+           iva=iva.toFixed(2); // con esto fijamos 2 decimales
+           document.write("<p>El IVA de "+euros+"€ es: "+iva+"€</p>");
+       }
+       
+   </script>
+   
+    
+</body>
+
+</html>

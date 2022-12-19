@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>El Hamster</title>
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<style>
+	
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}		
+		#container{
+			max-width: 1000px;
+			margin: 50px auto;
+			background-color: white;
+		}
+		
+		body{
+			background-color: darkgray;
+			font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+		}
+		
+		h1{
+			padding: 25px;
+			text-align: center;
+			color: mediumvioletred;
+		}
+		section{
+			overflow: auto;
+		}
+		.fotillo{
+			display: block;
+			width: 33.3%;
+			float: left;
+		}
+		
+		
+		#portatexto{
+			clear: both;
+			padding: 25px;
+			
+		}
+		
+		.azul{
+			background-color: cornflowerblue;
+		}
+		
+		.naranja{
+			background-color: tomato;
+		}
+		
+		.amarillo{
+			background-color: greenyellow;
+		}
+		
+	</style>
+
+</head>
+
+<body>
+	<div id="container">
+		
+		<section>
+			<h1>La vida del Hamster</h1>
+            <article id="porta-foto">
+             	<a href="#" class="fotillo" id="ft1"><img src="img/ElHamster.jpg" width="100%" title="hamster 1"></a>
+              	<a href="#" class="fotillo" id="ft2"><img src="img/hamsterchino.jpg" width="100%" title="hamster durmiente"></a>
+              	<a href="#" class="fotillo" id="ft3"><img src="img/hamsterRuso.jpg" width="100%" title="hamster hippo"></a>
+             </article>
+			
+			<article id="portatexto">
+				
+			  <p id="txt1">EL HAMSTER  es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. </p>
+				
+				<p id="txt2">EL HAMSTER DUERME Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. </p>
+				
+				<p id="txt3"> EL HAMSTER SE TRANSFORMA EN HIPOPÓTAMO Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. </p>
+			</article>
+		</section>
+		
+		
+	</div>
+	
+	<script>
+		
+	$(document).ready(function(){
+		$("#txt2, #txt3").hide();
+		$("#portatexto").addClass("azul");
+		
+		
+		$("#ft2").click(function(){
+			$("#txt2").show();
+			$("#txt1, #txt3").hide();
+			$("#portatexto").removeClass();
+			$("#portatexto").addClass("naranja");
+		});
+		
+		$("#ft3").click(function(){
+			$("#txt3").show();
+			$("#txt1, #txt2").hide();
+			$("#portatexto").removeClass();
+			$("#portatexto").addClass("amarillo");
+		});
+		$("#ft1").click(function(){
+			$("#txt1").show();
+			$("#txt2, #txt3").hide();
+			$("#portatexto").removeClass();
+			$("#portatexto").addClass("azul");
+		});
+		
+	});
+	
+	</script>
+</body>
+</html>

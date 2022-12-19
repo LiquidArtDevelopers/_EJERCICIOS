@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JASON</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>JSON</h1>
+       <p>Se utilizan para almacenar varios valores en una sola variable.</p>
+       <p>Sintaxis:</p>
+       <p>
+        let cadena1 = '{"persona":[{"ustelefono":"3544432","usidrol":0,"userid":1,"usapellidos":"Perez","useremail":"andrea@gmail.com","usnombres":"Andrea"}]}';</p>
+        <P>
+
+        let cadena2 = '[{"ustelefono":"3544432","usidrol":0,"userid":0,"usapellidos":"Perez","useremail":"andrea@gmail.com","usnombres":"Andrea"}]';
+
+       </p>
+      
+    <p> let json1 = JSON.parse(cadena1);<BR>
+        let json2 = JSON.parse(cadena2);</p>
+    <h2>Textos con JS</h2>    
+          
+       <p id="txt1"></p>
+       
+       <p id="txt2"></p>
+       <p id="txt3"></p>
+       <p id="txt4"></p>
+       
+<script>
+    let cadena1 = '{"persona":[{"ustelefono":"3544432","usidrol":0,"userid":1,"usapellidos":"Perez","useremail":"andrea@gmail.com","usnombres":"Andrea"}   ]}';
+
+    let cadena2 = '[{"ustelefono":"3544432","usidrol":0,"userid":0,"usapellidos":"Perez","useremail":"andrea@gmail.com","usnombres":"Andrea"}]';
+
+    let json1 = JSON.parse(cadena1);
+    let json2 = JSON.parse(cadena2);
+
+    // Acceder a ustelefono con el primer json
+    console.log(json1.persona[0].ustelefono);
+    document.getElementById("txt1").innerHTML='Telefono : ' + json1.persona[0].ustelefono;
+    // Acceder a ustelefono con el segundo json
+    console.log(json2[0].ustelefono);
+    document.getElementById("txt2").innerHTML='Telefono : ' + json2[0].ustelefono; 
+</script>
+       
+       
+       
+   </div>
+    
+</body>
+</html>

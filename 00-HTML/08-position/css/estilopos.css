@@ -1,0 +1,53 @@
+body {
+	font-family:sans-serif;
+	margin: 0;
+	padding: 0;
+	padding-top: 80px;
+	padding-bottom: 200em;
+}
+
+section {
+	border: 2px dashed steelblue;
+	width: 50%;
+	height: 440px;
+	margin:  5em;
+}
+
+div {
+	border-radius: 5px;
+	color: #444;
+	
+	padding: .5em;
+	font-weight: bold;
+	text-align: center;
+	background: rgba(173, 216, 230);
+	opacity: 1;
+	width:100px;
+	height: 100px;
+	/*position: relative;*/
+}
+
+
+/* Posicionamiento */
+.uno {
+	position: relative;
+	background: palegreen;
+	top:  90px;
+	left:  50px;
+	z-index:  30;
+	}
+
+.dos {
+	position: fixed;
+	background: tomato;
+	z-index:  20;
+	}
+.tres{
+	position: relative;
+	background: lightblue;
+	top: -50px;
+	left: 50px;
+	z-index: 25 ;
+
+	
+}

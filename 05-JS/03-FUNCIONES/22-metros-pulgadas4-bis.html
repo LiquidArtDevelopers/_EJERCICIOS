@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        .oculto{
+            display: none;
+        }
+        .visible{
+            display: block;
+        }
+        
+        
+    </style>
+    
+    <script>
+// si me llega la "m" hago calculo de metros a pulgadas, si no, hago calculo de pulgadas a metros
+function convertir(x){
+        
+    if(x == "m"){
+            dato=prompt("Escribe METROS");
+            if(isNaN(dato)==true){
+                document.getElementById("txt").innerHTML="ERROR, no es número!!!";
+            }else{
+                pulgada=(dato*100)/2.54;
+                pulgada=pulgada.toFixed(2); 
+                document.getElementById("txt").innerHTML= pulgada+" pulgadas";
+            }
+    }else{
+            dato=prompt("Escribe PULGADAS");
+            if(isNaN(dato)==true){
+                document.getElementById("txt").innerHTML="ERROR, no es número!!!";
+            }else{
+                metro=(dato*2.54)/100;
+                metro=metro.toFixed(2);
+                document.getElementById("txt").innerHTML= metro+" metros"; 
+            }
+    }
+}
+        
+        
+    </script>
+    
+</head>
+
+<body>
+   
+   <div id="container">
+       
+    <h1>Función METROS A PULGADAS</h1>
+    <p>Escribe el código de una función a la que se pasa como parámetro un número entero (metros) y devuelve como resultado el cálculo de metros a pulgadas. Mostrar el resultado en pantalla.</p>
+    
+    <p id="txt"></p>
+    
+    <button onclick="convertir('m')">Metros a pulgadas</button>
+    <button onclick="convertir('p')">Pulgadas a metros</button>
+    
+       
+       
+   </div>
+    
+</body>
+</html>

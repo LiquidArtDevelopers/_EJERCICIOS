@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    
+    
+    
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+        .orange{
+            background-color: orange;
+            padding: 20px;
+            color: gray;
+            border: 1px solid black;
+        }
+        
+       
+        
+    </style>
+    
+    
+    
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+      
+      <h1>addClass() - removeClass()</h1>
+      
+      <div id="div1">
+      
+      <p id="p1">UNO....Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus eligendi voluptates atque iure, iste sequi quis saepe natus quo architecto pariatur commodi hic doloribus asperiores ut voluptatem quibusdam! Vel, aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsum voluptas suscipit quibusdam consequuntur, quod earum impedit dignissimos libero nobis labore nihil cumque sit porro adipisci odit voluptates voluptatum reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius id omnis eveniet! Quo illo expedita fugit rem sequi nemo quasi molestiae perferendis asperiores iure voluptatum numquam, provident, consequuntur atque pariatur!</p>
+      
+      <p id="p2">UNO....Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus eligendi voluptates atque iure, iste sequi quis saepe natus quo architecto pariatur commodi hic doloribus asperiores ut voluptatem quibusdam! Vel, aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsum voluptas suscipit quibusdam consequuntur, quod earum impedit dignissimos libero nobis labore nihil cumque sit porro adipisci odit voluptates voluptatum reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius id omnis eveniet! Quo illo expedita fugit rem sequi nemo quasi molestiae perferendis asperiores iure voluptatum numquam, provident, consequuntur atque pariatur!</p>
+      
+      <br><br>
+      
+      <button id="btn1">addClass</button>
+      <button id="btn2">removeClass</button>
+      
+      
+      
+      
+      </div>
+
+<script>
+       
+    $(function(){
+        
+                // aplicar estilo 
+              $("#btn1").click(function(){
+                $("#p1").addClass("orange");
+              });
+              
+                // eliminar estilo 
+              $("#btn2").click(function(){
+                $("#p1").removeClass("orange");
+              });
+              
+                            
+    });
+       
+</script>
+      
+       
+   </div>
+    
+</body>
+</html>

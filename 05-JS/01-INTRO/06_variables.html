@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Variables</title>
+
+<style>
+    
+body {
+	background-color: #CCC;
+    font-size: 20px;
+}
+#container {
+	max-width: 1000px;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFF;
+	padding: 10px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+<h1> Variables en JS</h1>
+
+<p>Variables JavaScript son contenedores para el almacenamiento de valores de datos.</p>
+
+<p>Todos las variables en JavaScript deben ser identificados con <strong>nombres únicos</strong>!!!!</p>
+
+<p>Estos nombres únicos son llamados identificadores.</p>
+
+<p>Los identificadores pueden ser nombres cortos (como X e Y), o nombres más descriptivos (edad, suma, totalVolume).</p>
+
+<p>Las normas generales para la construcción de nombres para las variables (identificadores únicos)son:</p>
+
+<ul>
+	<li>Los nombres pueden contener letras, dígitos, guiones y signos de dólar.</li>
+	<li>Los nombres deben comenzar con una letra</li>
+	<li>Los nombres también pueden comenzar con $ y _ (no se utiliza mucho)</li>
+	<li>Los nombres son mayúsculas y minúsculas (y e Y son variables diferentes)</li>
+	<li>Las palabras reservadas no se pueden utilizar como nombres</li>
+</ul>
+
+
+
+<h2>Mostrar datos con las variables</h2>
+
+<p id="datos"></p>
+<ul>
+	<li id="nom"></li>
+    <li id="eda"></li>
+    <li id="tel"></li>
+	<li id="ciu"></li>
+</ul>
+
+<script>
+// declarar las variables
+//var nombre,edad,ciudad,TELEFONO;
+    
+//asignar un valor a la variable, tipo CADENA/TEXTO
+var nombre="Jon";
+//asignar un valor a la variable, tipo NUMERO
+edad=33;
+//asignar un valor a la variable, tipo CADENA   
+TELEFONO="+34 943 665 544";
+//asignar un valor a la variable, tipo CADENA
+ciudad="Barcelona";
+
+document.getElementById("datos").innerHTML="Mis datos personales son:";	
+// sin comillas dobles las VARIABLES!!	
+document.getElementById("nom").innerHTML=nombre;
+document.getElementById("eda").innerHTML=edad;
+document.getElementById("tel").innerHTML=TELEFONO;
+document.getElementById("ciu").innerHTML=ciudad;
+
+// sin comillas dobles las VARIABLES!!    
+document.write(nombre);
+
+</script>
+
+
+
+</div>
+
+
+</body>
+</html>

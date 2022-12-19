@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Array-Matrices</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+        .ocultar{
+            display: none;
+        }
+        .mostrar{
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Array - Matrices</h1>      
+       
+          <form name="form1" id="form1" enctype="text/plain">
+           
+           <label>Elije el menú de hoy</label>
+           
+           <select id="dias">
+              <option value="0">Lunes</option>
+              <option value="1">Martes</option>
+              <option value="2">Miércoles</option>
+              <option value="3">Jueves</option>
+              <option value="4">Viernes</option>
+           </select>
+           
+           <input type="button" value="Cambiar" onclick="menuhoy()">
+           
+       </form>
+            
+       <ul id="aki" class="ocultar">
+           <li id="txt1"></li>
+           <li id="txt2"></li>
+           <li id="txt3"></li>
+       </ul>
+           
+ 
+    <script>
+           
+           function menuhoy(){
+               
+               hoy=document.getElementById("dias").value;
+               
+               primero=new Array("Arroz","Pasta","Sopa","Ensalada","Vainas");
+               segundo= ["Merluza","Txuleta","Pollo","Langosta","Lomo"];
+               postre=["Flan","Natillas","Coulant","Sorbete","Tarta de queso"];
+               
+               // mostrar datos
+               
+               document.getElementById("aki").className="mostrar";
+               
+               document.getElementById("txt1").innerHTML=primero[hoy];
+               document.getElementById("txt2").innerHTML=segundo[hoy];
+               document.getElementById("txt3").innerHTML=postre[hoy];
+ 
+           }
+        
+    </script>
+       
+       
+       
+   </div>
+    
+</body>
+</html>

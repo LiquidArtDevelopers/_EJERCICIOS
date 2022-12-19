@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IF / ELSE</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+   <h1>IF-ELSE anidado</h1>
+
+<p>Para hacer estructuras condicionales más complejas podemos anidar sentencias IF, es decir, colocar estructuras IF dentro de otras estructuras IF. Con un solo IF podemos evaluar y realizar una acción u otra según dos posibilidades, pero si tenemos más posibilidades que evaluar debemos anidar IFs para crear el flujo de código necesario para decidir correctamente.</p>
+
+
+<p>if (expresión1) { <br>
+   //acciones a realizar en caso positivo <br>
+   //... <br>
+} else { <br>
+	if (expresión2) { <br>
+   	//acciones a realizar en caso positivo <br>
+   	//... <br>
+   	} else { <br>
+    //acciones a realizar en caso negativo <br>
+   //... <br>
+   }<br>
+}
+</p>
+
+
+
+<h2>Mostrar ejemplo</h2>    
+       
+       <script>
+           
+           color=prompt("¿En qué color está el semáforo?");
+           color=color.toLowerCase();
+           
+           if (color == "verde"){
+               document.write("<p>Puedes pasar, está en VERDE </p>");
+           }else{
+               
+               if (color == "rojo"){
+                   document.write("<p>No puedes pasar, está ROJO!</p>");
+               }else{
+                   document.write("<p>Todavía no, está en NARANJA, queda poco!</p>");
+               }
+           }
+      
+       
+       </script>
+  
+   
+     
+   </div>
+    
+</body>
+</html>

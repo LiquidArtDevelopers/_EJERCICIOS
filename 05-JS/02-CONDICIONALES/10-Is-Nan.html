@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IF / ELSE</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Number() </h1>
+       <p>La función Number() convierte el argumento objeto a un número que representa el valor del objeto.</p>
+       <p>Si el valor no se puede convertir en número legal, se devuelve NaN.</p>
+       <p>Confirmar que es un número: para los viejos navegadores o los formularios que 
+       no pone type=number en una casilla de números. Evita que lea "12" como "1" y "2".</p>
+       
+       
+       <script>
+           
+         // si la variable e es un número (diferente de nor a number), hacer el cálculo
+           
+        e=prompt("Cuantos euros tienes?");
+           
+        //e=Number(e)
+        //alert(e) ;
+        
+        
+        if(Number(e) != NaN){
+            
+            dol=e*1.24;
+            document.write("<p>Tienes "+dol+" dolares en tu bolsillo</p>");
+        }else{
+            
+            document.write("<p>Solo números por favor</p>");
+            
+        }
+         
+       </script>
+
+   </div>
+    
+</body>
+</html>

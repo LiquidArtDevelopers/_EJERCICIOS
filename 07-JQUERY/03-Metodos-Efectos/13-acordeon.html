@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+            height: 1200px;
+        }
+        
+        #pri, #seg, #ter{
+            text-align: center;
+            cursor: pointer;
+            padding: 10px;
+        }
+        #txt1, #txt2, #txt3{
+            padding: 5px;
+            background-color:gainsboro;
+            overflow: auto;  
+        }
+        img{
+            float: left;
+        }
+        
+        .x{
+            background-color: greenyellow;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js">
+    </script>
+    
+</head>
+<body>
+   
+<div class="container">
+      
+      <h1>slideToggle()</h1>
+      
+      <div id="pri">PRIMERO</div>
+      <div id="txt1">
+          
+          <h2>PRIMER TEXTO</h2>
+          <img src="imagenes/01-burger.jpg" title="b1" width="30%">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis error reprehenderit omnis rerum impedit quaerat esse, sunt autem, doloribus quis, perspiciatis vitae rem quo. Quia veniam tempora aliquam accusamus ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus porro quis nemo, ab dolore hic non sint in recusandae, eveniet deleniti suscipit nesciunt autem doloribus ad! Optio non rem esse.</p>
+          
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolores commodi officiis excepturi nemo repellat sapiente earum, maiores inventore nam voluptatum laborum consectetur veniam sint atque, repellendus nisi non. Esse! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam commodi doloribus enim in, deserunt neque quos modi vel cupiditate aliquid consectetur maiores eveniet dolores harum, iusto eum minima. Dicta, porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, soluta, fugit? Consequuntur accusantium praesentium sunt maxime doloremque, temporibus rem neque veniam ipsam, vero, maiores cum deleniti repellat mollitia. Officiis, odit.</p>
+          
+      </div> 
+      
+      <div id="seg">SEGUNDO</div>
+      <div id="txt2">
+          
+          <h2>SEGUNDO TEXTO</h2>
+          <img src="imagenes/02-burger.jpg" title="b1" width="30%">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis error reprehenderit omnis rerum impedit quaerat esse, sunt autem, doloribus quis, perspiciatis vitae rem quo. Quia veniam tempora aliquam accusamus ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus porro quis nemo, ab dolore hic non sint in recusandae, eveniet deleniti suscipit nesciunt autem doloribus ad! Optio non rem esse.</p>
+          
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolores commodi officiis excepturi nemo repellat sapiente earum, maiores inventore nam voluptatum laborum consectetur veniam sint atque, repellendus nisi non. Esse! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam commodi doloribus enim in, deserunt neque quos modi vel cupiditate aliquid consectetur maiores eveniet dolores harum, iusto eum minima. Dicta, porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, soluta, fugit? Consequuntur accusantium praesentium sunt maxime doloremque, temporibus rem neque veniam ipsam, vero, maiores cum deleniti repellat mollitia. Officiis, odit.</p>
+          
+      </div> 
+      
+      <div id="ter">TERCERO</div>
+      <div id="txt3">
+          
+          <h2>TERCER TEXTO</h2>
+           <img src="imagenes/03-burger.jpg" title="b1" width="30%">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis error reprehenderit omnis rerum impedit quaerat esse, sunt autem, doloribus quis, perspiciatis vitae rem quo. Quia veniam tempora aliquam accusamus ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus porro quis nemo, ab dolore hic non sint in recusandae, eveniet deleniti suscipit nesciunt autem doloribus ad! Optio non rem esse.</p>
+          
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolores commodi officiis excepturi nemo repellat sapiente earum, maiores inventore nam voluptatum laborum consectetur veniam sint atque, repellendus nisi non. Esse! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam commodi doloribus enim in, deserunt neque quos modi vel cupiditate aliquid consectetur maiores eveniet dolores harum, iusto eum minima. Dicta, porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, soluta, fugit? Consequuntur accusantium praesentium sunt maxime doloremque, temporibus rem neque veniam ipsam, vero, maiores cum deleniti repellat mollitia. Officiis, odit.</p>
+          
+      </div>
+      
+
+</div>
+
+
+      <script>
+          
+    $(function(){
+             
+            // ocultar la div de abajo
+            $("#txt1, #txt2, #txt3").hide();
+            // aplicar color de fondo al botón
+            $("#pri,#seg,#ter").addClass("x");
+            
+            
+            $("#pri").click(function(){
+                $("#txt1").slideToggle(1000);
+                $("#txt2, #txt3").slideUp(1000);
+                
+                $("#pri").toggleClass("x");
+                $("#seg, #ter").addClass("x");
+                
+            });
+             
+            $("#seg").click(function(){
+                $("#txt2").slideToggle(1000); 
+                $("#txt1,#txt3").slideUp(1000);
+                
+                $("#seg").toggleClass("x");
+                $("#pri,#ter").addClass("x");
+            });
+             
+            $("#ter").click(function(){
+                $("#txt3").slideToggle(1000);
+                $("#txt1,#txt2").slideUp(1000);
+                
+                 $("#ter").toggleClass("x");
+                $("#pri,#seg").addClass("x");
+            });
+  
+    });
+ 
+
+       </script>
+      
+ 
+</body>
+</html>

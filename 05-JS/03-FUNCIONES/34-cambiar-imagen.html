@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BUCLE FOR</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        img{
+            cursor: pointer;
+            width: 150px;
+        }
+    .n{
+            background-color: black;
+        }
+        .b{
+            background-color: white;
+        }
+        .txtb{
+            color: white;
+        }
+         .txtn{
+            color: black;
+        }
+    
+    </style>
+</head>
+
+
+<body id="bo">
+   
+   <div class="container">
+       
+       <h1 id="tit">Con JavaScript vamos a cambiar la imagen</h1>
+       <p id="txt">getAtrribute() - devuelve exactamente lo que habia en el código HTML. Puede ser una dirección URL relativa.
+           <br><br>
+       .src - devuelve una URL absoluta completo, incluso si lo habia en el código HTML en una URL relativa.</p>
+       
+<img id="foto" onclick="cambiar()" src="imagenes/bombilla-off.gif" title="">
+       
+
+       
+<script>       
+    function cambiar(){
+        
+        //x=document.getElementById("foto").getAttribute("src");
+        //alert(x); 
+        
+            imagen = document.getElementById("foto"); 
+               
+            if (imagen.getAttribute("src")=="imagenes/bombilla-on.gif"){ 
+                imagen.src = "imagenes/bombilla-off.gif";
+                document.getElementById('bo').className="b";
+                document.getElementById('tit').className="txtn";
+                document.getElementById('txt').className="txtn";
+            }else{
+                imagen.src = "imagenes/bombilla-on.gif";
+                document.getElementById('bo').className="n";
+                document.getElementById('tit').className="txtb";
+                document.getElementById('txt').className="txtb";
+            }
+           
+    }             
+</script>
+
+   </div>
+    
+</body>
+</html>

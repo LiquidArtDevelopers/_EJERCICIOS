@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+            height: 1200px;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    
+</head>
+<body>
+   
+   <div class="container">
+      
+      <h1>Metodo toggle()</h1>
+      
+      <button type="button" id="btn1">hide/show</button>
+      
+      <br><br>
+      
+      <div id="txt1">
+      <p>UNO! ipsum dolor sit amet, consectetur adipisicing elit. Rerum nemo tempore quia perferendis ab illum voluptatum dolorum nulla eaque aut quo vero, quibusdam distinctio debitis excepturi laudantium veritatis eos nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex cupiditate eius nesciunt asperiores animi excepturi! Ipsam voluptatem dignissimos dolorum, deserunt rem qui. Numquam magni recusandae facere, adipisci incidunt mollitia dolorum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati laborum aliquid perferendis facilis, praesentium, rem animi repudiandae molestiae libero quis facere ipsam voluptate nulla culpa ullam rerum neque, porro itaque?</p>
+      </div>
+      
+      <br><br>
+      <a href="#" id="btn2">Mostrar/ocultar</a>
+      
+      <div id="txt2">
+      <p>DOS! ipsum dolor sit amet, consectetur adipisicing elit. Rerum nemo tempore quia perferendis ab illum voluptatum dolorum nulla eaque aut quo vero, quibusdam distinctio debitis excepturi laudantium veritatis eos nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex cupiditate eius nesciunt asperiores animi excepturi! Ipsam voluptatem dignissimos dolorum, deserunt rem qui. Numquam magni recusandae facere, adipisci incidunt mollitia dolorum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati laborum aliquid perferendis facilis, praesentium, rem animi repudiandae molestiae libero quis facere ipsam voluptate nulla culpa ullam rerum neque, porro itaque?</p>
+      </div>
+
+<script>
+          
+    $(function(){
+             
+            $("#txt2").hide();
+                
+            $("#btn1").click(function(){
+                // toggle tiene la función de ocultar/mostrar
+                $("#txt1").toggle(1000); 
+            });
+             
+            $("#btn2").click(function(){
+                $("#txt2").toggle(1000);
+            });
+             
+    });
+
+</script>
+      
+       
+   </div>
+    
+</body>
+</html>

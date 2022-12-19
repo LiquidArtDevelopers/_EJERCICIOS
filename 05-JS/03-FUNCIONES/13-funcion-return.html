@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+    
+    <script>
+        
+    function cubo(){
+        x=prompt("escribe un número para calcular su cubo");
+        
+        // COMPROBAR SI EL DATO ES NUMERICO CON EL BUCLE WHILE
+        while(isNaN(x)==true){
+               x=prompt("Por favor, escribe un número");
+            }
+        
+        total=x*x*x;
+        return total;
+        
+        //document.getElementById("txt").innerHTML=total;
+    }
+    // este return le dice a la función que tiene que devolver (mostrar) el dato porque si no, la función no lo hace
+    // suele usarse para devolver calculos (precios con descuentos, iva, porcentaje, etc.)
+        
+    </script>
+    
+</head>
+
+<body>
+   
+   <div id="container">
+       
+    <h1>RETURN - devolver dato</h1>
+    <p>Llamamos a una función que calcula el cubo de un número y utilizamos return y utilizamos return para que me devuelva <br>
+    el resultado para poder mostrarlo en la pantalla.</p>
+       
+       
+    <p id="txt"></p>
+       
+    <script>
+        document.getElementById("txt").innerHTML=cubo();
+    </script>
+       
+   </div>
+    
+</body>
+</html>

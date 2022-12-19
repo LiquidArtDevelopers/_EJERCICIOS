@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Fixed Menu on Scroll</title>
+
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+
+<style>
+    
+  
+*{ margin: 0; padding: 0; box-sizing:border-box;}
+body{ background: #fff; font: normal 13px Arial;}
+a{ text-decoration: none; color: #000;}
+
+.header{ 
+background-color:black; 
+    text-align: center;
+/* esta altura debe coincidir con la condición en JS! */
+height: 150px;
+margin: 0px auto; 
+width: 100%;
+}
+    
+.tit{ 
+color:white;
+font-size: 40px;
+padding-top: 40px;
+}
+    
+
+    
+/* ........ Menu ........ */
+nav{ 
+    background-color:rgba(255,255,255,1.00);
+    width: 100%;
+    padding:30px 0px;
+
+    transition: all 0.5s;
+}
+
+
+.fixed{ 
+z-index: 999;
+position: fixed; 
+top: 0; 
+width: 100%;
+padding:10px 0px;
+background-color:rgba(255,255,255,0.7);
+} 
+
+ul { list-style-type: none;text-align: center; }
+ul li{display: inline-block;}
+ul li a { display: block; padding: 5px 10px;font-size: 18px;}
+ul li a:hover{ text-decoration: underline;}
+
+/* ....... sección ........ */
+.container{ 
+background-image:url(img/fondo.jpg);
+background-size:cover;
+width: 100%;
+}
+/* ...... articulo ........ */
+.main-content{ 
+margin: 0px auto;
+max-width: 1000px; 
+height: 1300px; /*  auto  */ 
+}
+
+/* ........ pie ......... */
+.pie{ 
+width:100%;
+height:150px;
+background-color:rgba(255,255,255,1.00);
+}      
+
+</style>
+
+</head>
+
+<body>
+
+<header class="header">
+<h1 class="tit">Fixed Menu on Scroll with jQuery and CSS3</h1>
+</header>		
+<nav>		
+	<ul>
+		<li><a href="">INICIO</a></li>
+		<li><a href="">SERVICIOS</a></li>
+		<li><a href="">PRODUCTOS</a></li>
+		<li><a href="">GALERÍA</a></li>
+		<li><a href="">BLOG</a></li>
+		<li><a href="">CONTACTO</a></li>
+	</ul>
+</nav>			     
+<section class="container">	
+	<article class="main-content">	</article>
+</section>
+<footer class="pie"></footer>
+
+
+
+<script>
+		
+        $(function(){
+            
+            var navtop = $('nav').offset().top;
+            
+			$(window).scroll(function () {
+				if($(this).scrollTop() > navtop) {
+					$("nav").addClass("fixed");
+				}else{
+					$("nav").removeClass("fixed");
+				}
+			});
+            
+
+		});
+    
+  
+ /*   
+    //CÓDIGO NO CONFLICT, por si da problemas con otro código js
+    comp=jQuery.noConflict();
+    
+		comp(function(){
+			
+			comp(window).scroll(function () {
+				if (comp(this).scrollTop() > 200) {
+					comp("nav").addClass("fixed");
+				} else {
+					comp("nav").removeClass("fixed");
+				}
+			});
+
+		});
+*/
+		
+</script>
+
+
+</body>
+
+</html>

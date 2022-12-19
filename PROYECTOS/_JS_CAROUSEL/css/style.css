@@ -1,0 +1,91 @@
+.container{
+    padding: 20px;
+    font-family: helvetica;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: azure;
+    row-gap: 20px;
+    max-width: 1200px;
+}
+img{
+    cursor: pointer;
+}
+
+.superior{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.superior img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;           
+}
+
+/* estilos de botón */
+.boton{
+    position: absolute;
+    opacity: 50%;
+    width: 80px;
+}
+.botonIzd{    
+    left:20px;    
+}
+.botonDer{
+    right: 20px;
+}
+.boton:hover{
+    opacity: 90%;
+}
+/* -------------- */
+
+
+.inferior{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.inferior img{
+    width: 20%;
+}
+.inferior img:hover{
+    opacity: 80%;
+}
+
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.2s;
+    animation-name: fade;
+    animation-duration: 1.2s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.fadee{
+    -webkit-animation-name: fadee;
+    -webkit-animation-duration: 1.2s;
+    animation-name: fadee;
+    animation-duration: 1.2s;
+}
+@-webkit-keyframes fadee {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+@keyframes fadee {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.icono{
+    font-size: 100px;
+    color: brown;
+}  

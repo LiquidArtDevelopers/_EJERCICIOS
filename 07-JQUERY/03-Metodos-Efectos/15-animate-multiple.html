@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+            height: 1200px;
+        }
+        
+        #verde{
+            background-color: greenyellow;
+            height: 100px;
+            width: 100px;
+            position: absolute; /* sin esto la animación no funciona */
+            
+        }
+        
+        
+        
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+      
+      <h1>animate()</h1>
+      
+      <p>El método jQuery animado() se utiliza para crear animaciones personalizadas.</p>
+      <p>Sintaxis:</p>
+      <p>S(selector).animate({params}.speed.callback);</p>
+      <p>El parámetro params define las propiedades del CSS para ser animados.</p>
+      <p>El parámetro de velocidad opcional especifica la duración de del efecto. Puede tomar los siguientes valores: slow, fast o milisegundos. </p>
+      <p>El parámetro callback opcional es una función a ejecutar después de la animación completa. </p>
+      
+      <button type="button" id="btn">Animation múltiple</button>
+      <br><br>
+      
+      <div id="verde"></div>
+      
+
+    </div>
+
+
+    <script>
+          
+        $(function(){
+             
+            $("#btn").click(function(){
+                $("#verde").animate({
+                    "left":"500px",
+                    "opacity":"0.5",
+                    "height":"150px",
+                    "width":"150px"  
+                }, 3000);
+            });
+
+        });
+
+    </script>
+      
+ 
+</body>
+</html>

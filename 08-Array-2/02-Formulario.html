@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Array-Matrices</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Array - Matrices</h1>
+       
+       <form name="form1" id="form1">
+           
+           <label>Primer plato</label>
+           <input type="text" name="pr" id="pr">
+           <br>
+           <label>Segundo plato</label>   
+           <input type="text" name="se" id="se">   
+           <br>
+           <label>Postre</label>   
+           <input type="text" name="po" id="po">   
+           <br><br>
+           
+           <input type="button" value="Enviar" onclick="platoshoy()">   
+           
+       </form>       
+       
+              
+       <p id="txt1"></p>
+       <p id="txt2"></p>
+       <p id="txt3"></p>
+       <p id="txt4"></p>
+       
+       
+<script>
+           
+function platoshoy(){
+        
+    // recibir datos   
+    pri=document.getElementById("pr").value;
+    seg=document.getElementById("se").value;
+    pos=document.getElementById("po").value;
+            
+    //crear matriz y guardar estos valores
+    menu = [pri, seg, pos];
+     
+    // mostrar todo
+    document.getElementById("txt1").innerHTML="El menú de hoy es:"+menu;
+    
+    document.getElementById("txt2").innerHTML="Primer plato es: "+menu[0];
+    document.getElementById("txt3").innerHTML="Segundo plato es: "+menu[1];
+    document.getElementById("txt4").innerHTML="de Postre tenemos: "+menu[2];
+            
+}
+           
+</script>
+       
+       
+       
+   </div>
+    
+</body>
+</html>

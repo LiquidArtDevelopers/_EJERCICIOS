@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULARIOS</title>
+    <style>
+    
+        #container{
+            padding: 50px;
+            font-family: helvetica;
+        }
+        .visible{
+            display: block;
+        }
+        .oculto{
+            display: none;
+        }
+
+    </style>
+    
+    <script>
+        
+        function calcular(x){ 
+            // ocultar
+            document.getElementById("v").className="oculto";
+            document.getElementById("num").className="oculto";
+                
+            // mostrar
+            document.getElementById("r").className="visible";
+            document.getElementById("res").className="visible";
+            
+            cantidad=document.getElementById("num").value;
+            //cantidad=Number(cantidad);
+
+            if(x == "e"){
+                dol=cantidad*1.25;
+                document.getElementById("res").value=dol+"$";
+
+            }else{
+               eur=cantidad/1.25; 
+               document.getElementById("res").value=eur+"€";
+            }
+            
+        }
+
+        
+        
+    </script>
+</head>
+<body>
+   
+   <div id="container">
+     
+     <h1>Formularios</h1>
+     <p>Sintaxis: <br>
+     variable=document.nombre_formulario.nombre_campo.value; <br>
+     variable=document.getElementById("id").value;
+     </p>
+     <p>CONVERTIR</p>
+      
+      <form id="formu" name="formu">
+ <!-- recibir datos por su nombre "name" -->
+       
+        <label id="v">Valor:</label>
+        <input type="number" id="num">
+        
+        <label id="r" class="oculto">Resultado:</label>
+        <input class="oculto" type="text" id="res" disabled>
+        
+        <br><br>
+        
+        <input type="button" onclick="calcular('e')" value="Euros">
+        <input type="button" onclick="calcular('d')" value="Dolares">
+
+      </form>
+      
+       
+       
+       
+       
+   </div>
+    
+</body>
+</html>

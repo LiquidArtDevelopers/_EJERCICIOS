@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ejemplo Modal</title>
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>	
+
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+
+	<style>
+		*{
+			padding: 0px;
+			margin: 0px;
+			box-sizing: border-box;
+		}
+			
+		
+	</style>
+	
+	
+
+
+</head>
+
+<body>
+	<div class="container">
+		<h1>Ejemplo Modal</h1>
+		
+		<a href="#" class="btn btn-info btn-lg" data-toggle="modal" data-target="#koala">KOALA</a>
+		
+		<a href="#" class="btn btn-info btn-lg" data-toggle="modal" data-target="#pinguinos">Pingüinos</a>
+		
+		
+		<div class="modal fade" id="koala" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button> <!--Boton x para cerrar la ventana &times codigo para que salga la x-->
+						<h2 class="modal-title">Koala</h2> <!--Aqui decidimos nosotros la importancia de la ventana-->
+					</div>
+					<div class="modal-body">
+						<h3>Texto sobre Koalas</h3>
+						<img src="img/Koala.jpg" width="100%" title="">
+						<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto. Todos los generadores de Lorem Ipsum que se encuentran en Internet tienden a repetir trozos predefinidos cuando sea necesario, haciendo a este el único generador verdadero (válido) en la Internet. Usa un diccionario de mas de 200 palabras provenientes del latín, combinadas con estructuras muy útiles de sentencias, para generar texto de Lorem Ipsum que parezca razonable. Este Lorem Ipsum generado siempre estará libre de repeticiones, humor agregado o palabras no características del lenguaje, etc.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>			
+		</div>
+		
+		<div class="modal fade" id="pinguinos" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button> <!--Boton x para cerrar la ventana &times codigo para que salga la x-->
+						<h2 class="modal-title">Pingüinos</h2> <!--Aqui decidimos nosotros la importancia de la ventana-->
+					</div>
+					<div class="modal-body">
+						<h3>Texto sobre Pingüinos</h3>
+						<img src="img/Penguins.jpg" width="100%">
+						<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto. Todos los generadores de Lorem Ipsum que se encuentran en Internet tienden a repetir trozos predefinidos cuando sea necesario, haciendo a este el único generador verdadero (válido) en la Internet. Usa un diccionario de mas de 200 palabras provenientes del latín, combinadas con estructuras muy útiles de sentencias, para generar texto de Lorem Ipsum que parezca razonable. Este Lorem Ipsum generado siempre estará libre de repeticiones, humor agregado o palabras no características del lenguaje, etc.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>			
+		</div>
+		
+	</div>
+</body>
+</html>
+<!-- La calse btn btn info no es necesario-->

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IF / ELSE</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>IF ANIDADO / ELSE IF</h1>
+       
+       
+       <script>
+           
+           
+           color=prompt("¿En qué color está el semáforo?","");
+           color=color.toLowerCase();
+           
+           if (color=="verde"){
+               document.write("<p>Puedes pasar, está en VERDE </p>");
+               
+           }else if (color=="naranja"){
+            document.write("<p>Todavía no, está en NARANJA, queda poco!</p>");
+               
+            }else if (color=="rojo"){
+            document.write("<p>No puedes pasar, está ROJO</p>");
+                   
+            }else{
+            document.write("<p>¿¿ "+color+" ?? Solo puedes escribir verde, rojo o naranja. No hablamos del arcoiris...</p>");
+            }
+       
+       </script>
+
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Operadores</title>
+
+<style type="text/css">
+#container {
+	background-color: #9CC;
+	padding: 20px;
+	height: 400px;
+	width: 700px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.rojo {
+	color: #F00;
+	font-size: 18px;
+}
+    #txt3{
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+<h1>Cambiar,Ocultar y Mostrar texto con un click</h1>
+
+<p id="txt1"></p>
+<p id="txt2"></p>
+<p id="txt3">Este texto esta oculto y lo vamos a mostrar clickando en el botón</p>
+
+<script>
+// primero vemos este texto en el párrafo
+document.getElementById("txt1").innerHTML="Vamos bien, vamos muuuy bien!";
+document.getElementById("txt2").innerHTML="Vamos a ocultar este texto!";
+</script>
+
+
+<button onclick="document.getElementById('txt1').innerHTML='Texto cambiado'">Botón</button>
+<br><br>
+
+<button onclick="document.getElementById('txt2').style.display='none'">Ocultar</button>
+<br><br>
+
+<button onclick="document.getElementById('txt3').style.display='block'">Mostrar</button>
+
+</div>
+
+
+</body>
+</html>

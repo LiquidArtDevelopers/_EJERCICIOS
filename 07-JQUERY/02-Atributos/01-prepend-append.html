@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+      
+      <div id="elem1">
+          <p>ELEMENTO 01</p>
+      </div>
+      
+      <div id="elem2">
+          <p>ELEMENTO 02</p>
+      </div>
+
+      
+      <script>
+       
+          $(function(){
+              
+              //añadir el código DELANTE
+              $("#elem1,#elem2").prepend("<p>Este texto va DELANTE</p>");
+              
+              //añadir el código DETRÁS
+              //$("#elem2").append("<p>Este texto va DETRÁS</p>");
+              
+              
+          });
+       
+       </script>
+      
+       
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>OPERADORES</title>
+    <style>
+    
+        body{
+            padding-top: 50px;
+            padding-left: 150px;
+            font-size: 16px;
+            font-family: helvetica;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+<div id="container">
+
+<h1>window.prompt()</h1>
+<p>pedir dinero al usuario y convertir a dólares:</p>
+<p>Ojo! el prompt no tiene number o no number, habra que validar (más adelante)</p>
+
+<p id="txt"></p>
+
+<script>
+    
+    //recoger datos
+    nombre=window.prompt("¿Cómo te llamas?",""); 
+    euros=prompt("¿Cuántos euros tienes \n en tu bolsillo?");
+    dolar=prompt("¿A Cuánto esta el dolar hoy?");
+    
+    // convertir euros a dólares
+    calculo=(euros*dolar);
+    
+    // mostrar 
+    document.getElementById("txt").innerHTML="Hola "+nombre+" tienes "+calculo+" dolares.";
+    
+</script>
+  
+</div> 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FoxHolder</title>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+      
+
+   
+   <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,700i,900" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/css/help-styles.css" />
+    <link rel="stylesheet" href="static/css/prism.css" />
+    <link rel="stylesheet" href="src/foxholder-styles.css" />
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script src="static/scripts/bootstrap.min.js"></script>
+    <script src="static/scripts/prism.js"></script>
+    <script src="src/foxholder.js"></script>
+    <script src="static/scripts/script.js"></script>
+    
+    <style>
+      
+        .container{
+            width: 70%;
+            margin: 0px auto;
+        }
+      
+    </style>
+    
+  </head>
+  
+  
+  <body>
+  <div class="container">
+  <form class="formcon">
+      <input id="nom" type="text" placeholder="Nombre" required />
+      <input id="ape" type="text" placeholder="Apellido" required />
+      <input id="ema" type="email" alt=""placeholder="Email" required />
+      <textarea id="msg-3" placeholder="Message"></textarea>
+      
+	  <button>Enviar</button>
+  </form>
+</div>
+
+<script>
+	jQuery('.formcon').foxholder({
+    placeholderDemo: 10, // for placeholder demo (1 - 15)
+    buttonDemo: 5 //for button demos (1 - 6), if you need a button effect
+  });
+	  </script>
+
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        a{
+            cursor: pointer;
+        }
+    </style>
+    
+    <script>
+        
+    function nomape(n,t){
+        
+       document.getElementById("txt").innerHTML="Bienvenido "+n+" el mejor "+t;
+       
+    }
+    
+    </script>
+    
+</head>
+
+<body>
+   
+   <div id="container">
+       
+       <h1>FUNCIÓN CON ARGUMENTO</h1>
+       <p>Las funciones son uno de los elementos más importantes de cualquier lenguaje de programación actual. <br>
+       Una función JavaScript es un fragmento de código que puede ser invocado para realizar tareas o devolver un resultado.</p>
+       
+       <p id="txt"></p>
+       
+       <a onclick="nomape('Pedro','Panadero')">Pepito</a> 
+       
+       <br>
+       
+       <a onclick="nomape('Maria','xxx')">Maria</a>
+
+
+  
+   </div>
+    
+</body>
+</html>

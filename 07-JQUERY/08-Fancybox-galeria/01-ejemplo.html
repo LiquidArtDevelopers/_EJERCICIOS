@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+
+<title>Fancy Box</title>
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+
+
+<link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+
+	<style>
+		*{
+			padding: 0px;
+			margin: 0px;
+			box-sizing: border-box;
+		}
+		
+		article{
+			width: 25%;
+			float: left;
+		}
+	
+	</style>
+	
+<script>
+    $(function(){
+			$('#galeria').magnificPopup({
+				delegate: 'a',
+                type: 'image',
+				image: {
+					cursor: null,
+					titleSrc: 'title' // title de la etiqueta A
+				},
+				gallery:{
+					enabled: true,
+					preload: [0,1], //will preload 0 - before current, and 1 after the current image
+					navigateByImgClick: true
+				}
+			});
+    });
+</script>
+	
+</head>
+
+<body>
+	<section id="galeria">
+		<article>
+			<a href="imagenes/foto02.jpg" title="Koala">
+				<img src="imagenes/foto02.jpg" width="100%" title="">
+			</a>
+		</article>
+		<article>
+			<a href="imagenes/foto03.jpg" title="Faro">
+				<img src="imagenes/foto03.jpg" width="100%" title="">
+			</a>
+		</article>
+		<article>
+			<a href="imagenes/foto04.jpg" title="penguins">
+				<img src="imagenes/foto04.jpg" width="100%" title="">
+			</a>
+		</article>
+		<article>
+			<a href="imagenes/foto05.jpg" title="tulips">
+				<img src="imagenes/foto05.jpg" width="100%" title="">
+			</a>
+		</article>
+	</section>
+	
+</body>
+</html>

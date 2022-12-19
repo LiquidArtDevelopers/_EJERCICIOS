@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+
+<title>Menu</title>
+
+
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+
+
+<style type="text/css">
+
+#menu{
+	width: 200px;
+	height: 250px;/* auto */
+	background-color: #F2F2F2;
+	border: 1px solid #CCC;
+	position: absolute; /* importante */ 
+	left: -200px; /* ocultar menu, moverlo fuera a la izq. */
+	top: 70px; /*  esta distancia es variable !!! */
+	z-index:999;/* para mostrarlo encima de otros contenidos  */ 
+}
+    
+	#solapita{
+        /*position: absolute;
+        top: 20px;
+        right: 20px;*/
+		cursor: pointer;
+	}
+    
+</style>
+
+
+</head>
+
+<body>
+
+<!-- <span>&#9776;</span> -->
+
+<img id="solapita" src="bot_menu.png" width="60" height="60">
+
+<nav id="menu">
+ 
+  <ul>
+    <li><a href="#">PRIMERA</a></li>
+    <li><a href="#">SEGUNDA</a></li>
+    <li><a href="#">TERCERA</a></li>
+    <li><a href="#">CUARTA</a></li>
+  </ul>
+  
+</nav>
+
+
+
+
+<script>
+    
+$(function(){
+	
+    var x=0;
+    
+    $("#solapita").click(function(){
+	   if(x == 0){
+	 	 $("#menu").animate({left:'0px'}, 1000);
+	 	 x = 1;
+ 	  }else{
+	 	 $("#menu").animate({left:'-200px'}, 1000);
+	 	 x = 0;
+ 	  }
+ 
+    })
+  
+});
+
+</script>
+
+
+ </body>
+</html>

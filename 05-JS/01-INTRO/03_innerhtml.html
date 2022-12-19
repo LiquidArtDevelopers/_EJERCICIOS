@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<title>NOOOOO</title>
+<meta charset="utf-8">
+
+<style type="text/css">
+
+body {
+	background-color: #CCC;
+    font-size: 20px;
+}
+#conteiner {
+	max-width: 1000px;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFF;
+	padding: 10px;
+}
+
+#uno{
+	padding:20px;
+	background-color:darkgoldenrod;
+    color: white;
+}
+#dos{
+	color:rgba(54,167,105,1.00);
+	}
+    
+.x{
+    color: white;
+    background-color:red;
+}
+#cuatro{
+    /* background-color: yellow;*/
+} 
+.txt{
+		background-color:darkcyan;
+		font-size:25px;
+		color:rgba(255,255,255,1.00);
+		padding:20px;
+	}
+</style>
+
+</head>
+
+<body>
+<div id="conteiner">
+
+
+<h1>JavaScript posibilidades de visualización</h1>
+<p>JavaScript puede  "visualizar" datos  de diferentes maneras:</p>
+<ul>
+	<li>Escribiendo en un cuadro de alerta, utilizando window.alert().</li>
+	<li>Escribir en la salida HTML utilizando document.write().</li>
+	<li>Escribiendo en un elemento HTML, <strong>usando innerHTML.</strong></li>
+</ul>
+
+
+
+
+<h1>con innerHTML</h1>
+
+<p>El método getElementById() accede al primer elemento con el id especificado.
+<br>
+Sintaxis:<br>
+document.getElementById("id");
+</p>
+
+<p>innerHTML nos permite cambiar/insertar el contenido HTML de un elemento.<br>
+Sintaxis:<br>
+document.getElementById("id").innerHTML ="valor";
+</p>
+
+
+<p>Acceder a objeto de estilo de un elemento especificado<br>
+Sintaxis:<br>
+document.getElementById("nombre").style; <br>
+Para establecer las propiedades de estilo de un elemento existente <br>
+document.getElementById("nombre").style.color = "red"
+</p>
+
+<p>Aplicar un estilo de clase<br>
+Sintaxis:<br>
+document.getElementById("nombre").className; <br>
+document.getElementById("myH1").className = "nombreestilo"
+</p>
+
+
+
+
+<br><br>
+
+<p id="uno"></p>
+<p id="dos">Este texto NO sale!!!! </p>
+<p id="tres"> Jueves, pintxo pote!!!</p>
+<p id="cuatro" class="x"> Mañana lloverá seguro.</p>
+
+
+<script>
+// este script tiene que ir despues de las etiquetas con id, sino no reconoce !!!!
+document.getElementById("uno").innerHTML ="Lo primero que veo es esto";
+document.getElementById("dos").innerHTML ="Este texto SI sale en este párrafo !!!";
+	 
+//aplicar los estilos desde JS
+document.getElementById("tres").style.color="red"; 
+document.getElementById("tres").style.fontSize="25px";
+document.getElementById("tres").style.background="green"; 
+    
+    
+// aplicar estilo de clase !!!
+// si tiene estilo id aplicado esto no se aplicará
+// si tiene estilo de clase lo reemplazará
+document.getElementById("cuatro").className="txt";
+</script>
+
+
+
+</div>
+
+</body>
+</html>

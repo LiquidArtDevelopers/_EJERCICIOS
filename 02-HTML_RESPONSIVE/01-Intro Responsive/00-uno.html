@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+
+<title>Responsive - viewport- @media</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+<style>
+    
+  /*   ESTILOS DESKTOP/PANTALLA  */   
+	*{
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+	}
+    h1{
+        font-family: Verdana;
+        font-size: 35px;
+    }
+    img{
+        width: 100%;
+    }
+    .container{
+        max-width: 1000px;
+        margin: 0px auto;
+        background-color: red;
+    }
+  
+    
+
+    
+ @media screen and (max-width:1024px){  /* 1200px  */ 
+	/* ESTILOS PARA TABLET */
+    .container{
+        background-color: greenyellow;
+    }
+	
+}   
+
+@media (max-width:640px){ /*  480px, 576px, 768px  */ 
+	
+    /* ESTILOS PARA MÓVIL */
+    .container{
+        background-color: violet;
+     }
+    
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+<div class="container">
+<h1>RESPONSIVE DESING</h1>
+<h2>etiqueta meta</h2>
+<h3> atributo name="viewport"</h3>
+<br>
+<p>El viewport del navegador es el área de la ventana en donde el contenido web está visible.</p>
+<br>
+<p>La propiedad width controla el tamaño del viewport. Puede definirse con un número en pixeles como  width=600 o con un valor especial device-width que es el equivalente al ancho de la pantalla en píxeles CSS en una escala de 100%.</p>
+<br>
+<p>La propiedad initial-scale controla el nivel de zoom cuando la página se carga por primera vez. Las propiedades maximum-scale, minimum-scale, y user-scalable controlan la forma en cómo se permite a los usuarios aumentar o disminiuir el zoom en la página.</p>
+
+<br>
+<h1>estilos CSS</h1>
+<h2>@media query</h2>
+<br>
+<p>Las media queries (en español "consultas de medios") son útiles cuando deseas modificar tu página web o aplicación en función del tipo de dispositivo</p>
+<br>
+<p>Utiliza la regla @media para incluir un bloque de propiedades CSS solo si una determinada condición es verdadera.</p>
+<br>
+<p>
+@media screen and (max-width:1024px){<br>
+	/* DEFINIR ESTILOS */ <br>
+	} <br>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+
+<title>Ejemplo Tintin</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  
+ *{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box,
+	}
+
+	#container{
+		max-width: 1200px;
+		margin: 0px auto;
+		padding: 0px 10px;
+		background-color: rgba(219,219,219,1.00);
+	}
+    h1{
+        font-family: Impact;
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+	#movil, #tablet, #pantalla{
+		border: 1px solid rgba(59,59,59,1.00);
+		padding: 10px;
+		margin-bottom: 50px;
+	}
+
+	#mov, #tab, #pan{
+		width: 80%;
+		margin: 0px auto;
+		padding: 10px 5px;
+		overflow: auto;
+	}
+
+	.foto{
+		float: left;
+		width: 30%;
+		margin: 0px 10px;
+	}
+
+	#mov,#tab{
+		display: none;
+	}
+
+	#pantalla, #pan{
+		background-color: rgba(2,149,255,1.0);
+	}
+		
+
+
+	
+		
+		
+	/*    ...........TABLET...........  */
+	@media screen and (max-width:1024px){
+		#pan{
+			display: none;
+		}
+		#pantalla{
+			background-color: transparent;
+		}
+		
+		#tablet{
+			background-color: rgba(42,163,135,1.00);
+		}
+		#tab {
+			display: block;
+			background-color: rgba(42,163,135,1.00);
+		}
+		.foto{
+			/*float: none;*/
+			width: 50%;
+		}
+		
+	}
+
+		
+	/*    ...........MÓVIL...........  */
+	@media (max-width:640px){
+		
+		#tab{
+			display: none;
+		}
+		#tablet{
+			background-color:transparent;
+		}
+		#movil {
+			background-color: rgba(255,188,17,1.0);
+		}
+		#mov{
+			display: block;
+			background-color: rgba(255,188,17,1.0);
+			width: 100%;
+			padding: 0px 0px;
+		}
+		.foto{
+		width: 100%;
+		margin: 0px 0px;
+		}
+			
+	}
+
+</style>
+    
+</head>
+
+
+
+<body>
+
+<div id="container">
+	
+	<h1>RESPONSIVE DESING</h1>		
+	
+		<div id="movil">
+			<p>MÓVIL</p>
+		</div>
+		
+		<div id="tablet">
+			<p>TABLET</p>
+		</div>
+		
+		<div id="pantalla">
+			<p>DESKTOP/PANTALLA</p>
+		</div>
+		
+		<div id="mov">
+			<img class="foto" src="Imagenes/ellotoazul.jpg" title="">
+			<p>PARA MÓVIL Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+		</div>
+		
+		<div id="tab">
+			<img class="foto" src="Imagenes/laestrellamisteriosa.jpg" title="">
+			<p>PARA TABLET Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+		</div>
+		
+		<div id="pan">
+		<img class="foto" src="Imagenes/tintinenamerica.jpg" title="">
+		<p>PARA DESKTOP/PANTALLA Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+		</div>
+		
+	</div>
+	
+</body>
+</html>

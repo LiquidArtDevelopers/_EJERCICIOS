@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Array-Matrices</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Array - Matrices</h1>      
+       
+        <h2 id="tit"></h2>  
+       <p id="txt1"></p>
+       <p id="txt2"></p>
+       <p id="txt3"></p>       
+       
+<script>
+           
+    fecha=new Date();
+    hoy=fecha.getDay();
+    //alert(hoy);
+    
+    if( hoy == 1) dia="LUNES";
+     if( hoy == 2) dia="MARTES";
+     if( hoy == 3) dia="MIERCOLES";
+     if( hoy == 4) dia="JUEVES";
+     if( hoy == 5) dia="VIERNES"; 
+    
+document.getElementById("tit").innerHTML="Hoy "+dia+" tenemos este menú";
+    
+    if(hoy <= 5){
+        hoy=hoy-1; // indice que empieza en 0
+            
+        primero=new Array("Arroz", "Pasta", "Sopa","Ensalada","Garbanzos");
+        segundo=Array("Merluza", "Txuleta", "Pollo","Escalope","Pizza");
+        postre=["Flan", "Natillas", "Helado","Tarta","Batido"];
+     
+        // mostrar todo
+document.getElementById("txt1").innerHTML="El primer plato es: "+primero[hoy];
+document.getElementById("txt2").innerHTML="El segundo plato es: "+segundo[hoy];
+document.getElementById("txt3").innerHTML="El postre es: "+postre[hoy];         
+        
+    }else{
+        alert("Los fines de semana no tenemos menú !!")
+    }
+           
+</script>
+       
+       
+       
+   </div>
+    
+</body>
+</html>

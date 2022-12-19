@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+
+    <style>
+
+        @font-face {
+            font-family: "calculadora";
+            src: url("fonts/Calculator.ttf");
+        }
+
+        .cuerpo{
+            margin: 100px auto;
+            width: 380px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 40px;
+            background-color: rgb(100, 100, 100);
+            
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            padding-top: 60px;
+        }
+        .superior{
+            width: 380px;
+            height: 70px;
+            background-color: rgb(123, 155, 153);
+            float: right;
+            text-align: right;
+            font-size: 50px;
+            color:rgb(2, 53, 49);
+            font-family: "calculadora";
+            border-radius: 5px;
+            border: none;
+        }
+        .inferior{
+            width: 380px;
+            height: 100px;
+            border: 1px solid rgba(0, 0, 0, 0.377);
+            margin-top: 5px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .button{
+            width: 80px;
+            height: 80px;
+            margin: 5px;
+            font-size: 30px;
+            border-radius: 20px;
+        }
+        .especial{
+            color: dimgray;
+        }
+
+    </style>
+
+</head>
+<body>
+    <form action="" id="calculadora" name="calculadora">   
+        <div class="cuerpo">            
+            <div onclick="borrar()">
+                <input type="number" maxlength="15" class="superior" id="resultado" disable="True" value="" acumulado="" memo1="" operacion="" memo2="" disabled >
+            </div>
+            <div class="inferior">
+                <input type="button" class="button" onclick="anadir_num(7)" value="7"></input>
+                <input type="button" class="button" onclick="anadir_num(8)" value="8"></input>
+                <input type="button" class="button" onclick="anadir_num(9)" value="9"></input>
+                <input type="button" class="button especial" onclick="anadir_ope('/')" value="/"></input>
+            </div>
+            <div class="inferior">
+                <input type="button" class="button" onclick="anadir_num(4)" value="4"></input>
+                <input type="button" class="button" onclick="anadir_num(5)" value="5"></input>
+                <input type="button" class="button" onclick="anadir_num(6)" value="6"></input>
+                <input type="button" class="button especial" onclick="anadir_ope('X')" value="X"></input>
+            </div>
+            <div class="inferior">
+                <input type="button" class="button" onclick="anadir_num(1)" value="1"></input>
+                <input type="button" class="button" onclick="anadir_num(2)" value="2"></input>
+                <input type="button" class="button" onclick="anadir_num(3)" value="3"></input>
+                <input type="button" class="button especial" onclick="anadir_ope('-')" value="-"></input>
+            </div>
+            <div class="inferior">
+                <input type="button" class="button" onclick="anadir_num(0)" value="0"></input>
+                <input type="button" class="button" onclick="anadir_num('.')" value="."></input>
+                <input type="button" class="button especial" onclick="resolver()" value="="></input>
+                <input type="button" class="button especial" onclick="anadir_ope('+')" value="+"></input>
+            </div>
+        </div>
+    </form>
+</body>
+
+
+
+<script>
+
+    //recogemos el evento de pulsar una tecla carácter y llamamos a la función
+    window.onload = function() { 
+        document.onkeypress = mostrarInformacionCaracter;
+    }
+    function mostrarInformacionCaracter(evObject) {
+        //recogemos el carácter
+        var elCaracter = String.fromCharCode(evObject.which);
+        //recogemos el número de tecla
+        var teclaPulsada = evObject.keyCode;
+        //si es la tecla enter, asignamos el foco en el = para que resuelva la operación
+        if (teclaPulsada == 13){
+            /* calculadora.elements[15].focus(); */
+            resolver();
+            return;                      
+        }
+        //si el carácter es numérico, lo cogemos
+        if(isNaN(elCaracter)==false){
+            anadir_num(elCaracter);
+        }else if(elCaracter == "/" || elCaracter == "*" || elCaracter == "-" || elCaracter == "+"){
+            anadir_ope(elCaracter);
+        }
+    }
+
+
+    // declaramos la variable del número tecleado
+    let numero = "";
+    let numeroExp = "";
+    let valor = "";
+    let ope = "";
+    let longitud;
+    
+
+    // Función para limpiar la calculadora
+    function borrar(){
+        document.getElementById("resultado").value="";
+        document.getElementById("resultado").setAttribute("memo1","");
+        document.getElementById("resultado").setAttribute("memo2","");
+        document.getElementById("resultado").setAttribute("operacion","");
+        document.getElementById("resultado").setAttribute("acumulado","");
+        numero = "";
+        valor = "";
+        ope = "";
+        numeroExp = 0;
+        longitud = 0;
+    }
+
+    
+    // Función para añadir números según tecleamos (una vez pasada la comprobación)
+    function anadir_num(valor){
+        //en caso de estar todo correcto, concatenamos el valor tecleado y lo mostramos
+        numero += valor;
+        longitud = Number(numero.length);
+        
+        if (longitud>=15){
+            numero=Number(numero);
+            numeroExp = numero.toExponential(2);
+            document.getElementById("resultado").value=String(numeroExp);
+            document.getElementById("resultado").setAttribute("acumulado",numero);
+            document.getElementById("resultado").setAttribute("memo1",numero);
+        }else{
+            document.getElementById("resultado").value=numero;            
+            document.getElementById("resultado").setAttribute("acumulado",numero);
+            document.getElementById("resultado").setAttribute("memo1",numero);
+        }
+        
+        console.log(longitud);
+        console.log(numero);
+    }
+
+    // Función para operar
+    function anadir_ope(ope){
+
+        //vamos a comprobar que no haya un valor de operación, si lo hay lo cambiamos y salimos para evitar cambiar los valores memo
+        if(document.getElementById("resultado").getAttribute("operacion")!=""){
+            //si hay algún signo, lo cambiamos y salimos
+            document.getElementById("resultado").setAttribute("operacion",ope);
+            console.log(ope);
+            return;
+        }
+
+        //borramos lo que vemos
+        document.getElementById("resultado").value="";
+        //borramos la variable
+        numero = "";
+        numeroExp = "";
+        //asignamos a memo2 el valor de memo1
+        document.getElementById("resultado").setAttribute("memo2",document.getElementById("resultado").getAttribute("memo1"));
+        //borramos valor de memo1
+        document.getElementById("resultado").setAttribute("memo1","");
+        //asignamos valor a operación
+        document.getElementById("resultado").setAttribute("operacion",ope);
+    }
+
+    function resolver(){
+        //para resolver necesitamos
+        let num1, num2, result;
+        num1 = Number(document.getElementById("resultado").getAttribute("memo1"));
+        num2 = Number(document.getElementById("resultado").getAttribute("memo2"));
+        ope = document.getElementById("resultado").getAttribute("operacion");
+
+        //comprobación
+        if(num1 =="" || num2==""){return}
+
+        switch(ope) {
+        case "X":
+            result=num2 * num1;
+            console.log(num2+" x "+num1+" = "+result);         
+            break;
+        case "/":
+            result=num2 / num1;
+            console.log(num2+" / "+num1+" = "+result);
+            break;
+        case "+":
+            result=num2 + num1;
+            console.log(num2+" + "+num1+" = "+result);
+            break;
+        case "-":
+            result=num2 - num1;
+            console.log(num2+" - "+num1+" = "+result);
+        break;                
+        }
+        //comprobamos y si superamos los 15 dígitos en la respuesta, exponenciamos el resultado
+        //para saber el length lo paso a string, pero luego a number para la comprobación de la condición numérica
+        if (Number(String(result).length)>=16){
+            resultExp = result.toExponential(2);
+            document.getElementById("resultado").value=resultExp;
+        }
+        //escribimos el resultado      
+        document.getElementById("resultado").value=result;
+
+        //reseteamos todo, pero mantenemos el valor en memo1 por si queremos seguir operando con el resultado de la operación anterior
+        document.getElementById("resultado").setAttribute("memo1",result);
+        document.getElementById("resultado").setAttribute("memo2","");
+        document.getElementById("resultado").setAttribute("acumulado",result);
+        document.getElementById("resultado").setAttribute("operacion","");
+        numero = "";        ç
+        numeroExp = "";
+        valor = "";
+        ope = "";
+    }
+
+
+    
+
+</script>
+
+
+</html>

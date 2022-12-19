@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>OPERADORES</title>
+    <style>
+    
+        body{
+            padding-top: 50px;
+            padding-left: 150px;
+            font-size: 16px;
+            font-family: helvetica;
+        }
+        
+    </style>
+    
+
+</head>
+
+<body>
+
+<div id="container">
+
+<h1>window.prompt()</h1>
+
+<h1>FUNCTION</h1>
+
+<p>Click en el botón para mostrar una ventana y pedir dato PARA LUEGO MOSTRARLO EN PANTALLA.</p>
+
+<button onclick="pedirnom()">Tu nombre</button>
+<br>
+<button onclick="pediredad()">Pedir Edad</button>
+<br>
+<button onclick="aviso()">Jueves pintxo pote</button>
+
+
+<p id="nom"></p>
+<p id="eda"></p>
+
+
+<script>  
+    
+function pedirnom(){ 
+    nom = prompt("¿Cómo te llamas?");
+    document.getElementById("nom").innerHTML="Usuario: "+nom;      
+}
+
+function pediredad(){
+    eda=prompt("Cuantos años tienes?");
+    document.getElementById("eda").innerHTML="Edad: "+eda;  
+}
+
+function aviso(){
+    alert("Hoy es jueves, pintxo poteeeeee !!");
+}
+
+    
+</script>
+
+</div> 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

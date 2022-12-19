@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        .oculto{
+            display: none;
+        }
+        .visible{
+            display: block;
+        }
+        
+        
+    </style>
+    
+<script>
+        
+function parimpar(){
+        
+//pedir dato
+numero=prompt("Introduce el número entero","");
+    
+numero=parseInt(numero); //por si te escribe decimales, los quita
+        
+//comprobamos si un número es par
+// el resultado de la división no tiene resto (no tiene decimales es decir 8/2 4,0 y 7/2 es 3,5 tiene resto)
+        
+        if(numero % 2 == 0){
+            document.getElementById("txt").innerHTML="El número "+numero+" es par.";
+        }else{ // es impar
+            document.getElementById("txt").innerHTML="El número "+numero+" es impar";
+        }  
+}
+        
+</script>
+    
+</head>
+
+<body>
+   
+   <div id="container">
+       
+    <h1>Función PAR/IMPAR</h1>
+    <p>Escribe el código de una función a la que se pasa como parámetro un número entero y devuelve un mensaje que indica si el número es par e impar.<br>
+     Mostrar el resultado devuelto por la función.</p>
+    
+    <p id="txt"></p>
+    
+    <button onclick="parimpar()">¿Par/Impar?</button>
+    
+       
+       
+   </div>
+    
+</body>
+</html>

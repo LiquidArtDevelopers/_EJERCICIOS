@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IF / ELSE</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+ <h1> Bucle FOR</h1>
+
+	<p>El bucle FOR se utiliza para repetir una o más instrucciones un determinado número de veces. De entre todos los bucles, el FOR se suele utilizar cuando sabemos seguro el número de veces que queremos que se ejecute. La sintaxis del bucle for se muestra a continuación.</p>
+	
+	<p>
+		for (inicialización; condición; actualización) { <br>
+   	//sentencias a ejecutar en cada iteración<br> 
+}<br>
+	</p>
+	
+	<p>El bucle FOR tiene tres partes incluidas entre los paréntesis, que nos sirven para definir cómo deseamos que se realicen las repeticiones. 
+	<br><br>
+	1. La primera parte es la inicialización, que se ejecuta solamente al comenzar la primera iteración del bucle. En esta parte se suele colocar la variable que utilizaremos para llevar la cuenta de las veces que se ejecuta el bucle.
+<br>
+2. La segunda parte es la condición, que se evaluará cada vez que comience una iteración del bucle. Contiene una expresión para decidir cuándo se ha de detener el bucle, o mejor dicho, la condición que se debe cumplir para que continúe la ejecución del bucle.
+<br>
+3. Por último tenemos la actualización, que sirve para indicar los cambios que queramos ejecutar en las variables cada vez que termina la iteración del bucle, antes de comprobar si se debe seguir ejecutando.</p>
+
+
+	<h2>Mostar Ejemplo</h2>
+    
+       <script>
+        
+           for(x=1; x<=10 ; x++){
+               
+               // instrucción
+                document.write("<p>Este es el número "+x+" </p>");
+               
+               // condición dentro del bucle
+               if (x == 6){
+                   break;// salir del bucle
+               }
+           }
+           
+           document.write("<p>FIN</p>");
+      
+       </script>
+
+   </div>
+    
+</body>
+</html>

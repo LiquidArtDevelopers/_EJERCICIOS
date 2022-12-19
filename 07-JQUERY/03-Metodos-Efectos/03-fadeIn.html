@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+            height: 1200px;
+        }
+        
+        #div1{
+            width: 300px;
+            height: 100px;
+            background-color: blue;
+        }
+        
+        #div2{
+            width: 300px;
+            height: 100px;
+            background-color: greenyellow;
+        }
+        
+        #div3{
+            width: 300px;
+            height: 100px;
+            background-color: deeppink;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+
+
+
+
+<body>
+   
+   <div class="container">
+      
+      <h1>fadeIn()</h1>
+      
+      <h2>Mostrar cajas con diferentes parámetros de fadeIn()</h2>
+      
+      <button type="button" id="btn">fadeIn/mostrar</button>
+      
+      <br><br>
+      
+      <div id="div1">Lunes</div>
+      <br>
+      <div id="div2">Martes</div>
+      <br>
+      <div id="div3">Miércoles</div>
+      
+    </div>
+
+<script>
+          
+    $(function(){
+             
+            $("#div1,#div2,#div3").hide();
+            
+            $("#btn").click(function(){
+                $("#div1").fadeIn(1000);
+                $("#div2").fadeIn(2000); 
+                $("#div3").fadeIn(3000); 
+            });
+  
+    });
+
+</script>
+      
+ 
+</body>
+</html>

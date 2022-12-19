@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Array-Matrices</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Array - Matrices</h1>      
+       
+              
+       <p id="txt1"></p>
+       <p id="txt2"></p>
+       <p id="txt3"></p>       
+       
+<script>
+    // pedir dato     
+    hoy=prompt("Qué menú quieres hoy? Tenemos 3 menús!");
+    // comprobar se es número     
+    if(isNaN(hoy) == true){
+            alert("Sólo números por favor!!"); 
+    }else{
+        hoy=Number(hoy);
+        hoy=hoy-1; // indice empieza en 0 !!!
+            
+        primero=new Array("Arroz", "Pasta", "Sopa");
+        segundo=Array("Merluza", "Txuleta", "Pollo");
+        postre=["Flan", "Natillas", "Helado"];
+     
+        // mostrar todo
+document.getElementById("txt1").innerHTML="El primer plato es: "+primero[hoy];
+document.getElementById("txt2").innerHTML="El segundo plato es: "+segundo[hoy];
+document.getElementById("txt3").innerHTML="El postre es: "+postre[hoy];         
+        
+    }       
+</script>
+       
+       
+       
+   </div>
+    
+</body>
+</html>

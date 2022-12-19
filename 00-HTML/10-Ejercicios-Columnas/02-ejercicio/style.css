@@ -1,0 +1,683 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+/* declaramos la fuente */
+@font-face {
+  font-family: "Raleway-normal";
+  src: url("fuentes/Raleway-ExtraLight.ttf");  
+}
+@font-face{
+  font-family: "Raleway-bold";
+  src: url("fuentes/Raleway-Bold.ttf");
+}
+@font-face{
+  font-family: "Raleway-regular";
+  src: url("fuentes/Raleway-Regular.ttf");
+}
+@font-face{
+  font-family: "Abel";
+  src: url("fuentes/Abel-Regular.ttf");
+}
+
+
+body{
+  width: 100%;
+}
+.contenedor-principal{
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* navegación */
+nav{
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  position:fixed;
+  z-index: 20;
+  max-width: 1500px;
+  
+ 
+}
+.nav-links{
+  background-color: #306ec2;
+  width: 100%;
+  height: 50%;
+  position: relative;
+  top: 50%; 
+  overflow: hidden;
+  display: flex;
+}
+nav ul{
+  list-style-type: none; /*  quitar puntos   */
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav ul li a{  
+  text-decoration: none;
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px; 
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-family: "Raleway-normal";
+  color: white;
+}
+
+nav img{
+  height: 35px;  
+}
+
+
+/* header */
+header{
+  padding-top: 70px;  
+  position: relative;
+}
+.nav-logo{
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+}
+
+.portada-imagen{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.portada-imagen img{
+  width: 100%;
+}
+.portada-text{
+  position: absolute; /* se coloca encima ya que es hijo, y su padre está delimitado por la imagen */
+  text-align: center;
+  margin-top: -10px;
+}
+
+.portada-text h1{
+  color: white;
+  font-size: 50px;
+  font-family: "Raleway-normal";
+  font-weight: 200;
+}
+.portada-text p{
+  margin-bottom: 15px;  
+  color: white;
+  font-size: 20px;
+  font-family: "Raleway-bold";
+}
+.boton{
+  border: 2px solid white;
+  padding: 10px 20px;
+  color: white;
+  font-size: 20px;
+  font-family: "Raleway-bold";
+}
+.portada-pie{
+  background-color: #edf000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedor-art{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+/* contenedores comunes para lado izd y der */
+.contenedor-izd{
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;  
+  overflow: hidden;
+}
+.contenedor-der{
+  width: 50%;  
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Estilos particulares de cajas izd y der de portada */
+.portada-izd{
+  font-family:"Abel";
+  font-size: 28px;
+  color: #e1a000;  
+}
+.portada-izd h1{  
+  padding-top: 20px;
+}
+.portada-der{
+  font-family:"Raleway-regular";
+  font-size: 20px;
+  line-height: 35px;
+}
+.bold{
+  font-family: "Raleway-bold";
+}
+.italic{
+  font-style: italic;
+}
+#art02, #art03{
+  border-top: 3px solid rgb(54, 54, 54);
+}
+
+
+/* estilos comunes contenedores artículos */
+.contenedor-art h1{
+  font-family:"Abel";
+  font-size: 40px;
+  color: #0c71c3;  
+  margin-top: -10px;
+}
+.contenedor-art p{
+  font-family:"Raleway-regular";
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 20px;
+}
+
+
+
+/* album */
+.contenedor-album{
+  height: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.album{
+  width: 25%;
+  overflow: hidden;
+}
+.album img{
+  position: relative;
+  height: 100%;
+  left: -30px;
+}
+
+
+/* promo */
+.contenedor-promo{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  width: 100%;
+}
+.promo-sup{
+  width: 100%;
+  height: 400px;
+  background-color: #7cda24;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.promo-sub-contenido{
+  width: 80%;
+}
+.promo-sup h1{
+  color: white;
+  font-size: 30px;
+  font-family: "Raleway-normal";
+  font-weight: 200;
+}
+.promo-sup p{
+  margin-bottom: 15px;  
+  color: white;
+  font-size: 20px;
+  font-family: "Raleway-bold";
+}
+.boton{
+  border: 2px solid white;
+  padding: 10px 20px;
+  color: white;
+  font-size: 20px;
+  font-family: "Raleway-bold";
+}
+
+
+.text-promo{
+  padding-top: 10%;
+  margin-bottom: 170px;
+}
+.img-esp{  
+  width: 100%;
+  height: 250px;
+  margin-bottom: 60px;
+  box-shadow: 10px 15px 20px 10px rgba(99, 99, 99, 0.329);
+  overflow: hidden;
+}
+.img-esp img{  
+  height: 100%;
+}
+.especial{
+  position:absolute;
+  top: -50px;
+}
+
+
+
+/* promo02 */
+
+.contenedor-promo02{
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.contenedor-promo02 img{
+  width: 100%;
+}
+.fondo-promo{
+  background-color: #7cda248c ;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.contenedor-promo03{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.fondo-promo03{
+  background-color: #2b86db;
+  width: 100%;
+  height: 300px;
+}
+
+.contenedor-promo04{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.fondo-promo04{
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+.contenedor-promo04 img{
+  width: 100%;
+  position: absolute;
+  top: -80%
+}
+.contenedor-promo04 h1{
+  color: white;
+  font-size: 35px;
+  font-family: "Raleway-normal";
+  font-weight: 200;
+}
+
+/* responsive para móvil------------------------------------ */
+/* responsive para móvil------------------------------------ */
+
+@media (max-width:768px){
+  body{
+    width: 100%;
+  }
+  .contenedor-principal{
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  
+  /* navegación */
+  nav{
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    position:fixed;
+    z-index: 20;
+
+  }
+  .nav-links{
+    background-color: #306ec2;
+    width: 100%;
+    height: 100%; /* ocupamos el 100% del ancho */
+    position: relative;
+    top: 50%; 
+    overflow: hidden;    
+    display: block;
+  }
+  nav ul{
+    list-style-type: none; /*  quitar puntos   */
+    overflow: visible; /* quitamos el scroll */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap; /* hacemos que pase de línea */
+  }
+  nav img{
+    height: 35px;  
+  }
+  nav ul li a{  
+    text-decoration: none;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px; 
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: "Raleway-normal";
+    color: white;
+  }
+
+  
+  /* header */
+  header{
+    padding-top: 100px; /* responsive */  
+    position: relative;
+  }
+  .nav-logo{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding-left: 80px; /* responsive */
+  }  
+  .portada-imagen{
+    width: 100%;
+    height: 100%; /* responsive */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .portada-imagen img{
+    width: 100%;
+  }
+  .portada-text{
+    position: absolute; /* se coloca encima ya que es hijo, y su padre está delimitado por la imagen */
+    text-align: center;
+    margin-top: -10px;
+  }
+  
+  .portada-text h1{
+    color: white;
+    font-size: 30px; /*  */
+    font-family: "Raleway-normal";
+    font-weight: 200;
+  }
+  .portada-text p{
+    margin-bottom: 15px;  
+    color: white;
+    font-size: 18px; /*  */
+    font-family: "Raleway-bold";
+  }
+  .boton{
+    border: 1px solid white;
+    padding: 10px 20px;
+    color: white;
+    font-size: 18px; /*  */
+    font-family: "Raleway-normal";
+  }
+  .portada-pie{
+    background-color: #edf000;
+    width: 100%;
+    padding-bottom: 20px; /*  */
+    display: block; /*  */
+    justify-content: center;
+  }
+  
+  section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contenedor-art{
+    width: 80%;
+    display: block; /*  */
+    justify-content: center;
+    position: relative;
+    
+  }
+  /* contenedores comunes para lado izd y der */
+  .contenedor-izd{
+    width: 90%; /*  */
+    margin-top: 0px; /*  */
+    margin-bottom: 20px;
+    margin-right: 0px;
+    padding-left: 0px;/*  */
+    padding-right: 0px;/*  */
+    display: flex;
+    flex-direction: column;  
+    overflow: hidden;
+    
+    margin: 0 auto; /*  */
+    padding-bottom: 10px; /*  */
+    padding-top: 10px; /*  */
+  }
+  .contenedor-der{
+    width: 90%;  /*  */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 0px;/*  */
+    padding-right: 0px;/*  */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    margin: 0 auto;/*  */
+    padding-bottom: 10px; /*  */
+  }
+  
+  /* Estilos particulares de cajas izd y der de portada */
+  .portada-izd{
+    font-family:"Abel";
+    font-size: 28px;
+    color: #e1a000;  
+  }
+  .portada-izd h1{  
+    padding-top: 20px;
+  }
+  .portada-der{
+    font-family:"Raleway-regular";
+    font-size: 20px;
+    line-height: 35px;
+  }
+  .bold{
+    font-family: "Raleway-bold";
+  }
+  .italic{
+    font-style: italic;
+  }
+  #art02, #art03{
+    border-top: 3px solid rgb(54, 54, 54);
+  }
+  
+  
+  /* estilos comunes contenedores artículos */
+  .contenedor-art h1{
+    font-family:"Abel";
+    font-size: 40px;
+    color: #0c71c3;  
+    margin-top: 10px; /*  */
+    
+  }
+  .contenedor-art p{
+    font-family:"Raleway-regular";
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 20px;    
+  }
+  
+    
+  /* album */
+  .contenedor-album{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .album{
+    width: 25%;
+    overflow: hidden;
+  }
+  .album img{
+    position: relative;
+    height: 100%;
+    left: -110px; /*  */
+  }
+  
+  
+  /* promo */
+  .contenedor-promo{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    width: 100%;
+  }
+  .promo-sup{
+    width: 100%;
+    height: 400px;
+    background-color: #7cda24;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .promo-sub-contenido{
+    width: 80%;
+  }
+  .promo-sup h1{
+    color: white;
+    font-size: 30px;
+    font-family: "Raleway-normal";
+    font-weight: 00;
+  }
+  .promo-sup p{
+    margin-bottom: 15px;  
+    color: white;
+    font-size: 20px;
+    font-family: "Raleway-bold";
+  }
+  .boton{
+    border: 2px solid white;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    font-family: "Raleway-bold";
+  }
+  
+  
+  .text-promo{
+    padding-top: 5%;
+    margin-bottom: 20px; /*  */
+  }
+  .img-esp{    
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    box-shadow: none;
+    overflow: hidden;
+  }
+  .img-esp img{  
+    height: auto;
+    width: 100%;
+  }
+  .especial{
+    position:relative; /*  */
+    top: 0px; /*  */
+  }
+  
+  
+  
+  /* promo02 */
+  
+  .contenedor-promo02{
+    width: 100%;
+    height: 100%; /*  */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .contenedor-promo02 img{
+    width: 100%;
+  }
+  .fondo-promo{
+    background-color: #7cda248c ;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  /* promo 3 */
+
+  .contenedor-promo03{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .fondo-promo03{
+    background-color: #2b86db;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .contenedor-promo04{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .fondo-promo04{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .contenedor-promo04 img{
+    width: 100%;
+    position: relative; /*  */
+    top: 0% /*  */
+  }
+  .contenedor-promo04 h1{
+    color: white;
+    font-size: 35px;
+    font-family: "Raleway-normal";
+    font-weight: 200;
+  }
+}

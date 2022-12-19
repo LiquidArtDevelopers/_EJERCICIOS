@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Variables-concatenar</title>
+
+<style type="text/css">
+body {
+	background-color: #CCC;
+    font-size: 20px;
+}
+#container {
+	max-width: 1000px;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFF;
+	padding: 10px;
+}
+.fondop{
+	background-color:rgba(190,252,177,1.00);
+	padding:10px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+<h1> Concatenar Variables en JS</h1>
+
+<p>Variables JavaScript son contenedores para el almacenamiento de valores de datos.</p>
+
+<p>Todos las variables en JavaScript deben ser identificados con <strong>nombres únicos</strong>!!!!</p>
+
+<p>Estos nombres únicos son llamados identificadores.</p>
+
+<p>Los identificadores pueden ser nombres cortos (como X e Y), o nombres más descriptivos (edad, suma, totalVolume).</p>
+
+<p>Las normas generales para la construcción de nombres para las variables (identificadores únicos)son:</p>
+
+<ul>
+	<li>Los nombres pueden contener letras, dígitos, guiones y signos de dólar.</li>
+	<li>Los nombres deben comenzar con una letra</li>
+	<li>Los nombres también pueden comenzar con $ y _ (no se utiliza mucho)</li>
+	<li>Los nombres son mayúsculas y minúsculas (y e Y son variables diferentes)</li>
+	<li>Las palabras reservadas no se pueden utilizar como nombres</li>
+</ul>
+
+<p class="fondop">Se puede concatenar las cadenas de texto que sean necesarias con el operador (+).</p>
+
+
+<h2>Mostrar datos con las variables</h2>
+
+<script>
+//var nombre,apellido,edad,ciudad;
+//asignar un valor a la variable, tipo CADENA
+nombre="Anne";
+apellido="Egia";
+//asignar un valor a la variable, tipo NUMERO
+edad=25;
+//asignar un valor a la variable, tipo CADENA
+ciudad="Donostia";
+    
+//document.write("nombre apellido"); 
+//document.write(nombre+" "+apellido); 
+
+//document.write("<p>Holaa, me llamo Anne Egia </p>");	
+document.write("<p>Holaa, me llamo "+nombre+" "+apellido+"</p>");
+  
+document.write("<p>Me llamo "+nombre+", tengo "+edad+" años.</p>");
+    
+document.write("<p>Me llamo "+nombre+", tengo "+edad+" años y vivo en "+ciudad+".</p>");
+    
+document.write("<p>"+ciudad+" es una ciudad muuuuuuuy bonita</p>");
+
+</script>
+
+<p>  
+<script>document.write(ciudad+" es muuuuuuuy bonita");</script>
+</p>
+
+
+<br><br>
+
+<p id="tel"></p>
+<p id="ema"></p>
+
+<script>
+ 
+var telefono="+34 943 552 244";
+var email="anne@gmail.com";
+    
+document.getElementById("tel").innerHTML="Mi número de teléfono es: "+telefono;
+document.getElementById("ema").innerHTML="Me puedes escribir a "+email; 
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<h1>Método concat()</h1>
+<p>Hay un método incorporado en String que permite concatenar multiples cadenas. Se necesita uno o más parámetros, cada uno de los cuales se anexan al final del objeto de cadena. Este método es concat.</p>
+<p>El método concat puede ser una manera más sencilla de generar una cadena de varios valores, como la generación de una cadena de varios campos del formulario. Sin embargo, el uso del operador de suma es el método más comúnmente utilizado.</p>
+
+
+<p id="cc"></p>
+
+<script>
+	nombre="Igone";
+	edad=28;
+	txt = nombre.concat(" tengo "+edad);
+	document.getElementById("cc").innerHTML=txt;
+	
+	
+	// "Me llamo "+nombre+", tengo "+edad+" años."
+	//txt = "Mis datos: ".concat("Me llamo ",nombre ," tengo ", edad," años.");
+	//document.getElementById("cc").innerHTML=txt;
+	
+</script>
+
+
+</div>
+
+
+</body>
+</html>

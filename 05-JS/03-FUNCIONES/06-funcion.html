@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+    
+    <script>
+        
+    function saludo(nom){
+        nom=nom.toLocaleUpperCase();
+        document.write("<p>hola "+nom+" como te va la vida?</p>");
+    }
+        
+    </script>
+    
+</head>
+<body>
+   
+   <div id="container">
+       
+       <h1>FUNCIÓN CON ARGUMENTO</h1>
+       <p>Las funciones son uno de los elementos más importantes de cualquier lenguaje de programación actual. <br>
+       Una función JavaScript es un fragmento de código que puede ser invocado para realizar tareas o devolver un resultado.</p>
+       
+       
+       <script> 
+           nom=window.prompt("¿como te llamas?","");
+         // recoge como te llamas, es una variable que no va entre comillas dobles
+           saludo(nom); 
+       </script>
+
+
+  
+   </div>
+    
+</body>
+</html>

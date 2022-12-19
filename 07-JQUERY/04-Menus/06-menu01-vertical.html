@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Menu Responsive</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> 
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+
+<style type="text/css">
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+#general{
+	max-width:800px;
+	height:500px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:5%;
+}
+nav {
+	width:100%;
+	height:auto;/* no puede tener altura fija !! */
+	background-color:gainsboro;
+}
+nav ul {
+	list-style-type:none;
+}
+nav ul li {
+	display: inline-block;
+}
+nav ul li a {
+	padding: 5px 15px;
+	font-size: 18px;
+	color: #464646;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	color: #d5d3d9;
+	background-color: #040707;
+}
+nav ul li a.activado {
+	color: #d5d3d9;
+	background-color: #040707;
+	font-weight:bold;
+}
+/* ocultar botón  */
+.btn{
+display: none;
+cursor: pointer;
+}
+    
+/*****************************************************/
+@media (max-width: 800px) {
+	
+nav ul{ /* ocultar menu horizontal ul!!! */
+  	display: none;
+  	}
+    
+.btn {
+	display: block;/* mostrar imagen botón  */
+	background-color: #000;
+	padding:5px;
+	margin: 0px auto;
+	
+}
+
+nav {
+	text-align:center;
+}
+    nav ul li {
+	display: block; /*  para poner los menus NO en linea!!!   */ 
+}
+nav ul li a{
+    width: 100%;
+	display: block; /* vinculos en vertical....no en linea!!! */
+	}
+    
+}
+
+
+</style>
+</head>
+
+
+<body>
+
+<div id="general">
+
+<nav>
+
+<img src="nav-icon.png" width="50" height="50" class="btn">
+
+      <ul id="menuresponsive">
+        <li><a href="#" class="activado">INICIO</a></li>
+        <li><a href="#">NOSOTROS</a></li>
+        <li><a href="#">CATÁLOGO</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">CONTACTO</a></li>
+      </ul>
+</nav>
+
+
+</div>  
+    
+    
+    
+    
+  
+<script>
+    
+$(function(){
+	
+    $(".btn").click(function(){
+        	$("#menuresponsive").slideToggle();
+      });
+	  
+	 // para que cierre el menu---solo en resolución menor que 640px
+	 $("#menuresponsive li a").click(function(){
+		  if ( $(window).width() <= 800 ){
+        	$("#menuresponsive").slideUp();
+		  }
+		  
+      });
+	  
+});
+    
+</script>
+
+</body>
+</html>

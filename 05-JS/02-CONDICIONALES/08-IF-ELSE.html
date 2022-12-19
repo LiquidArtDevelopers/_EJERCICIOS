@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IF / ELSE</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>IF ELSE / OPERADORES LÓGICOS - OR || </h1>
+       
+    <p>if (condición1 && condición2 && condición3) { <br>
+   //acciones a realizar en caso positivo <br>
+   //... <br>
+} else { <br>
+   //acciones a realizar en caso negativo <br>
+   //... <br>
+}
+</p>
+
+<p> Los operadores lógicos son muy parecidos a los relacionales, en el sentido de que dan también como output sólo dos valores que, en este caso, son:verdadera y falsa.</p>
+
+<table width="80%" border="0" cellspacing="0" cellpadding="0" class="fontab">
+  <tbody>
+    <tr>
+      <th width="19%" scope="col">Operador</th>
+      <th width="14%" scope="col">Símbolo</th>
+      <th width="67%" scope="col">Significado</th>
+    </tr>
+    <tr>
+      <td>AND</td>
+      <td>&&</td>
+       <td>devuelve true si se cumplen todas la condiciones</td>
+    </tr>
+      <tr>
+      <td>OR</td>
+      <td>||</td>
+       <td>devuelve true se si cumple una de las condiciones</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<h2>Mostrar ejemplo</h2>   
+       <script>
+           
+        nom=prompt("¿Cómo te llamas?","");
+        ciu=prompt("¿Dónde vives?","");
+           
+        nom=nom.toLowerCase();
+        ciu=ciu.toLowerCase();
+           
+        if (nom=="pepe" || ciu=="donosti"){
+            
+        if(nom="pepe")document.write("<p>Te llamas Pepe</p>");
+        if(ciu="donosti")document.write("<p>Vives en Donosti</p>");
+        
+        }else{
+        document.write("<p>Ninguna condición se ha cumplido </p>")
+        }
+           
+            
+           
+           
+       </script>
+
+   </div>
+    
+</body>
+</html>

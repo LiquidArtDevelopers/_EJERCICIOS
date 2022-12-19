@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BUCLE FOR</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        img{
+            cursor: pointer;
+            width: 100px;
+        }
+        
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+<h1>Con JavaScript vamos a cambiar la imagen</h1>
+      
+<p>.src - devuelve una URL absoluta completo, incluso si lo habia en el código HTML en una URL relativa.</p>
+     
+<p>Click en la foto para encender/apagar la luz.</p>
+
+<button onclick="document.getElementById('foto').src='imagenes/bombilla-on.gif'">PIZTU ARGIA</button>
+
+<img id="foto" src="imagenes/bombilla-off.gif">
+
+<button onclick="document.getElementById('foto').src='imagenes/bombilla-off.gif'">ITZALI ARGIA</button>
+     
+
+   </div>
+    
+</body>
+</html>

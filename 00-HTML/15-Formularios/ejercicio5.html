@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ejercicio 4 - Formularios</title>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	
+	#form1{
+		width: 50%;
+		background-color: rgba(207,247,245,1.00);
+		margin-left: auto;
+		margin-right: auto;
+		padding: 10px;
+		font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	}
+	
+	#form1 fieldset{
+		border: 2px solid rgba(1,115,208,1.00);
+		padding: 10px;
+	}
+	#form1 legend{
+		font-size: 16px;
+		color: rgba(0,0,0,1.00);
+		font-weight: bold;
+		margin-bottom: 15px;
+	}
+	
+	#form1 label{
+		display: inline-block;
+		width: 100px;
+		
+		font-size: 14px;
+	/*background-color:rgba(23,176,117,1.00);*/
+		padding: 5px;
+	}
+	
+	#form1 input{
+        display: inline-block;
+		width: 150px;
+		height: 25px;
+		color: rgba(189,186,186,1.00);
+		font-size: 12px;
+		border: 0,5px solid rgba(72,72,72,1.00);
+		margin-bottom: 10px;
+	}
+	
+	#form1 select{
+        display: inline-block;
+        width: 150px;
+        height: 25px;
+    }
+	
+	#form1 input.boton{
+		background-color: rgba(245,247,248,1.00);
+		margin: 10px 40px;
+		color: rgba(0,0,0,1.00);
+		border: 1px solid rgba(51,50,50,1.00);
+		height: 24px;
+		width: 120px;
+		clear: both;
+	}
+	
+	#form1 input.boton:hover{
+		background-color: rgba(113,113,113,1.00);
+	}
+		
+    #form1 label.apartamas{
+		width: 350px;
+    }
+
+			
+</style>
+
+</head>
+
+<body>
+
+<form id="form1" name="form1" method="post" action="mailto:nombre@gmail.com">
+	<fieldset>
+	<legend>Operadora Móvil</legend>
+		<label for="nombre">Nombre:</label>
+		<input name="Nombre" type="text" id="nom" tabindex="1" required> 
+		<br>
+		<label for="apellidos">Apellidos:</label>
+		<input type="text" name="Apellidos" id="ape" tabindex="2">
+		<br>
+		
+		<label for="Operadoras">Operadoras:</label>
+		<select name="Operadora">
+			<option value="ninguna">Elija una opción</option> 	
+			<option>Vodafone</option>
+			<option value="Movistar">Movistar</option>
+			<option value="Euskaltel">Euskaltel</option>
+		</select>
+		<br><br>
+		<input type="checkbox" name="acepto" id="acepto" value="Acepto" required>
+		  <label for="acepto" class="apartamas">Sí, <a href="pdf/proteccion-datos.pdf" target="_blank">acepto</a> la política de privacidad de datos</label>
+		  <br>
+		<input type="submit" name="submit" id="submit" value="Enviar" class="boton"> 
+	   
+   </fieldset>
+</form>
+
+</body>
+</html>

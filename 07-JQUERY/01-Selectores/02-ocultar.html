@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+    
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+   
+
+ 
+</head>
+<body>
+   
+   <div class="container">
+       
+       
+       
+       <h1>SELECTORES $("selector")</h1>
+       
+       
+       <h2>Mostrar ejemplo</h2>
+       <h3>Oculta todas las etiquetas p</h3>
+       
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe molestias, quasi laudantium deserunt dignissimos libero sed error id necessitatibus commodi totam deleniti consequatur similique, odio quas. Unde corrupti, voluptatem et.</p>
+       
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe molestias, quasi laudantium deserunt dignissimos libero sed error id necessitatibus commodi totam deleniti consequatur similique, odio quas. Unde corrupti, voluptatem et.</p>
+       
+       <br><br>
+       
+       <button type="button">Ocultar P</button>
+       
+       
+       <script>
+       // este script puede estar en cualquier parte de la página
+           
+          
+         /*
+           $(document).ready(function(){ // función de jquery
+               
+               $("button").click(function(){
+                   $("p").hide();
+               });
+               
+           });
+          */
+       
+           
+           // abreviado
+           $(function(){
+               
+               $("button").click(function(){
+                   $("p").hide();
+               })
+               
+           });
+           
+         
+
+
+       </script>
+       
+   </div>
+    
+</body>
+</html>

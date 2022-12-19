@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Array-Matrices</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Array - Matrices</h1>
+       <p>Se utilizan para almacenar varios valores en una sola variable.</p>
+       <p>Sintaxis:</p>
+       <p>var nombre = new Array ("valor1", "valor2", "valor3");</p>
+       <p>var num = new Array (15,20,18);</p>
+       <p>var otra = new Array ("variable1", "variable2", "variable3");</p>
+       
+       <p id="txt1"></p>
+       <p id="txt2"></p>
+       <p id="txt3"></p>
+       <p id="txt4"></p>
+       
+<script>
+    
+    // menu=new Array("Arroz", "Merluza en salsa", "Flan");
+    
+    //menu=Array("Arroz", "Merluza en salsa", "Flan");  
+    
+    // otra forma de escribir      
+    menu=["Arroz","Merluza en salsa","Flan"];
+           
+    // mostrar todo
+    document.getElementById("txt1").innerHTML="El menú de hoy es:"+menu;
+           
+    document.getElementById("txt2").innerHTML="Primer plato es: "+menu[0];
+    document.getElementById("txt3").innerHTML="Segundo plato es: "+menu[1];
+    document.getElementById("txt4").innerHTML="de Postre tenemos: "+menu[2];
+       
+       
+       
+</script>
+       
+       
+       
+   </div>
+    
+</body>
+</html>

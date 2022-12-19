@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+    
+    <script> // definir la función, no tiene que estar en el head si o si...!
+        
+        function condato(nom){
+            document.write("<p>Hola "+nom+" como te va?</p>");
+        }
+        
+        function otra(n){
+            document.getElementById("txt").innerHTML="Cuanto tiempo "+n+" sin verte!";
+        }
+    
+    </script>
+</head>
+
+<body>
+   
+   <div id="container">
+       
+       <h1>FUNCIÓN CON ARGUMENTO</h1>
+       <p>Las funciones son uno de los elementos más importantes de cualquier lenguaje de programación actual. <br>
+       Una función JavaScript es un fragmento de código que puede ser invocado para realizar tareas o devolver un resultado.</p>
+       
+       
+       <script> // llamada a la función
+           
+           condato("Leire");
+           condato("Aitor");
+           condato("Jon");
+
+       </script>
+       
+       
+       <p id="txt"></p>
+       
+        <button onclick="otra('Jone')">Mostrar JONE </button>
+        <button onclick='otra("Anne")'>Mostrar ANNE</button>
+  
+   </div>
+    
+</body>
+</html>

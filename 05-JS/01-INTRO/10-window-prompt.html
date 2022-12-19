@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>OPERADORES</title>
+    <style>
+    
+        body{
+            padding-top: 50px;
+            padding-left: 150px;
+            font-size: 16px;
+            font-family: helvetica;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+<div id="container">
+
+<h1>window.prompt()</h1>
+<p>Pedir datos al usuario</p>
+
+<p id="txt"></p>
+<p id="eda"></p>
+
+<script>
+    
+    var nombre=window.prompt("¿Cómo te llamas?","Nombre");
+    
+    var ciudad=window.prompt("¿Dónde vives?");
+    
+    edad=prompt("¿Cuantos años tienes?");
+
+    document.getElementById("txt").innerHTML="Hola "+nombre+", vives en "+ciudad+".";
+    
+    document.getElementById("eda").innerHTML=edad;
+    
+</script>
+  
+</div>
+
+
+<button onclick="prompt('¿Dónde vives?');">Pedir Dato button</button>
+
+<br><br>
+
+<a onclick="prompt('¿Dónde vives?');">Pedir Dato a</a>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

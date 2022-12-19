@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+            height: 1200px;
+        }
+        
+        #arriba{
+            background-color: greenyellow;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        #abajo{
+            background-color: lightgrey;
+            padding: 20px;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+      
+      <h1>slideToggle()</h1>
+      
+      <div id="arriba">
+          <p>Abrimso y cerramos con el mismo div</p>
+      </div>
+      
+      <div id="abajo">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolores commodi officiis excepturi nemo repellat sapiente earum, maiores inventore nam voluptatum laborum consectetur veniam sint atque, repellendus nisi non. Esse! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam commodi doloribus enim in, deserunt neque quos modi vel cupiditate aliquid consectetur maiores eveniet dolores harum, iusto eum minima. Dicta, porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, soluta, fugit? Consequuntur accusantium praesentium sunt maxime doloremque, temporibus rem neque veniam ipsam, vero, maiores cum deleniti repellat mollitia. Officiis, odit.</p>
+          
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolores commodi officiis excepturi nemo repellat sapiente earum, maiores inventore nam voluptatum laborum consectetur veniam sint atque, repellendus nisi non. Esse! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam commodi doloribus enim in, deserunt neque quos modi vel cupiditate aliquid consectetur maiores eveniet dolores harum, iusto eum minima. Dicta, porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, soluta, fugit? Consequuntur accusantium praesentium sunt maxime doloremque, temporibus rem neque veniam ipsam, vero, maiores cum deleniti repellat mollitia. Officiis, odit.</p>
+      </div>
+      
+      <div> <!-- se desplaza el contenido siguiente -->
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolores commodi officiis excepturi nemo repellat sapiente earum, maiores inventore nam voluptatum laborum consectetur veniam sint atque, repellendus nisi non. Esse! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam commodi doloribus enim in, deserunt neque quos modi vel cupiditate aliquid consectetur maiores eveniet dolores harum, iusto eum minima. Dicta, porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, soluta, fugit? Consequuntur accusantium praesentium sunt maxime doloremque, temporibus rem neque veniam ipsam, vero, maiores cum deleniti repellat mollitia. Officiis, odit.</p>
+          
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolores commodi officiis excepturi nemo repellat sapiente earum, maiores inventore nam voluptatum laborum consectetur veniam sint atque, repellendus nisi non. Esse! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam commodi doloribus enim in, deserunt neque quos modi vel cupiditate aliquid consectetur maiores eveniet dolores harum, iusto eum minima. Dicta, porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, soluta, fugit? Consequuntur accusantium praesentium sunt maxime doloremque, temporibus rem neque veniam ipsam, vero, maiores cum deleniti repellat mollitia. Officiis, odit.</p>
+      </div>
+      
+    </div>
+
+
+<script>
+          
+        $(function(){
+             
+            // ocultar la div de abajo
+            $("#abajo").hide();
+             
+            $("#arriba").click(function(){
+                $("#abajo").slideToggle(1000);
+            });
+  
+        });
+ 
+
+</script>
+      
+ 
+</body>
+</html>

@@ -1,0 +1,19 @@
+<script>
+	function inicio(){
+		window.addEventListener('scroll', function(){
+            
+            //si esta abajo o si lo bajan hasta 300px
+			var distanceY = window.pageYOffset || document.documentElement.scrollTop, 
+					shrinkOn = 300, // esta medida la podemos modificar como prefiramos
+					header = document.querySelector("header"); //esto sustituye al getElemntById si no tengo #
+			if (distanceY > shrinkOn){ //si es mayor q 300 en este caso
+				classie.add(header, "txiki"); //otra forma de hacer addClass
+			}else{
+				if (classie.has(header, "txiki")){ //si el header tiene la clase smaller
+					classie.remove(header, "txiki"); //se la quitamos
+				}
+			}
+		});
+	}
+	window.onload=inicio();
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Array-Matrices</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+        .ocultar{
+            display: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+   
+   <div class="container">
+       
+       <h1>Array - Matrices</h1> 
+               
+       <div id="txt"></div>
+         
+ 
+<script>
+           
+// crear array
+fot = ["bar01.jpg","bar02.jpg","bar03.jpg","bar04.jpg","bar05.jpg","bar06.jpg"];
+           
+// calcular para tener un número aleatorio
+num=Math.floor(Math.random()*(fot.length)); // longitud del array = 6
+           
+//mostrar una imagen aleatoria
+document.getElementById("txt").innerHTML="<img src='imagenes/"+fot[num]+"' width='100%'/>"
+
+           
+        
+
+</script>
+       
+       
+       
+   </div>
+    
+</body>
+</html>

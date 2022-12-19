@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Operadores</title>
+
+<style type="text/css">
+#container {
+	background-color:aquamarine;
+	padding: 20px;
+	max-width: 1000px;
+	margin: 0px auto;
+    font-size: 20px;
+}
+.rojo {
+	color: #F00;
+	font-size: 18px;
+}
+.fontab{
+	background-color:rgba(255,255,255,1.00);
+	padding:20px;
+}
+td{
+	padding:5px;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+
+<h1>Operadores</h1>
+
+<p>Los operadores se dividen en:</p>
+<ol>
+	<li>operadores de asignación;</li>
+	<li>operadores aritméticos;</li>
+	<li>operadores relacionales;</li>
+	<li>operadores lógicos;</li>
+</ol>
+
+<p>1. El primer operador que hay que conocer es eloperador de asignación cuyo signo es el igual (=). </p>
+
+<p>2. Los operadores aritméticos</p>
+
+<table width="80%" border="0" cellspacing="0" cellpadding="0" class="fontab">
+  <tbody>
+    <tr>
+      <th scope="col">Operador</th>
+      <th scope="col">Símbolo</th>
+      <th scope="col">Acción</th>
+    </tr>
+    <tr>
+      <td>Suma</td>
+      <td>+</td>
+      <td>Suma dos operandos</td>
+    </tr>
+      <tr>
+      <td>Resta</td>
+      <td>-</td>
+      <td>Reste el segundo operando del primero</td>
+    </tr>
+     <tr>
+      <td>Multiplicación</td>
+      <td>*</td>
+      <td>Multiplica los dos operandos</td>
+    </tr>
+      <tr>
+      <td>División</td>
+      <td>/</td>
+      <td>Divide el primer operando por el segundo</td>
+    </tr>
+     <tr>
+      <td>Resto </td>
+      <td>%</td>
+      <td>Facilita el resto de la división entre dos operandos</td>
+    </tr>
+    <tr>
+      <td colspan="3">Forma abreviada (en bucles) </td>
+      </tr>
+    <tr>
+      <td>Incremento</td>
+      <td>++</td>
+      <td>Incrementa una unidad</td>
+    </tr>
+    <tr>
+      <td>Disminución</td>
+      <td>--</td>
+      <td>Disminución</td>
+    </tr>
+       <tr>
+      <td>Adjunta</td>
+      <td>+=</td>
+      <td>Suma al valor actual</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+
+<p>3. Con operador relacional entendemos la relación que tiene un valor respecto a otro. Se basan en el concepto de verdadero o falso </p>
+<table width="60%" border="0" cellspacing="0" cellpadding="0" class="fontab">
+  <tbody>
+    <tr>
+      <th scope="col">Operador</th>
+      <th scope="col">Acción</th>
+    </tr>
+    <tr>
+      <td>>	</td>
+      <td>Mayor que</td>
+    </tr>
+    <tr>
+      <td>>=	</td>
+      <td>Mayor o igual</td>
+    </tr>
+    <tr>
+      <td><	</td>
+      <td>Menor que</td>
+    </tr>
+    <tr>
+      <td><=	</td>
+      <td>Menor o igual</td>
+    </tr>
+    <tr>
+      <td>==	</td>
+      <td>Igual</td>
+    </tr>
+    <tr>
+      <td>!=	</td>
+      <td>Distinto</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>4. Los operadores lógicos son muy parecidos a los relacionales, en el sentido de que dan también como output sólo dos valores que, en este caso, son:verdadera y falsa.</p>
+
+<table width="80%" border="0" cellspacing="0" cellpadding="0" class="fontab">
+  <tbody>
+    <tr>
+      <th width="19%" scope="col">Operador</th>
+      <th width="14%" scope="col">Símbolo</th>
+      <th width="67%" scope="col">Significado</th>
+    </tr>
+    <tr>
+      <td>AND</td>
+      <td>&&</td>
+       <td>devuelve true si se cumplen todas la condiciones</td>
+    </tr>
+      <tr>
+      <td>OR</td>
+      <td>||</td>
+       <td>devuelve true se si cumple una de las condiciones</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+<h2>Mostrar Ejemplo</h2>
+
+
+
+<script>
+
+v1=125;
+v2=10;
+v3=20;
+    
+sumar=v1+v2;
+document.write("<p>La suma de v1 + v2 es "+sumar+"</p>");
+document.write("<p>"+v1+"+"+v2+"="+sumar+"</p>");
+//document.write("<p>La suma de v1 + v2 es "+(v1+v2)+"</p>");
+
+resta=v1-v2;
+document.write("<p>La resta entre "+v1+" y "+v2+" es "+resta+"</p>");
+document.write("<p>"+v1+" - "+v2+" = "+(v1-v2)+"</p>");
+
+m=v1*v2;
+document.write("<p>La multiplicación de "+v1+" y "+v2+" es "+m+"</p>");
+
+//division=v1/v2;
+document.write("<p>La división entre "+v1+" y "+v2+" es "+(v1/v2)+"</p>");
+
+varios=(v1+v2)*v2;
+document.write("<p>Sumar varios y multiplicar es "+varios+"</p>");
+
+</script>
+
+
+
+</div>
+</body>
+</html>

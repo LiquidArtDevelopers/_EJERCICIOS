@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        .oculto{
+            display: none;
+        }
+        .visible{
+            display: block;
+        }
+        
+        
+    </style>
+    
+<script>
+    
+function calcular(){
+    
+    importe=prompt("Introduce el importe","");
+    descuento=prompt("¿Qué descuento tienes?","");
+    
+    // si uno de los dos datos no cumple, error!
+    if(isNaN(importe)==true || importe == ""){
+        document.getElementById("imp").innerHTML="IMPORTE MAL";
+        
+        }else if(isNaN(descuento) || descuento == ""){
+            document.getElementById("des").innerHTML="DESCUENTO MAL";
+            
+            }else{
+                total=importe-(importe*descuento/100);
+                document.getElementById("txt").innerHTML="Tienes el "+descuento+"% sobre "+importe+"€. <br> Tienes que pagar "+total+"€."  
+                }
+
+}
+        
+</script>
+    
+</head>
+
+<body>
+   
+   <div id="container">
+       
+    <h1>Función - descuento</h1>
+    <p>Un script para una tienda de comercio electrónico tiene que calcular el precio total de los productos varias veces.</p>
+    
+    <p id="imp"></p>
+    <p id="des"></p>
+    <p id="txt"></p>
+    
+    <button onclick="calcular()">Descuento</button>
+    
+       
+       
+   </div>
+    
+</body>
+</html>

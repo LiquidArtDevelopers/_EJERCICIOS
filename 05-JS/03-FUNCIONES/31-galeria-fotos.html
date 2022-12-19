@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        .oculto{
+            display: none;
+        }
+        .visible{
+            display: block;
+        }
+        .grande img{
+            width: 100%;
+        }
+        .minifoto .foto{
+            float: left;
+            width:20%;
+        }
+        a{
+            cursor: pointer;
+        }
+        
+    </style>
+    
+    
+<script>   
+    function mostrar(x){
+        document.getElementById("foto").src="imagenes/foto0"+x+".jpg"  
+    }    
+</script>
+    
+</head>
+
+
+
+
+<body>
+   
+<div id="container">
+       
+    <h1>Galería de fotos con JS</h1>
+    <p>Galería sencilla con varias imágenes.</p>
+    
+    <div class="grande">
+        <img id="foto" src="imagenes/foto01.jpg" title="">
+    </div>
+     
+    <div class="minifoto">
+    
+    <a  onclick="mostrar('1')"><img class="foto" src="imagenes/foto01.jpg"></a>
+    <a  onclick="mostrar('2')"><img class="foto" src="imagenes/foto02.jpg"></a>
+    <a  onclick="mostrar('3')"><img class="foto" src="imagenes/foto03.jpg"></a>
+    <a  onclick="mostrar('4')"><img class="foto" src="imagenes/foto04.jpg"></a>
+    <a  onclick="mostrar('5')"><img class="foto" src="imagenes/foto05.jpg"></a>
+    
+    </div>
+       
+       
+   </div>
+    
+
+</body>
+</html>

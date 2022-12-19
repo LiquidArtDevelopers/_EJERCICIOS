@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>SELECTORES $("selector")</h1>
+       
+       <h2>Ocultamos las etiquetas que tengan atributo afinando la búsqueda</h2>
+       
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quidem, consequatur nostrum voluptatem nihil ratione harum explicabo quaerat, suscipit atque doloremque animi labore rem ab, saepe accusamus soluta reiciendis natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quidem, consequatur nostrum voluptatem nihil ratione harum explicabo quaerat, suscipit atque doloremque animi labore rem ab, saepe accusamus soluta reiciendis natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem neque, vero dolorum quaerat, iusto voluptas nulla molestias facere itaque ratione quae, eveniet quo dolor ipsa expedita amet ex! Asperiores, id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus vitae corporis expedita asperiores, officia unde ab vero, libero nostrum consequatur dolor, aperiam adipisci magni explicabo porro dignissimos aspernatur dicta error!</p>
+       
+       
+       <a href="http://www.areafor.com" target="_blank">Area</a>
+       <br>
+       <a href="http://www.diariovasco.com" target="new">Diario Vasco</a>
+       <br><br>
+       
+       <button type="button">OCULTAR</button>
+       
+       
+       <script>
+           
+           $(function(){ // función de jquery
+               
+               $("button").click(function(){
+                   $("a[target='_blank']").hide(1000); 
+               }); 
+               
+           });
+
+
+       </script>
+  
+   </div>
+    
+</body>
+</html>

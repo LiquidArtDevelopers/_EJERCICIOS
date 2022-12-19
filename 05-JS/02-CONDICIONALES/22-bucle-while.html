@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BUCLE FOR</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Bucle WHILE</h1>
+       <p>No hace falta iniciar ni actualizar</p>
+       
+       <p id="cal"></p>
+       
+       <script>
+           
+           e=prompt("¿Cuántos euros tienes?");
+           
+           while(isNaN(e) == true){
+               alert("Por favor, escribe un número!!");
+               e=prompt("¿Cuántos euros tienes?");
+            }
+           
+           dolar=(e*1.24);
+           dolar=dolar.toFixed(2); //para fijar decimales a un número
+           document.getElementById("cal").innerHTML="Tienes "+dolar+" dolares.";
+
+           
+       </script>
+
+   </div>
+    
+</body>
+</html>

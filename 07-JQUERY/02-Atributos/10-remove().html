@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        #div1{
+            background-color: skyblue;
+            height: 350px;
+            padding: 50px;
+        }
+        
+        .cursiva{
+            font-style: italic;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+      
+      <h1>remove()</h1>
+      
+      <div id="div1">
+      
+      <p>UNO....Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus eligendi voluptates atque iure, iste sequi quis saepe natus quo architecto pariatur commodi hic doloribus asperiores ut voluptatem quibusdam! Vel, aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsum voluptas suscipit quibusdam consequuntur, quod earum impedit dignissimos libero nobis labore nihil cumque sit porro adipisci odit voluptates voluptatum reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius id omnis eveniet! Quo illo expedita fugit rem sequi nemo quasi molestiae perferendis asperiores iure voluptatum numquam, provident, consequuntur atque pariatur!</p>
+      
+      <p class="txt">UNO....Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus eligendi voluptates atque iure, iste sequi quis saepe natus quo architecto pariatur commodi hic doloribus asperiores ut voluptatem quibusdam! Vel, aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsum voluptas suscipit quibusdam consequuntur, quod earum impedit dignissimos libero nobis labore nihil cumque sit porro adipisci </p>
+      
+      <button id="b1">empty</button>
+      
+    </div>
+    <script>
+       
+          $(function(){
+
+              $("#b1").click(function(){
+                $("p").remove(".txt");
+              });
+                           
+          });
+       
+    </script>
+      
+       
+   </div>
+    
+</body>
+</html>

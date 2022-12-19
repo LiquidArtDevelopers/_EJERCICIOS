@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BUCLE FOR</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Bucle WHILE</h1>
+       <p>No hace falta iniciar ni actualizar</p>
+       
+       <script>
+           
+           d=prompt("¿qué día es hoy?");
+           d=d.toLowerCase();
+           
+            //for(x=1;d!="lunes";x++){}    
+           
+           while(d != "lunes"){
+               // si no queremos que nos muestre en pantalla todas las respuestas incorrectas, quitamos esta linea
+               document.write("<p>No, no es "+d+"</p>"); 
+               
+               d=prompt("qué dia es hoy otra vez?");
+               d=d.toLowerCase();
+            }
+           
+           document.write("<p>BIEN, Hoy es "+d+"</p>");
+
+           
+           
+       </script>
+
+   </div>
+    
+</body>
+</html>

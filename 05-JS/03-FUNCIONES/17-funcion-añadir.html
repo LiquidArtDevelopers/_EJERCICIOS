@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones</title>
+    <style>
+        
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        .oculto{
+            display: none;
+        }
+        .visible{
+            display: block;
+        }
+        
+        
+    </style>
+    
+    <script>
+        
+function anadir(){
+    // pedir dato
+    nom=prompt("¿Como te llamas?");
+    // nueva etiqeta li
+    nuevo="<li>"+nom+"</li>";
+        
+// se puede escribir en corto
+document.getElementById("lista").innerHTML += nuevo;
+
+//document.getElementById("lista").innerHTML=document.getElementById("lista").innerHTML+nuevo;
+}
+        
+    </script>
+    
+</head>
+
+<body>
+   
+   <div id="container">
+       
+    <h1>Función añadir</h1>
+    <p>Escribe el código de una función que nos permita añadir más elementos en lista no ordenada.</p>
+    
+    <ul id="lista">
+        <li>Leire</li>
+        <li>Anne</li>
+        <li>Jon</li>
+        <li>Aitor</li>
+        
+    </ul>
+    
+    <button onclick="anadir()">Añadir</button>
+    
+       
+       
+   </div>
+    
+</body>
+</html>

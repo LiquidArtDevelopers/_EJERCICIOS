@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Menu Responsive</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"> 
+
+<script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+
+
+<style type="text/css">
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+#general{
+	max-width:800px;
+	height:500px;
+	margin-left:auto;
+	margin-right:auto;
+}
+nav {
+	width:100%;
+	height:auto;/* no puede tener altura fija !! */
+	background-color:rgba(160,159,159,1.00);
+}
+#menuresponsive {
+	list-style-type:none;
+}
+#menuresponsive li {
+	display: inline;
+}
+#menuresponsive li a {
+	padding: 5px 15px;
+	font-size: 18px;
+	color: #464646;
+	text-decoration: none;
+}
+#menuresponsive li a:hover {
+	color: #d5d3d9;
+	text-shadow:none;
+	background-color: #040707;
+}
+#menuresponsive li a.activado {
+	color: #d5d3d9;
+	text-shadow:none;
+	background-color: #040707;
+	text-decoration: none;
+	font-weight:bold;
+}
+/* ocultar menu desplegable */
+.btn{
+display: none;
+cursor: pointer;
+}
+
+/*****************************************************/
+@media (max-width: 640px) {
+	
+nav ul { 
+	width:200px;
+	background-color:rgba(84,251,238,1.00);
+	position:absolute;
+	left:-200px;/* ocultar menu horizontal, mandarlo fuera */
+  	}
+.btn {
+	display: block;/* mostrar menu desplegable */
+	background-color: #000;
+	padding:5px;
+}
+
+nav {
+	width:100%;
+	
+}
+#menuresponsive li a{
+	display: block;
+	}
+
+}
+
+
+</style>
+</head>
+
+
+<body>
+<div id="general">
+
+<nav>
+
+<img src="nav-icon.png" width="50" height="50" class="btn">
+     
+      <ul id="menuresponsive">
+           <li><a href="#" class="activado">Home</a></li>
+           <li><a href="#">Nosotros</a></li>
+           <li><a href="#">Catálogo</a></li>
+          	<li><a href="#">Contacto</a></li>
+      </ul>
+      
+</nav>
+
+
+</div>  
+    
+    
+<script>
+    
+$(function(){
+    
+	var x = 0;
+    $(".btn").click(function(){
+	   if (x == 0) {
+		  $("#menuresponsive").animate({left: "0"});
+		  x = 1;
+	   } else {
+		  x = 0;
+		  $("#menuresponsive").animate({left: "-200px"});
+	   }
+    });
+    
+	// si hacemos las secciones en la misma página, no hacemos .html
+    $("#menuresponsive li a").click(function(){
+	// si no ponemos x=0 se salta un click del botón
+	   x = 0;
+	   if( $(window).width() <= 640 ){
+            $("#menuresponsive").animate({left: "-200px"});
+	   } 
+    });
+    
+});
+    
+</script>
+
+</body>
+</html>

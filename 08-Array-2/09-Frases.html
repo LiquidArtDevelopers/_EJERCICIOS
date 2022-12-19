@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Array-Matrices</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+        .ocultar{
+            display: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+   
+   <div class="container">
+       
+       <h1>Array - Matrices</h1>         
+       <p id="txt"></p>      
+ 
+       <script>
+           
+        // crear array
+        frases=new Array();
+        // definir los valores del array.
+           frases[0]="Esta es la frase CERO";
+           frases[1]="Esta es la frase UNO";
+           frases[2]="Esta es la frase DOS";
+           frases[3]="Esta es la frase TRES";
+           frases[4]="Esta es la frase CUATRO";
+           frases[5]="Esta es la frase CINCO";
+           frases[6]="Esta es la frase SEIS";
+       
+        // calcular para tener un número aleatorio
+        num=Math.floor(Math.random()*(frases.length)); // longitud 7
+        
+        // mostrar una frase aleatoria
+        document.getElementById("txt").innerHTML=frases[num];
+
+       </script>
+       
+       
+       
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejercicio menú</title>
+
+<style>
+    
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+       header{
+        padding: 30px;
+        text-align: center;
+    }
+	
+	nav {
+		border: 1px solid rgba(0,0,0,1.00);
+		padding: 10px;
+		width: 70%;
+		margin: 50px auto; 
+        overflow: auto;
+	}
+    
+	nav ul{
+		list-style-type: none;
+		width: 500px; /* 120x4=480+20, */
+        float: right;
+        overflow: auto; 
+        background-color: aqua;
+	} 
+    
+	nav ul li a{
+		text-decoration: none;
+        float: left;
+		display: block;
+		width: 120px;
+		margin-left: 5px;
+		padding: 10px 0px;
+		color: white;
+		font-family: Verdana, "sans-serif";
+		text-align: center;
+		background-color: rgba(38,30,131,1.00);
+		}
+    
+    nav ul li a:hover{
+        background-color: red;
+    }
+
+	</style>
+</head>
+
+<body>
+<header>
+    <h1>Menú Horizontal con Float</h1>
+</header>
+	<nav>
+		<ul>
+			<li><a href="#">INICIO</a></li>
+			<li><a href="#">SERVICIOS</a></li>
+			<li><a href="#">BLOG</a></li>
+			<li><a href="#">CONTACTO</a></li>
+		</ul>
+ 	</nav>
+</body>
+</html>

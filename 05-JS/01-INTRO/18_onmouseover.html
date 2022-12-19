@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Operadores</title>
+
+<style type="text/css">
+#container {
+	background-color: #9CC;
+	padding: 20px;
+	height: 400px;
+	width: 700px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.rojo {
+	color: #F00;
+	font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+<h1>Mostrar texto con un onMouseOver y onMouseOut en el botón</h1>
+
+<p id="txt"></p>
+
+<a href="#" onmouseover="document.getElementById('txt').innerHTML='Jueves, pintxo pote!'" onmouseout="document.getElementById('txt').innerHTML='Vamos bien!'">
+Cambiar Texto
+</a>
+
+</div>
+
+<script>
+// primero vemos este texto en el párrafo
+document.getElementById("txt").innerHTML="Javascript me gusta.";
+</script>
+
+</body>
+</html>

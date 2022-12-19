@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos</title>
+    <style>
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+         .orange{
+            background-color: orange;
+            padding: 20px;
+            color: gray;
+            border: 1px solid black;
+        }
+        
+       
+        
+    </style>
+    
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"> // ../ salir de la carpeta
+    </script>
+    
+</head>
+<body>
+   
+   <div class="container">
+      
+      <h1>togleClass() - aplica y quita en una sola función</h1>
+
+      <p id="p1">UNO....Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus eligendi voluptates atque iure, iste sequi quis saepe natus quo architecto pariatur commodi hic doloribus asperiores ut voluptatem quibusdam! Vel, aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsum voluptas suscipit quibusdam consequuntur, quod earum impedit dignissimos libero nobis labore nihil cumque sit porro adipisci odit voluptates voluptatum reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius id omnis eveniet! Quo illo expedita fugit rem sequi nemo quasi molestiae perferendis asperiores iure voluptatum numquam, provident, consequuntur atque pariatur!</p>
+      
+      <p>UNO....Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus eligendi voluptates atque iure, iste sequi quis saepe natus quo architecto pariatur commodi hic doloribus asperiores ut voluptatem quibusdam! Vel, aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsum voluptas suscipit quibusdam consequuntur, quod earum impedit dignissimos libero nobis labore nihil cumque sit porro adipisci odit voluptates voluptatum reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius id omnis eveniet! Quo illo expedita fugit rem sequi nemo quasi molestiae perferendis asperiores iure voluptatum numquam, provident, consequuntur atque pariatur!</p>
+      
+      <button id="btn">toggleClass</button>
+      
+    <script> 
+       
+        $(function(){
+            
+              $("#btn").click(function(){
+                $("#p1").toggleClass("orange"); 
+                // togleClass hace la función de aplicar y quitar
+              });
+                         
+        });
+       
+    </script>
+      
+       
+   </div>
+    
+</body>
+</html>

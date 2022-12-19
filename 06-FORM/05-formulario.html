@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULARIOS</title>
+    <style>
+    
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+
+    </style>
+    
+<script>
+    
+        function euros(){
+            eur=document.getElementById("num").value;
+            dol=eur*1.25;
+            document.getElementById("txt").innerHTML=dol+"$"
+        }
+        
+         function dolares(){
+             dol=document.getElementById("num").value;
+            eur=dol/1.25;
+            document.getElementById("txt").innerHTML=eur+"€";
+        }  
+        
+</script>
+    
+    
+</head>
+<body>
+   
+   <div id="container">
+     
+     <h1>Formularios</h1>
+     <p>Sintaxis: <br>
+     variable=document.nombre_formulario.nombre_campo.value; <br>
+     variable=document.getElementById("id").value;
+     </p>
+     <p>CONVERTIR</p>
+      
+      <form  name="formu"> <!-- recibir datos por su nombre "name" -->
+       
+        <label for="Valor">Valor:</label>
+        <input type="number" id="num">
+        
+        <br><br>
+        
+        <input type="button" onclick="euros()" value="Euros">
+        <input type="button" onclick="dolares()" value="Dolares">
+
+      </form>
+      
+      <p id="txt"></p>
+       
+       
+       
+       
+   </div>
+    
+</body>
+</html>

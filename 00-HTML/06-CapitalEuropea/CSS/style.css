@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  body{
+    background-color: white;
+}
+.contenedor-principal{
+    /* background-color: rgb(255, 112, 155); */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+}
+nav a{
+    text-decoration: none;
+}
+
+
+
+.cab01{
+    /* background-color: darkgoldenrod; */
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+.cab01 h1{
+    /* background-color: rgb(176, 235, 255); */
+    color: #0e8d89;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 31px;
+}
+.cab02{
+    background-color: #c4c4c4;
+    padding: 10px 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.cab02 a{
+    /* background-color: rgb(255, 167, 167); */
+    color: #424242;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 5px;
+    
+}
+.cab-img{
+    /* background-color:rgb(250, 238, 173); */
+    width: 100%;
+    padding: 10px 0px;
+}
+.cab-img img{
+    /* background-color:rgb(90, 90, 90); */
+    width: 100%;
+}
+
+
+
+.contenedor-titular{
+    /* background-color: greenyellow; */
+    display: block;    
+    padding: 10px 0px;
+}
+.contenedor-titular h1{
+    /* background-color: rgb(209, 213, 214); */
+    color: #0e8d89;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.contenedor-titular p{
+    /* background-color: rgb(236, 241, 182); */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+
+
+.contenedor-presentacion h1{
+    /* background-color: rgb(209, 213, 214); */
+    color: #0e8d89;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.contenido-presentacion{
+    /* background-color: lightgreen; */
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    padding-bottom: 10px;
+}
+.contenido-presentacion img{
+    width: 25%;
+    float: left;
+    padding-right: 10px;
+}
+.contenido-presentacion p{    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding-top: 15px;       
+}
+
+
+
+.contenido-encuadrado{
+    /* background-color: rgb(235, 208, 221); */
+    border: 2px solid rgb(184, 184, 184);
+    width:60%;
+    margin: 20px auto;
+    text-align: justify;
+}
+.contenido-encuadrado img{
+    float: right;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 15px;
+}
+.contenido-encuadrado p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    color: rgb(97, 97, 97);;
+}
+
+
+.contenido-pie{
+    background-color: #008b8b;
+    display:flex;
+}
+.contenido-pie img{
+    padding: 15px;
+}
+.contenedor-pie{
+    padding-top: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+@media (max-width:768px){
+
+    body{
+        background-color: white;
+    }
+    .contenedor-principal{
+        /* background-color: rgb(255, 112, 155); */
+        max-width: 1200px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    
+    nav a{
+        text-decoration: none;
+    }
+    .cab01{
+        /* background-color: darkgoldenrod; */
+        padding-top: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+    }
+    .cab01 h1{
+        /* background-color: rgb(176, 235, 255); */
+        color: #0e8d89;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 31px;
+        text-align: center;
+    }
+    .cab02{
+        /* background-color: #c4c4c4; */
+        padding: 10px 5px;
+        padding-right: 10px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cab02 a{
+        /* background-color: rgb(255, 167, 167); */
+        color: #424242;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 10px;        
+    }
+    .cab-img{
+       /*  background-color:rgb(250, 238, 173); */
+        width: 100%;
+        padding: 0px;
+    }
+    .cab-img img{
+        /* background-color:rgb(90, 90, 90); */
+        width: 100%;
+        padding: 0px;
+    }
+    
+    
+    
+    .contenedor-titular{
+        /* background-color: greenyellow; */
+        display: block;    
+        padding: 0px 0px;
+        text-align: justify;
+    }
+    .contenedor-titular h1{
+        /* background-color: rgb(209, 213, 214); */
+        color: #0e8d89;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding-left: 10%;
+    }
+    .contenedor-titular p{
+        /* background-color: rgb(236, 241, 182); */
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        padding: 0px 10px;
+    }
+    
+    
+    
+    .contenedor-presentacion h1{
+        /* background-color: rgb(209, 213, 214); */
+        color: #0e8d89;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;        
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding-left: 10%;
+    }
+    .contenido-presentacion{
+        /* background-color: lightgreen; */
+        width: 100%;
+        height: 100%;
+        text-align: justify;
+        padding-bottom: 10px;        
+    }
+    .contenido-presentacion img{
+        width: 25%;
+        float: left;
+        padding-right: 10px;
+    }
+    .contenido-presentacion p{    
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        padding-top: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    
+    
+    .contenido-encuadrado{
+        /* background-color: rgb(235, 208, 221); */
+        border: 2px solid rgb(184, 184, 184);
+        width:95%;
+        margin: 20px auto;
+        text-align: justify;
+    }
+    .contenido-encuadrado img{
+        float: none;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-top: 15px;
+        width: 100%;
+
+        max-width:400px;
+        margin: 0 auto;
+        align-content:center;
+        justify-content: center;
+        display: block;
+    }
+    .contenido-encuadrado p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        padding: 10px;
+        color: rgb(97, 97, 97);;
+    }
+    
+    
+    
+    
+    .contenido-pie{
+        background-color: #008b8b;
+        display:block;
+    }
+    .contenido-pie img{
+        padding: 15px;
+
+        max-width: 500px;
+        margin: 0 auto;
+        align-content:center;
+        justify-content: center;
+        display: block;
+    }
+    .contenedor-pie{
+        padding-top: 15px;
+        padding-left: 40px;
+        padding-bottom: 50px;
+        color: white;
+        font-size: 20px;
+    }
+
+}

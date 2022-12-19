@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IF / ELSE</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>IF / IF ELSE</h1>
+       
+       
+       <script>
+           
+           // pedir dato
+           dia=prompt("¿Qué día es hoy?"); 
+           // condición
+           if (dia == "Jueves"){
+               document.write("<p>Hoy es"+dia+", pintxo pote !</p>");
+           } else {
+               document.write("<p>Hoy no es Jueves!</p>");
+           }
+          
+      
+            // pedir el dato
+            nombre=prompt("Teclea tu nombre, por favor");
+            // pasamos a MAYUSCULAS
+            nombre=nombre.toUpperCase();
+            // pasamos a MINUSCULAS
+            //nombre=nombre.toLowerCase();
+            alert(nombre);
+  
+          
+           dia=prompt("¿Qué día es hoy?");
+           dia=dia.toLowerCase();
+           
+           if(dia == "viernes"){
+               document.write("<p>Por fin es "+dia+"</p>");
+           }else{
+               document.write("<p>Hoy no es Viernes!</p>")
+           }
+      
+       
+       </script>
+  
+   
+     
+   </div>
+    
+</body>
+</html>

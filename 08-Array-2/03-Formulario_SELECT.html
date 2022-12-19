@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Array-Matrices</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>Array - select - onchange</h1>      
+       <form name="form1">
+           <select name="nummenu" id="nummenu" onchange="seleccionarMenu()">
+                <option value="1">Menu Uno</option>
+                <option value="2">Menu Dos</option>
+                <option value="3">Menu Tres</option>
+                
+
+           </select>
+       </form>
+       <h2 id="txtmenu"></h2>
+       <p id="txt1"></p>
+       <p id="txt2"></p>
+       <p id="txt3"></p>       
+       
+<script>
+    function seleccionarMenu(){
+        /* datos de menus */ 
+        menu = new Array("Menu 1","Menu 2","Menu 3");
+        primero=new Array("Arroz", "Pasta", "Sopa");
+        segundo=Array("Merluza", "Txuleta", "Pollo");
+        postre=["Flan", "Natillas", "Helado"];
+        indice = document.getElementById('nummenu').value - 1
+
+       
+       // mostrar todo
+       document.getElementById("txtmenu").innerHTML= menu[indice];
+        document.getElementById("txt1").innerHTML="El primer plato es: "+primero[indice];
+        document.getElementById("txt2").innerHTML="El segundo plato es: "+segundo[indice];
+        document.getElementById("txt3").innerHTML="El postre es: "+postre[indice];         
+        
+    }       
+</script>
+       
+       
+       
+   </div>
+    
+</body>
+</html>

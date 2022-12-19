@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULARIOS</title>
+    <style>
+    
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        .visible{
+            display: block;
+        }
+        .oculto{
+            display: none;
+        }
+        input{
+            margin: 10px;
+        }
+        caption{
+            display: none;
+        }
+        
+        th{
+            background-color:black;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        td{
+            background-color: rgba(220,220,220,1.00);
+            width: 200px;
+        }
+
+    </style>
+    
+    <script>
+        
+        function mostrar(){ 
+        
+            n=document.getElementById("nom").value; // recibir dato
+            document.getElementById("nombre").innerHTML=n; // mostar dato
+            document.getElementById("nom").value=""; // vaciar el campo
+           
+            a=document.getElementById("ape").value;
+            document.getElementById("apellido").innerHTML=a;
+            document.getElementById("ape").value="";
+            
+            e=document.getElementById("ema").value;
+            document.getElementById("email").innerHTML=e;
+            document.getElementById("ema").value="";
+            
+            c=document.getElementById("ciu").value;
+            document.getElementById("ciudad").innerHTML=c;
+            document.getElementById("ciu").value="";
+            
+        }
+
+        
+        
+    </script>
+</head>
+<body>
+   
+   <div id="container">
+     
+     <h1>Formularios</h1>
+     
+      <p>Sintaxis: <br>
+     variable=document.nombre_formulario.nombre_campo.value; <br>
+     variable=document.getElementById("id").value;
+     </p>
+     
+<form id="formu" name="formu">
+      
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nom">
+      <br>
+      
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="ape">
+      <br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="ema">
+      <br>
+      
+      <label for="ciudad">Ciudad:</label>
+      <input type="text" id="ciu">
+      <br>
+      
+      <input type="button" onclick="mostrar()" value="Mostrar datos">
+       
+</form>
+      
+      <h2>Mostrar Datos</h2>
+      
+      <table id="tabla" cellpading="0">
+          
+          <caption>Lista personal</caption>
+
+          <tbody>
+         
+          <tr>
+              <th scope="row">Nombre</th>
+              <td id="nombre"></td>
+          </tr>
+          
+          <tr>
+              <th scope="row">Apellido</th>
+              <td id="apellido"></td>
+          </tr>
+              
+          <tr>
+              <th scope="row">Email</th>
+              <td id="email"></td>
+              
+          </tr>
+          
+          <tr>
+              <th scope="row">Ciudad</th>
+              <td id="ciudad"></td>
+ 
+          </tr>
+          
+          </tbody>
+          
+      </table>
+   
+   </div>
+    
+</body>
+</html>

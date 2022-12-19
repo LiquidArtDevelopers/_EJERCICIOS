@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULARIOS</title>
+    <style>
+    
+        #container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+        .visible{
+            display: block;
+        }
+        .oculto{
+            display: none;
+        }
+        input{
+            margin: 10px;
+        }
+        .rojo{
+            border: 2px rgba(247,0,4,1.00) solid;
+        }
+
+
+    </style>
+    
+    <script>
+        
+        function comprobar(){ 
+            
+            document.getElementById("nom").className=false;
+            document.getElementById("eda").className=false;
+            
+            nombre=document.getElementById("nom").value;
+            edad=document.getElementById("eda").value;
+            aceptar=document.getElementById("ace").checked;
+            alert(aceptar);
+        
+            
+            
+            if (nombre == ""){ // (nombre.length == 0)
+                alert("Campo vacío");
+                document.getElementById("nom").className="rojo";
+                document.getElementById("nom").focus(); // para que el cursor se quede dentro
+                
+            }else if (edad == ""){
+                alert("Campo vacío");
+                document.getElementById("eda").className="rojo";
+                document.getElementById("eda").focus(); // para que el cursor se quede dentro
+                
+            }else if (isNaN(edad) == true){
+                alert("Sólo números por favor");
+                document.getElementById("eda").className="rojo";
+                document.getElementById("eda").focus();
+                     
+            }else if (edad.length>2){ // longitud si es distinto a 2, error
+                alert("Sólo dos números por favor");
+                document.getElementById("eda").className="rojo";
+                document.getElementById("eda").focus();
+
+            }else if (aceptar == false){
+                alert("Por favor, acepte las condiciones!");
+                
+            }else{
+                alert("Ok");
+                // document.formu.action="mailto:nombre@gmail.com"; // formu = name
+                // document.formu.submit(); // name + enviar
+                
+                // input type=submit está prohibido poner porque debemos comprobar los datos antes de ser enviamos.
+                // OBLIGATORIAMENTE PONER input type=buttom
+            }
+    
+        }
+
+        
+        
+    </script>
+</head>
+<body>
+   
+   <div id="container">
+     
+     <h1>Formularios</h1>
+      
+      <form id="formu" name="formu" enctype="text/plain"> <!-- action lo pondremos en javascript -->
+      
+      <label for="nom">Nombre:</label>
+      <input type="text" name="nom" id="nom">
+      <br>
+      
+      <label for="edad">Edad:</label>
+      <input type="number" name="edad" id="eda">
+      <br>
+           
+      <input type="checkbox" name="aceptar" id="ace">
+      <label for="aceptar">Acepto las condiciones</label>   
+      <br>
+            
+      <input type="button" onclick="comprobar()" value="Enviar">
+       
+      </form>
+   
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+
+<title>Ejercicio 2 - Formularios</title>
+
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	.contacto{
+		width: 50%;
+		margin: auto;
+	}
+	#form1{
+		width: 100%;
+		background-color: rgba(207,247,245,1.00);
+		margin: 0 auto; /* no hace falta */
+		padding: 10px;
+		font-family: Verdana, "sans-serif";
+	}
+	#form1 fieldset{
+		border: 1px solid rgba(1,115,208,1.00);
+		padding: 10px;
+	}
+	#form1 legend{
+		font-size: 16px;
+		color: rgba(0,0,0,1.00);
+		font-weight: bold;
+		margin-bottom: 15px;
+	}
+	
+	#form1 label{
+		/*display: block;*/
+        /*float: left;*/
+        display: inline-block;
+		width: 100px; /*  100% */
+		font-size: 16px;
+		padding: 5px;
+        /*background-color:rgba(23,176,117,1.00);*/
+	}
+	
+	#form1 input{
+		/*display: block;
+		float: left;*/
+        display: inline-block;
+		width: 200px;
+		height: 35px;
+		color:black;
+		font-size: 16px;
+		border: 0.5px solid rgba(72,72,72,1.00);
+		margin-bottom: 10px;
+	}
+	
+	
+	#form1 input.boton{
+		background-color: rgba(245,247,248,1.00);
+		margin-top: 10px;
+		margin-bottom: 10px;
+		color: rgba(0,0,0,1.00);
+		border: 1px solid rgba(51,50,50,1.00);
+		height: 25px;
+		width: 120px;
+	}
+    
+    #form1 input.x{
+        width: 20px;
+        height: 20px;
+    }
+	
+	#form1 input.boton:hover{
+		background-color: rgba(113,113,113,1.00);
+	}
+	
+
+	
+</style>
+
+</head>
+
+<body>
+<div class="contacto">
+
+<form id="form1" method="post" action="mailto:nombre@gmail.com">
+	<fieldset>
+		<legend>Compañías Telefónicas</legend>
+      
+		  <label for="nombre">Nombre:</label>
+		  <input name="Nombre" type="text" tabindex="1" required> 
+		  <br>
+		  <label for="apellidos">Apellidos:</label>
+		  <input type="text" name="Apellidos" tabindex="2">
+		  <br>
+		  
+		  <label for="Operadoras">Compañías:</label>
+		  <!-- <p>Compañías:</p> -->
+		  <br>
+		  <input class="x" type="radio" name="Operadora" id="vodafone" value="Vodafone" checked>
+		  <label for="Vodafone">Vodafone</label>
+		  <br>
+
+		  <input class="x" type="radio" name="Operadora" value="Movistar">
+		  <label for="Movistar">Movistar</label>
+		  <br>
+
+		  <input class="x" type="radio" name="Operadora" value="Euskaltel">
+		  <label for="Euskaltel">Euskaltel</label>
+		  <br>
+		
+	  <input type="submit" name="submit" id="submit" value="Enviar" class="boton"> 
+	
+   </fieldset>
+</form>
+
+</div>
+
+</body>
+</html>

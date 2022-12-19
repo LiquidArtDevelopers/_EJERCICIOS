@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IF / ELSE</title>
+    <style>
+    
+        .container{
+            padding: 100px;
+            font-family: helvetica;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+       
+       <h1>IF ELSE / window.confirm </h1>
+       
+       
+       <script>
+           
+        x=window.confirm("Te gusta la nieve?");
+         //alert(x);
+           
+        if (x == true){ // valor boleano, sin comillas dobles
+            document.write("<p>Te gusta la nieve</p>");
+        }else{
+            document.write("<p>No te gusta la nieve</p>");
+        }
+           
+           
+        // otra opción / != distinto a true
+        res=confirm("Te gusta la playa?");
+           
+        if (res != true){
+            document.write("<p>No te gusta la playa</p>"); 
+        }else{
+            document.write("<p>Te gusta la playa</p>");
+        }
+           
+            
+           
+           
+       </script>
+
+   </div>
+    
+</body>
+</html>

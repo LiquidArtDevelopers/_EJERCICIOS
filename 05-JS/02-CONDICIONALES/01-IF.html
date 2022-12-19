@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IF / ELSE</title>
+    <style>
+    
+        .container{
+            max-width: 800px;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+
+<body>
+   
+<div class="container">
+       
+<h1>IF / IF-ELSE</h1>
+
+<p>IF es una estructura de control utilizada para tomar decisiones. Es un condicional que sirve para realizar unas u otras operaciones en función de una expresión. </p>
+
+<p>Primero se evalúa una expresión, si da resultado positivo se realizan las acciones relacionadas con el caso positivo. 
+</p>
+
+
+<p>if (expresión) { <br>
+   //acciones a realizar en caso positivo <br>
+   //...<br> 
+}<br>
+</p>
+<p>if (condición) { <br>
+   // instrución a realizar<br>
+    // instrución a realizar<br>  
+}<br>
+</p>
+
+<p>Opcionalmente se pueden indicar acciones a realizar en caso de que la evaluación de la sentencia devuelva resultados negativos. </p>
+
+<p>if (expresión) { <br>
+   //acciones a realizar en caso positivo <br>
+   //... <br>
+} else { <br>
+   //acciones a realizar en caso negativo <br>
+   //... <br>
+}
+</p>
+
+<br>
+<p>Con operador relacional entendemos la relación que tiene un valor respecto a otro. Se basan en el concepto de verdadero o falso </p>
+<table width="60%" border="0" cellspacing="0" cellpadding="0" class="fontab">
+  <tbody>
+    <tr>
+      <th scope="col">Operador</th>
+      <th scope="col">Acción</th>
+    </tr>
+    <tr>
+      <td>>	</td>
+      <td>Mayor que</td>
+    </tr>
+    <tr>
+      <td>>=	</td>
+      <td>Mayor o igual</td>
+    </tr>
+    <tr>
+      <td><	</td>
+      <td>Menor que</td>
+    </tr>
+    <tr>
+      <td><=	</td>
+      <td>Menor o igual</td>
+    </tr>
+    <tr>
+      <td>==	</td>
+      <td>Igual</td>
+    </tr>
+    <tr>
+      <td>!=	</td>
+      <td>Distinto</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2>Mostrar ejemplo</h2>
+ 
+      
+      
+      
+       
+       <script>
+
+       valor1=prompt("Teclea un número del 1 al 10, por favor");
+       valor2=prompt("Teclea un número del 1 al 10, por favor");
+           
+            document.write("<p>Valor1 :"+valor1+"</p>");
+            document.write("<p>Valor2 :"+valor2+"</p>");
+           
+           if (valor1 < valor2){
+               document.write("<p>El PRIMER número es menor.</p>");
+           }
+    
+           
+           if (valor1 <= valor2){
+               document.write("<p>El PRIMER número es menor o igual. </p>");
+           }
+           
+           if (valor1 > valor2){
+               document.write("<p>El PRIMER número es mayor. </p>");
+           }
+             
+           if (valor1 >= valor2){
+               document.write("<p>El PRIMER número es mayor o igual. </p>");
+           }
+            
+           
+           if (valor1 == valor2){
+               document.write("<p>El PRIMER número es igual. </p>");
+           }
+          
+           
+           
+           if (valor1 != valor2){
+               document.write("<p>El PRIMER número es distinto a SEGUNDO. </p>");
+           }
+   
+       </script>
+  
+   
+     
+   </div>
+    
+</body>
+</html>

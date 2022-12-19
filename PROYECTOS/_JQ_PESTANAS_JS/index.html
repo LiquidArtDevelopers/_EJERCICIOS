@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jquery-3.1.1.min.js">
+    <title>PESTAÑAS CON JS/JQ</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          outline: 0;
+          box-sizing: border-box;
+        }
+        .contenedor{
+            background-color: bisque;
+            margin: 100px auto;
+            width: 600px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;            
+        }
+        .caja_pestanas{
+            background-color: rgb(240, 240, 240);
+            width: 100%;
+            height: 50px;
+            display: flex;
+        }
+        .caja_texto{
+            background-color: rgb(197, 183, 167);
+            width: 100%;
+            height: 550px;
+        }
+        .pestana{            
+            color: white;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            font-size: 30px;
+            border: 1px solid rgb(197, 183, 167);
+            background-color: rgb(255, 205, 144);
+        }
+        .pestana:hover{
+            background-color: rgba(255, 205, 144, 0.774);
+        }    
+        .pestana_select{
+            background-color: rgb(197, 183, 167) !important;
+        }
+        .texto{
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            padding: 30px;
+            display: none;
+
+        }
+        .texto_select{
+            display: block!important;
+            overflow: scroll;
+        }
+        .texto::-webkit-scrollbar {
+            display: none;  /* Ocultar scroll */
+        }
+
+    </style>    
+</head>
+
+<body>
+    <!--  -->
+    <div class="contenedor">
+        <div id ="pest" class="caja_pestanas"></div>
+        <div  id ="text" class="caja_texto"></div>
+    </div>
+</body>
+
+<script>
+    
+    //variables
+    let pest = "";
+    let texto = "";
+    let numPest = 7
+    let lorem = "<br><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.</p>"
+
+    //iteramos sobre la variable y creamos el HTML tanto de pestañas como de textos
+    for (i = 1;i<=numPest;i++){
+        pest += `<div id="${i}" class="pestana">${i}</div>`;
+        texto += `<div id="t${i}" class="texto">${i+lorem}</div>`;
+    }
+    document.querySelector("#pest").innerHTML=pest;
+    document.querySelector("#text").innerHTML=texto;
+
+    //escuchamos para saber qué pestaña está seleccionada
+    document.body.addEventListener("click", function (event) {
+        if (event.target.classList.contains("pestana")) {
+
+            //iteramos y borramos las clases de selección
+            for (const item of document.querySelectorAll('.pestana_select')) {
+                item.classList.remove("pestana_select");
+            }
+            for (const item of document.querySelectorAll('.texto_select')){
+                item.classList.remove("texto_select");
+            }
+
+            //añadimos clase de selección al target y su texto relacionado
+            event.target.classList.add("pestana_select");      
+            document.querySelector(`#t${event.target.id}`).classList.add("texto_select");
+            return;
+        }
+    });
+
+    console.log("palabra".toUpperCase(0,3));
+    
+
+</script>
+
+
+</html>

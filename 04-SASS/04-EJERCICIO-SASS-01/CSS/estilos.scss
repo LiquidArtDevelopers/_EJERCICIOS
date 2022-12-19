@@ -1,0 +1,127 @@
+
+//Importamos de variables.scss las variables
+@import "variables";
+
+body{
+  background-color: #444;
+}
+.super-contenedor{
+  margin: 0 auto;
+  padding: 30px;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #649ff7;
+
+  .ejercicio{  
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content:space-around;
+    row-gap: 20px;
+    background-color: rgba(192, 192, 192, 0.445);
+    padding: 30px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    //ejercicio de variables
+    h1.title {
+    font: $title-font;
+    color: $cool-red;    
+    }
+
+    //Ejercicio con Mixins
+    @mixin circulo($size, $color, $radio) {
+      width: $size;
+      height: $size;
+      background-color: $color;
+      border-radius: $radio;
+    }
+    .small-blue-square {
+      @include circulo(100px, rgb(97, 97, 255), 50%);
+    }
+    .big-red-square {
+      @include circulo(300px, rgb(255, 96, 96), 10%);
+    }
+
+    //Ejercicio con rotate
+    @mixin transform-tilt($tilt, $velocidad) {
+
+      -webkit-transform: $tilt; 
+      -ms-transform: $tilt; 
+      transform: $tilt;
+      transition: $velocidad;
+    }
+    .frame:hover{ 
+      @include transform-tilt(rotate(15deg), 500ms); 
+    }
+    .frame{
+      @include transform-tilt(rotate(0deg), 500ms); 
+    }
+
+    //ejercicio extend
+    .boton{
+      box-sizing: border-box;
+      color: #ffffff;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+      padding: 12px 40px;
+      cursor: pointer;
+    }
+    .confirmar{
+      @extend .boton;
+      background-color: #87bae1;
+      float: left;
+    }
+    .cancelar{
+      @extend .boton;
+      background-color: #e4749e;
+      float: right;
+    }
+
+    //operaciones
+    $width: 300px;
+
+    .contenedor01 { 
+      width: $width;
+      height: 50px;
+      background-color: #444;
+    }
+    .contenedor02 {
+      width: $width / 2;      
+      height: 50px;
+      background-color: #e4749e;
+    }
+    .contenedor03 {
+      width: $width / 5;      
+      height: 50px;
+      background-color: bisque;
+    }
+    .contenedor04 {
+      width: $width * 5;      
+      height: 50px;
+      background-color: yellow;
+    }
+
+
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
