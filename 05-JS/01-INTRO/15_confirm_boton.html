@@ -97,8 +97,19 @@ cuando se pulsa Cancelar se guardara false
 /* ejercicio 2 */
 
 	/* 1- recoger en una constante el html del div donde se pulse */
+
+	const elementoHTML4 = document.getElementById("sumame");
+
 	/* 2- hacer una función de escucha para esa constante */
 	/* 3- cada vez que se pulse en ese div, el número que aparece debe incrementarse en +1 */
+			elementoHTML4.addEventListener("click", function(e){
+				let numero = document.getElementById("ejercicio2").innerText; /* inner text muestra el texto literal sin etiqueteas html. En este caso el numero que va dentro */
+				/* console.log(numero); */
+				numero=Number(numero);
+				numero+=1;
+				/* numero=numero+1; (Es igual que la de arriba, escrita de diferente manera) */
+				document.getElementById("ejercicio2").innerText=numero; /* también podemos usar innerHTML=numero */
+			})
 		/* recoger en una variable el valor html del contenedor */
 		/* convertir a Number */
 		/* hacer una suma +1 */
