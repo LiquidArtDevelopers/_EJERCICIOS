@@ -18,9 +18,9 @@
 	color: #F00;
 	font-size: 18px;
 }
-    #txt3{
-        display: none;
-    }
+#txt3{
+	display: none;
+}
 </style>
 </head>
 
@@ -41,16 +41,36 @@ document.getElementById("txt2").innerHTML="Vamos a ocultar este texto!";
 </script>
 
 
-<button onclick="document.getElementById('txt1').innerHTML='Texto cambiado'">Botón</button>
+<button onclick="insertartexto()">Botón</button>
 <br><br>
 
-<button onclick="document.getElementById('txt2').style.display='none'">Ocultar</button>
+<button onclick="ocultar()">Ocultar</button>
 <br><br>
 
-<button onclick="document.getElementById('txt3').style.display='block'">Mostrar</button>
+<button onclick="mostrar('hola<br>')">Mostrar</button>
 
 </div>
 
 
 </body>
 </html>
+
+<script>
+
+	function insertartexto(){
+		document.getElementById('txt1').innerHTML='Texto cambiado'
+	}
+
+	function ocultar(){
+		document.getElementById('txt2').style.display='none'
+	}
+
+	function mostrar(palabra){
+		document.getElementById('txt2').style.display='block'
+		document.getElementById('txt3').style.display='block'
+		document.getElementById('txt3').insertAdjacentHTML("afterbegin", palabra)
+	}
+
+
+
+</script>
