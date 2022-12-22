@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <title>Ejercicio 21: EventListeners</title>
+    
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          outline: 0;
+          box-sizing: border-box;
+        }
+        nav{
+            margin: 0 auto;
+            width: 100vw;
+            max-width: 1440px;
+            background-color: rgb(155, 236, 236);
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: 60px;
+        }
+        nav ul li{
+            list-style-type: none;
+            color: black;
+            font-family: 'Tangerine';
+            font-size: 90px;
+            transition: .3s;
+            -webkit-user-select:none;
+            user-select: none;
+        }
+        nav ul li:hover{
+            color: yellow;
+            transition: .2s;
+        }
+        header{
+            margin: 0 auto;
+            width: 100vw;
+            max-width: 1440px;            
+            padding: 30px;
+            background-color: aliceblue;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+        .duda{
+            color: rgb(250, 185, 44);
+        }
+        .seleccion{
+            color: brown;
+        }
+        a{
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1440px;
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>    
+    <nav>
+        <ul>
+            <li id="opc1" class="listado">opcion 1</li>
+            <li id="opc2" class="listado">opcion 2</li>
+            <li id="opc3" class="listado">opcion 3</li>
+            <li id="opc4" class="listado">opcion 4</li>
+            <li id="opc5" class="listado">opcion 5</li>
+        </ul>
+    </nav>
+    <header>
+        
+    </header>
+    <a href="https://blog.webdevsimplified.com/2022-01/event-listeners/" target="_blank">Más información sobre Listener</a>
+    <script>
+        /* ejercicio 1: cambiar el color del LI de clase "listado" donde se haya hecho click */
+
+        
+            /* 1- como son varios elementos con la misma clase, guardo en una constante todos los HTML que tengan la clase "listado" (los 5 LI)*/
+            const elementosLI = document.getElementsByClassName("listado");
+
+
+            //recorremos todos los elementosLI de la variable elementosLI que contiene los 5 LI
+            for(const elementoLI of elementosLI){
+
+                /* DESATAMOS EL EVENTO DE ESCUCHA CLICK PARA CADA ELEMENTO LI */
+                elementoLI.addEventListener("click", function(e){
+                    /* nos queamos con el TEXT del elemento clickado */
+                    let texto = elementoLI.innerText //meto en la variable texto el texto del elementoLi clickado
+                    /* guardamos en una constante todos los elementos HTML cuyo tag sea Header (en teoría sólo habrá 1, pero debemos recorrerlo, ya que es un getElement"S" con S, por lo que debemos hacer un for) */
+                    const elementosHeader = document.getElementsByTagName("header");
+                    /* recorro los elementos header encotrados */
+                    for(const elementoHeader of elementosHeader){
+                        /* ahora ya sí, aquí tendré mi header */
+                        elementoHeader.innerHTML=`<p class="seleccion">Has elegido este texto: ${texto}</p>`
+                    }
+                })
+
+
+                /* DESATAMOS EL EVENTO DE ESCUCHA MOUSEOVER PARA CADA ELEMENTO LI */
+                elementoLI.addEventListener("mouseover", function(e){
+                    /* nos queamos con el TEXT del elemento clickado */
+                    let texto = elementoLI.innerText //meto en la variable texto el texto del elementoLi clickado
+                    /* guardamos en una constante todos los elementos HTML cuyo tag sea Header (en teoría sólo habrá 1, pero debemos recorrerlo, ya que es un getElement"S" con S, por lo que debemos hacer un for) */
+                    const elementosHeader = document.getElementsByTagName("header");
+                    /* recorro los elementos header encotrados */
+                    for(const elementoHeader of elementosHeader){
+                        /* ahora ya sí, aquí tendré mi header */
+                        elementoHeader.innerHTML=`<p class="duda">¿Estás pensando clickar en: ${texto}?</p>`
+                    }
+                })
+
+            }
+            
+
+            
+        /* fin ejercicio 1 */
+
+
+    </script>
+</body>
+</html>
