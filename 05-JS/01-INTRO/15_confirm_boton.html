@@ -17,17 +17,20 @@ body {
 }
 .decoracion{
 	width: 500px;
-	height: 300px;
+	height: 135px;
 	margin: 30px auto;
 	padding: 50px;
 	background-color: rgb(212, 255, 241);
 	color: blueviolet;
-	font-size: 40px;
+	font-size: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-#pulsame{
+.numero{
+	font-size: 90px;
+}
+.pulsame{
 	width: 300px;
 	margin: 30px auto;
 	padding: 20px;
@@ -41,7 +44,7 @@ body {
 	-webkit-user-select: none;
 	user-select:none;
 }
-#pulsame:hover{
+.pulsame:hover{
 	opacity: 1;
 }
 
@@ -66,24 +69,45 @@ cuando se pulsa Cancelar se guardara false
 
 <button type="button" class="clase1 clase2" id="botonPregunta">Confirmar</button>
 <button type="button" id="botonAlerta" onClick="alert('ALERTA ROOOOJA')">Alerta</button>
-
-<div id="pulsame">
-	<p>SOY UN DIV, PERO PUEDES PULSARME</p>
-</div>
-
-
 <div id="respuestaAlerta">
 	<!-- inyectaré el texto o html cuando le de al botón alerta -->
 </div>
 
+<!-- EJERCICIO LISTENER DE PULSAR E INYECTAR CÓDIGO -->
+<div id="pulsame" class="pulsame">
+	<p>SOY UN DIV, PERO PUEDES PULSARME</p>
+</div>
 <div id="ejercicio" class="decoracion">
 	<!-- ejercicio. Quiero que cuando se haga click en el botón de pulsame, aquí aparezca el texto de "hola, soy Gorka" -->
+</div>
+
+
+<!-- EJERCICIO LISTENER DE PULSAR Y SUMAR CADA VEZ 1 MÁS -->
+<div id="sumame" class="pulsame">
+	<p>PULSAME PARA SUMAR UNO MÁS</p>
+</div>
+<div id="ejercicio2" class="decoracion numero">
+	1
 </div>
 
 
 </div>
 <script>
 
+/* ejercicio 2 */
+
+	/* 1- recoger en una constante el html del div donde se pulse */
+	/* 2- hacer una función de escucha para esa constante */
+	/* 3- cada vez que se pulse en ese div, el número que aparece debe incrementarse en +1 */
+		/* recoger en una variable el valor html del contenedor */
+		/* convertir a Number */
+		/* hacer una suma +1 */
+		/* inyectar el resultado de la suma como HTML en el contenedor */
+
+/* fin ejercicio 2 */
+
+
+/* ejercicio 1 */
 	/* 1- recoger en una constante el html del boton */
 
 		const elementoHTML3 = document.getElementById("pulsame");
@@ -94,6 +118,7 @@ cuando se pulsa Cancelar se guardara false
 		elementoHTML3.addEventListener("click", function(e){
 			document.getElementById("ejercicio").innerHTML="hola soy Gorka";
 		})
+/* fin ejercicio 1 */
 
 	
 
