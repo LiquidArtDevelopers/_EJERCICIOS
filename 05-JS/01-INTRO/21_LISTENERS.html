@@ -92,13 +92,14 @@
     <script>
         /* ejercicio 1: cambiar el color del LI de clase "listado" donde se haya hecho click */
 
-        
+
             /* 1- como son varios elementos con la misma clase, guardo en una constante todos los HTML que tengan la clase "listado" (los 5 LI)*/
             const elementosLI = document.getElementsByClassName("listado");
 
 
             //recorremos todos los elementosLI de la variable elementosLI que contiene los 5 LI
             for(const elementoLI of elementosLI){
+
 
                 /* DESATAMOS EL EVENTO DE ESCUCHA CLICK PARA CADA ELEMENTO LI */
                 elementoLI.addEventListener("click", function(e){
