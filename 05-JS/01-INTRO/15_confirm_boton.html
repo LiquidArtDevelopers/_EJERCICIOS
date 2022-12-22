@@ -10,11 +10,38 @@ body {
 }
 #container {
 	max-width: 800px;
-	height: 500px;
 	margin-right: auto;
 	margin-left: auto;
 	background-color: #FFF;
 	padding: 10px;
+}
+.decoracion{
+	width: 500px;
+	height: 300px;
+	margin: 30px auto;
+	padding: 50px;
+	background-color: rgb(212, 255, 241);
+	color: blueviolet;
+	font-size: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#pulsame{
+	width: 300px;
+	margin: 30px auto;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: aquamarine;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	opacity: .5;	
+	user-select:none;
+}
+#pulsame:hover{
+	opacity: 1;
 }
 
 
@@ -39,13 +66,32 @@ cuando se pulsa Cancelar se guardara false
 <button type="button" class="clase1 clase2" id="botonPregunta">Confirmar</button>
 <button type="button" id="botonAlerta" onClick="alert('ALERTA ROOOOJA')">Alerta</button>
 
+<div id="pulsame">
+	<p>SOY UN DIV, PERO PUEDES PULSARME</p>
+</div>
+
 
 <div id="respuestaAlerta">
 	<!-- inyectaré el texto o html cuando le de al botón alerta -->
 </div>
 
+<div id="ejercicio" class="decoracion">
+	<!-- ejercicio. Quiero que cuando se haga click en el botón de alerta, aquí aparezca el texto de "hola, soy Gorka" -->
+</div>
+
+
 </div>
 <script>
+
+	/* 1- recoger en una constante el html del boton */
+
+	/* 2- hacer una función de escucha para esa constante */
+
+	/* 3- dentro de la función debes inyectar el html dentro del div correspondiente */
+
+
+
+
 
 	var pregunta
 	const elementoHTML1 = document.getElementById("botonPregunta");
