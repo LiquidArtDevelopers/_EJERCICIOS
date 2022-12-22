@@ -36,7 +36,8 @@ body {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  column-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 .nav .idiomas ul li {
   cursor: pointer;
@@ -68,7 +69,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -104,7 +106,8 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  column-gap: 20%;
+  -moz-column-gap: 20%;
+       column-gap: 20%;
 }
 .window #cookies .cookies-elements .cookies-botones :hover {
   color: black;
@@ -187,7 +190,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -243,5 +247,6 @@ body {
   z-index: 100;
   filter: invert(45%) sepia(11%) saturate(18%) hue-rotate(27deg) brightness(92%) contrast(96%);
   transform: scale(1.05);
-  animation: humillo 4s infinite;
-}/*# sourceMappingURL=style_idioma.css.map */
+  -webkit-animation: humillo 4s infinite;
+          animation: humillo 4s infinite;
+}

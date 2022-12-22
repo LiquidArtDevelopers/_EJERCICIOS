@@ -42,21 +42,20 @@ Portfolio Navigation
 }
 .cd-3d-portfolio-navigation h1 {
   font-size: 2rem;
-  margin-bottom: .6em;
+  margin-bottom: 0.6em;
   font-family: "Lora", serif;
   font-weight: bold;
 }
 .cd-3d-portfolio-navigation li {
   display: inline-block;
-  margin: 0 .3em;
+  margin: 0 0.3em;
 }
 .cd-3d-portfolio-navigation li a {
   display: inline-block;
   color: #edeade;
   border: 2px solid #391b28;
-  padding: .6em;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  padding: 0.6em;
+  transition: all 0.2s;
 }
 .cd-3d-portfolio-navigation li a:hover {
   border-color: #72a987;
@@ -97,20 +96,15 @@ Portfolio Projects
   width: 48px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.6);
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: -webkit-transform .3s 0s;
-  transition: -webkit-transform .3s 0s;
-  transition: transform .3s 0s;
-  transition: transform .3s 0s, -webkit-transform .3s 0s;
+  transform: scale(0);
+  transition: transform 0.3s 0s;
 }
 .cd-3d-portfolio .close-project:hover {
   background: black;
 }
 .cd-3d-portfolio .close-project::after, .cd-3d-portfolio .close-project::before {
   /* the 'X' lines */
-  content: '';
+  content: "";
   position: absolute;
   width: 18px;
   height: 2px;
@@ -119,61 +113,43 @@ Portfolio Projects
   background: #edeade;
 }
 .cd-3d-portfolio .close-project::before {
-  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-      -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
 .cd-3d-portfolio .close-project::after {
-  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-      -ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-          transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
 }
 .cd-3d-portfolio .project-is-open .open .close-project {
   /* show the 'X' icon when a project has been selected */
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
-  -webkit-transition: background 0.3s, -webkit-transform 0.3s 0.6s;
-  transition: background 0.3s, -webkit-transform 0.3s 0.6s;
+  transform: scale(1);
+  transition-delay: 0.6s;
   transition: transform 0.3s 0.6s, background 0.3s;
-  transition: transform 0.3s 0.6s, background 0.3s, -webkit-transform 0.3s 0.6s;
 }
 
 .cd-3d-portfolio .projects {
   /* used to render its children in a 3D space - add perspective */
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
+  perspective: 1000px;
 }
 .cd-3d-portfolio .projects .row {
   height: 25vh;
   position: relative;
   z-index: 1;
   /* position its children in a 3d space */
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
   /* Force hardware acceleration */
   will-change: transform;
-  -webkit-transform: translateZ(-50vw);
-          transform: translateZ(-50vw);
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
-  transition: -webkit-transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
+  transform: translateZ(-50vw);
   transition: transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
-  transition: transform 0.6s cubic-bezier(0.5, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
   pointer-events: none;
 }
 .cd-3d-portfolio .projects .row:nth-of-type(2) {
-  -webkit-transition-delay: .1s;
-          transition-delay: .1s;
+  transition-delay: 0.1s;
 }
 .cd-3d-portfolio .projects .row:nth-of-type(3) {
-  -webkit-transition-delay: .2s;
-          transition-delay: .2s;
+  transition-delay: 0.2s;
 }
 .cd-3d-portfolio .projects .row::after {
   /* this is used to create the row bottom face */
-  content: '';
+  content: "";
   position: absolute;
   z-index: 1;
   bottom: 0;
@@ -181,23 +157,16 @@ Portfolio Projects
   height: 100vw;
   width: 100%;
   background: #0f070b;
-  -webkit-transform: translateZ(50vw) rotateX(90deg);
-          transform: translateZ(50vw) rotateX(90deg);
-  -webkit-transform-origin: bottom center;
-      -ms-transform-origin: bottom center;
-          transform-origin: bottom center;
-  -webkit-transition: visibility 0s 0.6s;
+  transform: translateZ(50vw) rotateX(90deg);
+  transform-origin: bottom center;
   transition: visibility 0s 0.6s;
 }
 .cd-3d-portfolio .projects .row:last-of-type::after {
   /* use its ::after element as top face (rather than bottom face) */
   top: 0;
   bottom: auto;
-  -webkit-transform: translateZ(50vw) rotateX(-90deg);
-          transform: translateZ(50vw) rotateX(-90deg);
-  -webkit-transform-origin: top center;
-      -ms-transform-origin: top center;
-          transform-origin: top center;
+  transform: translateZ(50vw) rotateX(-90deg);
+  transform-origin: top center;
 }
 .cd-3d-portfolio .projects:not(.project-has-transition) .row:nth-of-type(2) {
   /* increase z-index of the second row - this way the back faces of the first and thirdv rows won't be visible (only of no project has been selected) */
@@ -205,8 +174,7 @@ Portfolio Projects
 }
 .no-preserve3d .cd-3d-portfolio .projects .row {
   /* fallback for browsers that don't support the preser3d property */
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
 }
 .cd-3d-portfolio .projects .row > li {
   /* this is the single project */
@@ -214,8 +182,7 @@ Portfolio Projects
   z-index: 1;
   height: 100%;
   width: 100%;
-  -webkit-transform: translateZ(50vw);
-          transform: translateZ(50vw);
+  transform: translateZ(50vw);
   will-change: transform;
   overflow: hidden;
 }
@@ -224,20 +191,16 @@ Portfolio Projects
   pointer-events: auto;
 }
 .cd-3d-portfolio .projects .row > li.front-face {
-  -webkit-transform: translateZ(50vw);
-          transform: translateZ(50vw);
+  transform: translateZ(50vw);
 }
 .cd-3d-portfolio .projects .row > li.right-face {
-  -webkit-transform: rotateY(90deg) translateZ(50vw);
-          transform: rotateY(90deg) translateZ(50vw);
+  transform: rotateY(90deg) translateZ(50vw);
 }
 .cd-3d-portfolio .projects .row > li.left-face {
-  -webkit-transform: rotateY(-90deg) translateZ(50vw);
-          transform: rotateY(-90deg) translateZ(50vw);
+  transform: rotateY(-90deg) translateZ(50vw);
 }
 .cd-3d-portfolio .projects .row > li.back-face {
-  -webkit-transform: rotateY(180deg) translateZ(50vw);
-          transform: rotateY(180deg) translateZ(50vw);
+  transform: rotateY(180deg) translateZ(50vw);
 }
 .cd-3d-portfolio .projects .row > li.hidden {
   opacity: 0;
@@ -245,16 +208,11 @@ Portfolio Projects
 }
 .no-preserve3d .cd-3d-portfolio .projects .row > li {
   opacity: 0;
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: opacity .4s;
-  transition: opacity .4s;
+  transform: translateX(0);
+  transition: opacity 0.4s;
 }
 .no-preserve3d .cd-3d-portfolio .projects .row > li.front-face, .no-preserve3d .cd-3d-portfolio .projects .row > li.right-face, .no-preserve3d .cd-3d-portfolio .projects .row > li.left-face, .no-preserve3d .cd-3d-portfolio .projects .row > li.back-face {
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
 .no-preserve3d .cd-3d-portfolio .projects .row > li.selected {
   opacity: 1;
@@ -275,18 +233,14 @@ Portfolio Projects
   height: 25%;
   cursor: pointer;
   /* force hardware acceleration */
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
   will-change: transform;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.6s;
-  transition: -webkit-transform 0.6s;
   transition: transform 0.6s;
-  transition: transform 0.6s, -webkit-transform 0.6s;
 }
 .cd-3d-portfolio .projects .project-image::before, .cd-3d-portfolio .projects .project-image::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -307,19 +261,16 @@ Portfolio Projects
   height: 100%;
   background: black;
   opacity: 0;
-  -webkit-transition: opacity .5s;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 .cd-3d-portfolio .projects .row > li:not(.selected) .project-image::after {
   opacity: 1;
 }
 .cd-3d-portfolio .projects .row:nth-of-type(2) > li:not(.selected) .project-image::after {
-  -webkit-transition-delay: .1s;
-          transition-delay: .1s;
+  transition-delay: 0.1s;
 }
 .cd-3d-portfolio .projects .row:nth-of-type(3) > li:not(.selected) .project-image::after {
-  -webkit-transition-delay: .2s;
-          transition-delay: .2s;
+  transition-delay: 0.2s;
 }
 .cd-3d-portfolio .projects .row > li.project-1 .project-image::before {
   /* set project background image */
@@ -357,13 +308,9 @@ Portfolio Projects
   vertical-align: middle;
   text-align: center;
   /* force hardware acceleration */
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
   will-change: transform;
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
-  transition: -webkit-transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
   transition: transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
-  transition: transform 0.6s cubic-bezier(0.5, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
 }
 .cd-3d-portfolio .projects h2 {
   color: #edeade;
@@ -382,10 +329,7 @@ Portfolio Projects
 }
 .cd-3d-portfolio .projects .project-content > div {
   opacity: 0;
-  -webkit-transform: translateY(25%);
-      -ms-transform: translateY(25%);
-          transform: translateY(25%);
-  -webkit-transition: all 0.6s cubic-bezier(0.5, 0, 0.1, 1);
+  transform: translateY(25%);
   transition: all 0.6s cubic-bezier(0.5, 0, 0.1, 1);
 }
 .cd-3d-portfolio .projects .project-content p {
@@ -397,10 +341,7 @@ Portfolio Projects
 }
 .cd-3d-portfolio .projects.project-has-transition .row > li {
   /* the project-has-transition class is used to add a transition to the tranform property of the single projects - it's added when a project is selected (before opening it) and removed when a project is colsed (when the closing animation is finished) */
-  -webkit-transition: opacity 0s 0.6s, -webkit-transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
-  transition: opacity 0s 0.6s, -webkit-transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
   transition: transform 0.6s cubic-bezier(0.5, 0, 0.1, 1), opacity 0s 0.6s;
-  transition: transform 0.6s cubic-bezier(0.5, 0, 0.1, 1), opacity 0s 0.6s, -webkit-transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
 }
 .cd-3d-portfolio .projects.project-has-transition .row > li.selected.open {
   overflow: visible;
@@ -411,15 +352,11 @@ Portfolio Projects
 .cd-3d-portfolio .projects.project-has-transition .row::after {
   /* hide the bottom/top parallelepiped face when a project is selected */
   visibility: hidden;
-  -webkit-transition: visibility 0s;
   transition: visibility 0s;
 }
 .cd-3d-portfolio .projects.project-is-open .row > li {
   /* the project-is-open class is used when a project is selected - it's added when a project is selected (before opening it) and removed when a project is closed (before the closing animation begins) */
-  -webkit-transition: opacity 0s, -webkit-transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
-  transition: opacity 0s, -webkit-transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
   transition: transform 0.6s cubic-bezier(0.5, 0, 0.1, 1), opacity 0s;
-  transition: transform 0.6s cubic-bezier(0.5, 0, 0.1, 1), opacity 0s, -webkit-transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
 }
 .cd-3d-portfolio .projects.project-is-open .row > li.selected.open .project-wrapper {
   /* selected project on the visible face of the parallelepiped */
@@ -428,155 +365,113 @@ Portfolio Projects
 }
 .cd-3d-portfolio .projects.project-is-open .row > li.selected .project-image {
   /* projects on the visible face of the parallelepiped */
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 .cd-3d-portfolio .projects.project-is-open .row > li.selected.open .project-image {
   cursor: auto;
 }
 .cd-3d-portfolio .projects.project-is-open .row > li.selected.open .project-title {
-  -webkit-transform: translateY(70%);
-      -ms-transform: translateY(70%);
-          transform: translateY(70%);
+  transform: translateY(70%);
 }
 .cd-3d-portfolio .projects.project-is-open .row > li.selected.open .project-content > div {
   opacity: 1;
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 .cd-3d-portfolio .projects.project-is-open .row:first-of-type .selected.open.front-face {
   /* if the project selected is inside the first row */
-  -webkit-transform: translateZ(50vw) translateY(-100%);
-          transform: translateZ(50vw) translateY(-100%);
+  transform: translateZ(50vw) translateY(-100%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:first-of-type .selected.open.right-face {
-  -webkit-transform: rotateY(90deg) translateZ(50vw) translateY(-100%);
-          transform: rotateY(90deg) translateZ(50vw) translateY(-100%);
+  transform: rotateY(90deg) translateZ(50vw) translateY(-100%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:first-of-type .selected.open.left-face {
-  -webkit-transform: rotateY(-90deg) translateZ(50vw) translateY(-100%);
-          transform: rotateY(-90deg) translateZ(50vw) translateY(-100%);
+  transform: rotateY(-90deg) translateZ(50vw) translateY(-100%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:first-of-type .selected.open.back-face {
-  -webkit-transform: rotateY(180deg) translateZ(50vw) translateY(-100%);
-          transform: rotateY(180deg) translateZ(50vw) translateY(-100%);
+  transform: rotateY(180deg) translateZ(50vw) translateY(-100%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:first-of-type .selected:not(.open).front-face {
   /* if the project selected is not inside the first row */
-  -webkit-transform: translateZ(50vw) translateY(300%);
-          transform: translateZ(50vw) translateY(300%);
+  transform: translateZ(50vw) translateY(300%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:first-of-type .selected:not(.open).right-face {
-  -webkit-transform: rotateY(90deg) translateZ(50vw) translateY(300%);
-          transform: rotateY(90deg) translateZ(50vw) translateY(300%);
+  transform: rotateY(90deg) translateZ(50vw) translateY(300%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:first-of-type .selected:not(.open).left-face {
-  -webkit-transform: rotateY(-90deg) translateZ(50vw) translateY(300%);
-          transform: rotateY(-90deg) translateZ(50vw) translateY(300%);
+  transform: rotateY(-90deg) translateZ(50vw) translateY(300%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:first-of-type .selected:not(.open).back-face {
-  -webkit-transform: rotateY(180deg) translateZ(50vw) translateY(300%);
-          transform: rotateY(180deg) translateZ(50vw) translateY(300%);
+  transform: rotateY(180deg) translateZ(50vw) translateY(300%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(2) .selected.open.front-face {
   /* if the project selected is inside the second row */
-  -webkit-transform: translateZ(50vw) translateY(-200%);
-          transform: translateZ(50vw) translateY(-200%);
+  transform: translateZ(50vw) translateY(-200%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(2) .selected.open.right-face {
-  -webkit-transform: rotateY(90deg) translateZ(50vw) translateY(-200%);
-          transform: rotateY(90deg) translateZ(50vw) translateY(-200%);
+  transform: rotateY(90deg) translateZ(50vw) translateY(-200%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(2) .selected.open.left-face {
-  -webkit-transform: rotateY(-90deg) translateZ(50vw) translateY(-200%);
-          transform: rotateY(-90deg) translateZ(50vw) translateY(-200%);
+  transform: rotateY(-90deg) translateZ(50vw) translateY(-200%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(2) .selected.open.back-face {
-  -webkit-transform: rotateY(180deg) translateZ(50vw) translateY(-200%);
-          transform: rotateY(180deg) translateZ(50vw) translateY(-200%);
+  transform: rotateY(180deg) translateZ(50vw) translateY(-200%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(2) .selected:not(.open).front-face {
   /* if the project selected is not inside the second row */
-  -webkit-transform: translateZ(50vw) translateY(200%);
-          transform: translateZ(50vw) translateY(200%);
+  transform: translateZ(50vw) translateY(200%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(2) .selected:not(.open).right-face {
-  -webkit-transform: rotateY(90deg) translateZ(50vw) translateY(200%);
-          transform: rotateY(90deg) translateZ(50vw) translateY(200%);
+  transform: rotateY(90deg) translateZ(50vw) translateY(200%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(2) .selected:not(.open).left-face {
-  -webkit-transform: rotateY(-90deg) translateZ(50vw) translateY(200%);
-          transform: rotateY(-90deg) translateZ(50vw) translateY(200%);
+  transform: rotateY(-90deg) translateZ(50vw) translateY(200%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(2) .selected:not(.open).back-face {
-  -webkit-transform: rotateY(180deg) translateZ(50vw) translateY(200%);
-          transform: rotateY(180deg) translateZ(50vw) translateY(200%);
+  transform: rotateY(180deg) translateZ(50vw) translateY(200%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(3) .selected.open.front-face {
   /* if the project selected is inside the third row */
-  -webkit-transform: translateZ(50vw) translateY(-300%);
-          transform: translateZ(50vw) translateY(-300%);
+  transform: translateZ(50vw) translateY(-300%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(3) .selected.open.right-face {
-  -webkit-transform: rotateY(90deg) translateZ(50vw) translateY(-300%);
-          transform: rotateY(90deg) translateZ(50vw) translateY(-300%);
+  transform: rotateY(90deg) translateZ(50vw) translateY(-300%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(3) .selected.open.left-face {
-  -webkit-transform: rotateY(-90deg) translateZ(50vw) translateY(-300%);
-          transform: rotateY(-90deg) translateZ(50vw) translateY(-300%);
+  transform: rotateY(-90deg) translateZ(50vw) translateY(-300%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(3) .selected.open.back-face {
-  -webkit-transform: rotateY(180deg) translateZ(50vw) translateY(-300%);
-          transform: rotateY(180deg) translateZ(50vw) translateY(-300%);
+  transform: rotateY(180deg) translateZ(50vw) translateY(-300%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(3) .selected:not(.open).front-face {
   /* if the project selected is not inside the third row */
-  -webkit-transform: translateZ(50vw) translateY(100%);
-          transform: translateZ(50vw) translateY(100%);
+  transform: translateZ(50vw) translateY(100%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(3) .selected:not(.open).right-face {
-  -webkit-transform: rotateY(90deg) translateZ(50vw) translateY(100%);
-          transform: rotateY(90deg) translateZ(50vw) translateY(100%);
+  transform: rotateY(90deg) translateZ(50vw) translateY(100%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(3) .selected:not(.open).left-face {
-  -webkit-transform: rotateY(-90deg) translateZ(50vw) translateY(100%);
-          transform: rotateY(-90deg) translateZ(50vw) translateY(100%);
+  transform: rotateY(-90deg) translateZ(50vw) translateY(100%);
 }
 .cd-3d-portfolio .projects.project-is-open .row:nth-of-type(3) .selected:not(.open).back-face {
-  -webkit-transform: rotateY(180deg) translateZ(50vw) translateY(100%);
-          transform: rotateY(180deg) translateZ(50vw) translateY(100%);
+  transform: rotateY(180deg) translateZ(50vw) translateY(100%);
 }
 .no-preserve3d .cd-3d-portfolio .projects.project-is-open .row.row:first-of-type > li.selected {
-  -webkit-transform: translateY(300%);
-      -ms-transform: translateY(300%);
-          transform: translateY(300%);
+  transform: translateY(300%);
 }
 .no-preserve3d .cd-3d-portfolio .projects.project-is-open .row.row:first-of-type > li.selected.open {
-  -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 .no-preserve3d .cd-3d-portfolio .projects.project-is-open .row.row:nth-of-type(2) > li.selected {
-  -webkit-transform: translateY(200%);
-      -ms-transform: translateY(200%);
-          transform: translateY(200%);
+  transform: translateY(200%);
 }
 .no-preserve3d .cd-3d-portfolio .projects.project-is-open .row.row:nth-of-type(2) > li.selected.open {
-  -webkit-transform: translateY(-200%);
-      -ms-transform: translateY(-200%);
-          transform: translateY(-200%);
+  transform: translateY(-200%);
 }
 .no-preserve3d .cd-3d-portfolio .projects.project-is-open .row.row:nth-of-type(3) > li.selected {
-  -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-          transform: translateY(100%);
+  transform: translateY(100%);
 }
 .no-preserve3d .cd-3d-portfolio .projects.project-is-open .row.row:nth-of-type(3) > li.selected.open {
-  -webkit-transform: translateY(-300%);
-      -ms-transform: translateY(-300%);
-          transform: translateY(-300%);
+  transform: translateY(-300%);
 }
 @media only screen and (min-width: 768px) {
   .cd-3d-portfolio .projects h2 {
@@ -607,8 +502,7 @@ Back to top
   background: rgba(0, 0, 0, 0.6) url(../img/cd-icon-arrow.svg) no-repeat center center;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity .3s, visibility .3s;
-  transition: opacity .3s, visibility .3s;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 .cd-top.is-visible {
   /* the button becomes visible */

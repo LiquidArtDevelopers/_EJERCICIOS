@@ -47,6 +47,9 @@ body {
 .pulsame:hover{
 	opacity: 1;
 }
+.rojo{
+	color: red;
+}
 
 
 </style>
@@ -108,8 +111,29 @@ cuando se pulsa Cancelar se guardara false
 				numero=Number(numero);
 				numero+=1;
 				/* numero=numero+1; (Es igual que la de arriba, escrita de diferente manera) */
-				document.getElementById("ejercicio2").innerText=numero; /* también podemos usar innerHTML=numero */
+				/* document.getElementById("ejercicio2").innerText=numero; */ /* también podemos usar innerHTML=numero */
+				document.getElementById("ejercicio2").innerHTML=`<p class="rojo">${numero}</p>`;			
 			})
+
+			/* //versión con condición de max 10 
+			elementoHTML4.addEventListener("click", function(e){
+				let numero = document.getElementById("ejercicio2").innerText; 
+				numero=Number(numero);
+				if(numero==10){
+					numero=1;					
+				}else{
+					numero+=1;			
+				}				
+				document.getElementById("ejercicio2").innerHTML=`<p class="rojo">${numero}</p>`;
+			}) */
+
+
+
+
+
+
+
+
 		/* recoger en una variable el valor html del contenedor */
 		/* convertir a Number */
 		/* hacer una suma +1 */
