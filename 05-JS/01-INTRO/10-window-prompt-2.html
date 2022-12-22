@@ -23,18 +23,26 @@
 <p>pedir dinero al usuario y convertir a dólares:</p>
 <p>Ojo! el prompt no tiene number o no number, habra que validar (más adelante)</p>
 
-<p id="txt"></p>
+<p id="txt">
+    <!-- mete el resultado con innerHTML -->
+</p>
 
 <script>
     
     //recoger datos
-    nombre=window.prompt("¿Cómo te llamas?",""); 
-    euros=prompt("¿Cuántos euros tienes \n en tu bolsillo?");
-    dolar=prompt("¿A Cuánto esta el dolar hoy?");
+    var nombre=window.prompt("¿Cómo te llamas?","");
+
+    var euros=prompt("¿Cuántos euros tienes \n en tu bolsillo?");
+    euros=euros.replace(',','.');
+    euros = Number(euros);
+
+    var dolar=prompt("¿A Cuánto esta el dolar hoy?");
+    dolar=dolar.replace(',','.');
+    dolar=Number(dolar);
     
     // convertir euros a dólares
     calculo=(euros*dolar);
-    
+    console.log(calculo)
     // mostrar 
     document.getElementById("txt").innerHTML="Hola "+nombre+" tienes "+calculo+" dolares.";
     

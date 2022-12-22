@@ -15,7 +15,7 @@ body {
 	background-color: #CCC;
     font-size: 18px;
 }
-#conteiner {
+#contenedor {
 	max-width: 700px;
 	height: 500px;
 	margin: 0px auto;
@@ -29,47 +29,27 @@ body {
 </head>
 
 
-<script type="text/javascript">
-
-// comentario en una linea 
-
-/* comentario
-	en
-	varias
-	lineas
-*/
-
-window.alert("Hola, hoy es un día soleado!!!");
-window.alert("Es MARTES !!");
-alert("Alerta sin window");
 
 
-</script>
+
+	<body>
+
+		<div id="contenedor">
+			<!-- rellenar desde javascript -->
+		</div>
 
 
-<body>
 
-<div id="conteiner">
+	<script type="text/javascript">
 
-  <h1>JavaScript posibilidades de visualización</h1>
-<p>JavaScript puede  "visualizar" datos  de diferentes maneras:</p>
-<ul>
-	<li>Escribiendo en un cuadro de alerta, utilizando <strong>window.alert()</strong>.</li>
-	<li>Escribir en la salida HTML utilizando document.write().</li>
-	<li>Escribiendo en un elemento HTML, usando innerHTML.</li>
-</ul>
-   
-   <h1>window.alert()</h1>
-      
-<p>El método de alerta () muestra un cuadro de alerta con un mensaje específico y un botón Aceptar.</p>
+		window.alert("Hola, hoy es un día soleado!!!");
 
-<p>Un cuadro de alerta se utiliza  si quiere asegurarse de que la información llega hasta el usuario.</p>
+		document.getElementById("contenedor").innerHTML="hola";
 
-<p>Nota: No se debe abusar de este método, ya que evita que el usuario pueda acceder a otras partes de la página hasta que la caja está cerrada.</p>
-      
-</div> 
-
-
-</body>
+		document.getElementById("contenedor").innerHTML="";
+	
+	
+	</script>
+	</body>
 
 </html>

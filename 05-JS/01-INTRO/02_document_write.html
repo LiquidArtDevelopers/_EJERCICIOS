@@ -27,55 +27,58 @@ body {
 </head>
 <body>
 
-<div id="conteiner">
+	<div id="conteiner">
 
-<h1>JavaScript posibilidades de visualización</h1>
-<p>JavaScript puede  "visualizar" datos  de diferentes maneras:</p>
-<ul>
-	<li>Escribiendo en un cuadro de alerta, utilizando window.alert().</li>
-	<li>Escribir en la salida HTML utilizando <strong>document.write()</strong>.</li>
-	<li>Escribiendo en un elemento HTML, usando innerHTML.</li>
-</ul>
+		<h1>JavaScript posibilidades de visualización</h1>
+		<p>JavaScript puede  "visualizar" datos  de diferentes maneras:</p>
+		<ul>
+			<li>Escribiendo en un cuadro de alerta, utilizando window.alert().</li>
+			<li>Escribir en la salida HTML utilizando <strong>document.write()</strong>.</li>
+			<li>Escribiendo en un elemento HTML, usando innerHTML.</li>
+		</ul>
 
-<h1>window.document.write()</h1>
+		<h1>window.document.write()</h1>
 
-<p>El método write() escribe expresiones HTML o código JavaScript a un documento.</p>
+        <p>El método write() escribe expresiones HTML o código JavaScript a un documento.</p>
 
-<p>Si se utiliza después de un documento HTML que se ha cargado completamente, se eliminará todo el HTML existente.</p>
+        <p>Si se utiliza después de un documento HTML que se ha cargado completamente, se eliminará todo el HTML existente.</p>
 
-<br>
+        <br>
 
-<img src="eitb.jpg" width="350" title="EITB">
-
-
-<h2>Contenido mostrado con JS</h2>
+        <img src="eitb.jpg" width="350" title="EITB">
 
 
-<p>Este texto lo escribo desde JS y no es tan dificil !!!!</p>
-
-<p class="txt">Este texto esta en ROJO !!</p>
-
-<p>
-<script>
-window.document.write("Este texto lo escribo desde JS y no es tan dificil !!!!"); 
-</script>
-</p>
+        <h2>Contenido mostrado con JS</h2>
 
 
-<script>
+        <p>Este texto lo escribo desde JS y no es tan dificil !!!!</p>
 
-document.write("<p>Hoy va a llover mucho!!</p>");
-document.write("<p class='txt'>Otro texto esta en ROJO desde JS !!</p>");
-    
-document.write("<img src='eitb.jpg' width='40%' title='Eitb'>");	
-    
-document.write("<div><p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p></div>");
+        <p class="txt">Este texto esta en ROJO !!</p>
 
-</script>
-
+        <p id="parrafo_conJS">
+            <!-- <script>
+                window.document.write("Este texto lo escribo desde JS y no es tan dificil !!!!"); 
+            </script> -->
+        </p>
 
 
+	<script>
 
-</div>
+        document.getElementById("parrafo_conJS").innerHTML="meterlo desde innerhtml con JS no es tan difícil"
+
+
+        document.write("<p>Hoy va a llover mucho!!</p>");
+        document.write("<p class='txt'>Otro texto esta en ROJO desde JS !!</p>");
+            
+        document.write("<img src='eitb.jpg' width='40%' title='Eitb'>");	
+            
+        document.write("<div><p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p></div>");
+
+	</script>
+
+
+
+
+	</div>
 </body>
 </html>

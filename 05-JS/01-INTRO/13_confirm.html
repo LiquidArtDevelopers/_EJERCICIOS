@@ -40,8 +40,29 @@ cuando se pulsa Cancelar se guardara false
 // variable res guarda el valor BOOLEANO
 var res=window.confirm("Mensaje de confirmación.\n ¿Estás de acuerdo?");
 
+
+switch (res){
+	case true:
+		document.getElementById("txt").innerHTML="has dicho que sí";
+		break;
+	case false:
+		document.getElementById("txt").innerHTML="has dicho que no";
+		break;
+	default:
+		document.getElementById("txt").innerHTML="ni uno ni otro";
+}
+
+
+
+if(res){
+	document.getElementById("txt").innerHTML="has dicho que sí"
+}else{
+	document.getElementById("txt").innerHTML="has dicho que no"
+}
+
+
 //para ver que se guarda en resul en cada caso...
-document.getElementById("txt").innerHTML="La confirmación ha sido: "+res;
+//document.getElementById("txt").innerHTML="La confirmación ha sido: "+res;
 
 </script>
 

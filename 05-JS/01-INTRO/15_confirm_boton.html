@@ -32,12 +32,49 @@ body {
 cuando se pulsa Aceptar se guardara true<br>
 cuando se pulsa Cancelar se guardara false
 </p>
-
-<button type="button" onClick="confirm('¿Estás de acuerdo?')">Confirmar</button>
-<button type="button" onClick="alert('ALERTA ROOOOJA')">Alerta</button>
-
-
+<div id="txt">
+<!-- inyectando el html desde js -->
 </div>
 
+<button type="button" class="clase1 clase2" id="botonPregunta">Confirmar</button>
+<button type="button" id="botonAlerta" onClick="alert('ALERTA ROOOOJA')">Alerta</button>
+
+
+<div id="respuestaAlerta">
+	<!-- inyectaré el texto o html cuando le de al botón alerta -->
+</div>
+
+</div>
+<script>
+
+	var pregunta
+	const elementoHTML1 = document.getElementById("botonPregunta");
+	/* declarar una variable constante donde guardo el elemento HTML del botón alerta con toda su información */
+	const elementoHTML2 = document.getElementById("botonAlerta");
+
+	/* función de escucha click para el elementoHTML2 */
+	elementoHTML2.addEventListener("click", function(e){
+		/* aquí me entra cuando se escuche un click en el elemento html de la constante elementoHTML2, que será el botón de alerta. */
+		document.getElementById("respuestaAlerta").innerHTML="has pulsado el botón de alerta.";		
+	})
+
+	
+	/* función de escucha click para el elementoHTML1 (el botón de confirmar) */
+	elementoHTML1.addEventListener("click", function(e){		
+		pregunta=confirm('¿Estás de acuerdo??????');
+
+		if(pregunta==true){
+			document.getElementById("txt").innerHTML="has dicho que sí"
+		}else{
+			document.querySelector("#txt").innerHTML="has dicho que no"
+		}
+	})
+
+
+
+
+
+
+</script>
 </body>
 </html>

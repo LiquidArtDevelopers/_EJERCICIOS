@@ -46,13 +46,16 @@ body {
 	<li>Los nombres también pueden comenzar con $ y _ (no se utiliza mucho)</li>
 	<li>Los nombres son mayúsculas y minúsculas (y e Y son variables diferentes)</li>
 	<li>Las palabras reservadas no se pueden utilizar como nombres</li>
+	<li>los nombres de variable sin espacios ni tildes.</li>
 </ul>
 
 
 
 <h2>Mostrar datos con las variables</h2>
 
-<p id="datos"></p>
+<p id="datos">
+
+</p>
 <ul>
 	<li id="nom"></li>
     <li id="eda"></li>
@@ -63,25 +66,36 @@ body {
 <script>
 // declarar las variables
 //var nombre,edad,ciudad,TELEFONO;
-    
+
+var nombre, edad, telefono, ciudad, sumatorio;
+
+nombre="Jon";
+edad="33";
+edad=Number(edad);
+sumatorio=2;
+sumatorio=String(sumatorio)
+total= edad + sumatorio;
+telefono="+34 943 665 544";
+ciudad="barcelona";
+/* 
 //asignar un valor a la variable, tipo CADENA/TEXTO
 var nombre="Jon";
 //asignar un valor a la variable, tipo NUMERO
-edad=33;
+var edad=33;
 //asignar un valor a la variable, tipo CADENA   
-TELEFONO="+34 943 665 544";
+var TELEFONO="+34 943 665 544";
 //asignar un valor a la variable, tipo CADENA
-ciudad="Barcelona";
+var ciudad="Barcelona"; */
 
 document.getElementById("datos").innerHTML="Mis datos personales son:";	
 // sin comillas dobles las VARIABLES!!	
 document.getElementById("nom").innerHTML=nombre;
 document.getElementById("eda").innerHTML=edad;
-document.getElementById("tel").innerHTML=TELEFONO;
+document.getElementById("tel").innerHTML=telefono;
 document.getElementById("ciu").innerHTML=ciudad;
 
 // sin comillas dobles las VARIABLES!!    
-document.write(nombre);
+document.write(total);
 
 </script>
 

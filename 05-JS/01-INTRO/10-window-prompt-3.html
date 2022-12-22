@@ -29,7 +29,7 @@
 
 <button onclick="pedirnom()">Tu nombre</button>
 <br>
-<button onclick="pediredad()">Pedir Edad</button>
+<button onclick="pediredad(5)">Pedir Edad</button>
 <br>
 <button onclick="aviso()">Jueves pintxo pote</button>
 
@@ -40,14 +40,16 @@
 
 <script>  
     
-function pedirnom(){ 
+function pedirnom(){
     nom = prompt("¿Cómo te llamas?");
     document.getElementById("nom").innerHTML="Usuario: "+nom;      
 }
 
-function pediredad(){
+function pediredad(numeroincrementatorio){
     eda=prompt("Cuantos años tienes?");
-    document.getElementById("eda").innerHTML="Edad: "+eda;  
+    eda=Number(eda);
+    eda += numeroincrementatorio
+    document.getElementById("eda").innerHTML="Edad: "+eda+" (te he sumado 5 añitos más jeje)";  
 }
 
 function aviso(){
