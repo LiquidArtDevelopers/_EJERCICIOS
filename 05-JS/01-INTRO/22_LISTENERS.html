@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <title>Ejercicio 21: EventListeners</title>
+    
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          outline: 0;
+          box-sizing: border-box;
+        }
+        nav{
+            margin: 0 auto;
+            width: 100vw;
+            max-width: 1440px;
+            background-color: rgb(155, 236, 236);
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: 60px;
+        }
+        nav ul li{
+            list-style-type: none;
+            color: black;
+            font-family: 'Tangerine';
+            font-size: 90px;
+            transition: .3s;
+            -webkit-user-select:none;
+            user-select: none;
+        }
+        .selected{
+            color: yellow;
+        }
+        nav ul li:hover{
+            color: yellow;
+            transition: .2s;
+        }
+        header{
+            margin: 0 auto;
+            width: 100vw;
+            max-width: 1440px;            
+            padding: 30px;
+            background-color: aliceblue;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+        .duda{
+            color: rgb(250, 185, 44);
+        }
+        .seleccion{
+            color: brown;
+        }
+        a{
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1440px;
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>    
+    <nav>
+        <ul>
+            <li id="opc1" class="listado">opcion 1</li>
+            <li id="opc2" class="listado">opcion 2</li>
+            <li id="opc3" class="listado">opcion 3</li>
+            <li id="opc4" class="listado">opcion 4</li>
+            <li id="opc5" class="listado">opcion 5</li>
+        </ul>
+    </nav>
+    <header id="headerID">
+        
+    </header>
+    <a href="https://blog.webdevsimplified.com/2022-01/event-listeners/" target="_blank">Más información sobre Listener</a>
+    <script>
+
+        /* ejercicio 2:  con un listener que escuche de forma global los clicks*/
+
+        document.addEventListener("click", function(e){ //escucho todos los clicks del documento
+            
+            if(e.target.classList=="listado"){ //condición de que el click se haya hecho sobre un elemento de clase "listado"
+                borrarColor(); //llamo a la función para borrar los colores de otras selecciones anteriores
+                e.target.classList.add("selected") //añado la clase selected (para que se quede amarillo) en donde he hecho click
+
+                let texto = e.target.innerText //guardo el texto del elemento clickado
+                const destino = document.getElementById("headerID"); //cuardo en constante el elemento HTML donde debo inyectar el resultado
+                destino.innerHTML=`<p class="seleccion">Has elegido este texto: ${texto}</p>` //inyecto el resultado como innerHTML ya que meto también etiquetas HTML
+            }
+        })
+
+
+        //esta función será llamada cada vez que se haga click en un LI, y se dedicará a borrar cada vez la clase selected de entre los elementos LI que puedan tenerla
+        function borrarColor(){
+            const elementosLiColoreados = document.getElementsByClassName("selected"); //guardo todos los elementos que tengan la clase selected
+            for (const elementoLIColoreado of elementosLiColoreados){ //recorro todos los elementos y les quito la clase "selected" en teoría sólo un elemento tendrá dicha clase.
+                elementoLIColoreado.classList.remove("selected") //quito la clase con remove.
+            }
+        }
+
+
+            
+
+
+
+    </script>
+</body>
+</html>

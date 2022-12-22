@@ -41,6 +41,9 @@
             -webkit-user-select:none;
             user-select: none;
         }
+        .selected{
+            color: yellow;
+        }
         nav ul li:hover{
             color: yellow;
             transition: .2s;
@@ -99,10 +102,12 @@
 
             //recorremos todos los elementosLI de la variable elementosLI que contiene los 5 LI
             for(const elementoLI of elementosLI){
-
-
+                
                 /* DESATAMOS EL EVENTO DE ESCUCHA CLICK PARA CADA ELEMENTO LI */
-                elementoLI.addEventListener("click", function(e){
+                elementoLI.addEventListener("click", function(){
+                    limpiarColor();
+                    /* coloreamos el elementoLi seleccionamos*/
+                    elementoLI.classList.add("selected")
                     /* nos queamos con el TEXT del elemento clickado */
                     let texto = elementoLI.innerText //meto en la variable texto el texto del elementoLi clickado
                     /* guardamos en una constante todos los elementos HTML cuyo tag sea Header (en teoría sólo habrá 1, pero debemos recorrerlo, ya que es un getElement"S" con S, por lo que debemos hacer un for) */
@@ -116,7 +121,7 @@
 
 
                 /* DESATAMOS EL EVENTO DE ESCUCHA MOUSEOVER PARA CADA ELEMENTO LI */
-                elementoLI.addEventListener("mouseover", function(e){
+                elementoLI.addEventListener("mouseover", function(){
                     /* nos queamos con el TEXT del elemento clickado */
                     let texto = elementoLI.innerText //meto en la variable texto el texto del elementoLi clickado
                     /* guardamos en una constante todos los elementos HTML cuyo tag sea Header (en teoría sólo habrá 1, pero debemos recorrerlo, ya que es un getElement"S" con S, por lo que debemos hacer un for) */
@@ -131,8 +136,17 @@
             }
             
 
+            function limpiarColor(){
+                const elementosLI = document.getElementsByClassName("selected");
+                //recorremos todos los elementosLI de la variable elementosLI que contiene los 5 LI
+                for(const elementoLI of elementosLI){
+                    elementoLI.classList.remove("selected")
+                }
+            }
             
         /* fin ejercicio 1 */
+
+
 
 
     </script>
