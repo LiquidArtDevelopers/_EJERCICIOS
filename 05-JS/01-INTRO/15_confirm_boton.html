@@ -38,6 +38,7 @@ body {
 	align-items: center;
 	cursor: pointer;
 	opacity: .5;	
+	-webkit-user-select: none;
 	user-select:none;
 }
 #pulsame:hover{
@@ -76,7 +77,7 @@ cuando se pulsa Cancelar se guardara false
 </div>
 
 <div id="ejercicio" class="decoracion">
-	<!-- ejercicio. Quiero que cuando se haga click en el botón de alerta, aquí aparezca el texto de "hola, soy Gorka" -->
+	<!-- ejercicio. Quiero que cuando se haga click en el botón de pulsame, aquí aparezca el texto de "hola, soy Gorka" -->
 </div>
 
 
@@ -85,10 +86,18 @@ cuando se pulsa Cancelar se guardara false
 
 	/* 1- recoger en una constante el html del boton */
 
+		const elementoHTML3 = document.getElementById("pulsame");
+	
 	/* 2- hacer una función de escucha para esa constante */
-
 	/* 3- dentro de la función debes inyectar el html dentro del div correspondiente */
 
+		elementoHTML3.addEventListener("click", function(e){
+			document.getElementById("ejercicio").innerHTML="hola soy Gorka";
+		})
+
+	
+
+	
 
 
 
