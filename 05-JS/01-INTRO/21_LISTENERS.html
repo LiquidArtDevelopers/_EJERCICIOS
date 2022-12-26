@@ -24,6 +24,13 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            column-gap: 40px;
+        }
+        nav div{
+            cursor: pointer;
+            font-size: 30px;
+            -webkit-user-select: none;
+            user-select: none;
         }
         nav ul{
             display: flex;
@@ -87,6 +94,7 @@
             <li id="opc4" class="listado">opcion 4</li>
             <li id="opc5" class="listado">opcion 5</li>
         </ul>
+        <div id="contenedor">LOGO</div>
     </nav>
     <header>
         
@@ -145,6 +153,36 @@
             }
             
         /* fin ejercicio 1 */
+
+
+
+
+        /* // opción 1: cuando tenemos UN SÓLO ELEMENTO sobre el que queremos escuchar el click creamos la constante de ese elemento y después un evento de escucha particular sobre él mismo
+        
+            // 1- recogemos en constante el elemento
+            const elemento = document.getElementById("contenedor")
+
+            // 2- creamos sobre la constante (el elemento html en sí)* un evento listener 
+            // nota: no es necesario crear objeto e de evento, ya que apuntamos al propio elemento que es this
+            elemento.addEventListener("click", function(){
+                this.classList.toggle("selected") //this hace referencia a "elemento"
+            })A
+        //fin opción 1 */
+        
+
+        // Opción 2:  también podríamos hacer un evento de escucha genérico para todos los clicks y condicionar que sea ese ID en concreto.
+
+            // 1- evento global de escucha, aquí sí determinamos el objeto e de evento, para saber el target
+            document.addEventListener("click", function(e){
+
+                // 2-condicionamos la escucha de clicks, si el id del target del evento click es "contenedor"
+                if(e.target.id=="contenedor"){
+                    e.target.classList.toggle("selected")
+                }
+
+            })
+        //fin opción 2
+
 
 
 
