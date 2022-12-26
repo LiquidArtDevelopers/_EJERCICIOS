@@ -99,6 +99,10 @@
     <header>
         
     </header>
+
+    <header>
+
+    </header>
     <a href="https://blog.webdevsimplified.com/2022-01/event-listeners/" target="_blank">Más información sobre Listener</a>
     <script>
         /* ejercicio 1: cambiar el color del LI de clase "listado" donde se haya hecho click */
@@ -164,9 +168,9 @@
 
             // 2- creamos sobre la constante (el elemento html en sí)* un evento listener 
             // nota: no es necesario crear objeto e de evento, ya que apuntamos al propio elemento que es this
-            elemento.addEventListener("click", function(){
-                this.classList.toggle("selected") //this hace referencia a "elemento"
-            })A
+            elemento.addEventListener("click", function(e){
+                elemento.classList.toggle("selected") //this hace referencia a "elemento"
+            })
         //fin opción 1 */
         
 
@@ -174,7 +178,7 @@
 
             // 1- evento global de escucha, aquí sí determinamos el objeto e de evento, para saber el target
             document.addEventListener("click", function(e){
-
+               
                 // 2-condicionamos la escucha de clicks, si el id del target del evento click es "contenedor"
                 if(e.target.id=="contenedor"){
                     e.target.classList.toggle("selected")
