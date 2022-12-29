@@ -18,6 +18,12 @@
 	color: #F00;
 	font-size: 18px;
 }
+.encendida{
+    background-color: yellow;
+}
+.apagada{
+    background-color: rgb(114, 114, 114);
+}
 
 </style>
 </head>
@@ -37,32 +43,39 @@
 
 <!-- <img id="bombilla2" src="img/bombilla-off.gif" title="Bombilla Apagada" name="off"> -->
 
+
 <script>
     function onoff(iden){
-        capa =document.getElementById(iden);
 
-        imagen2 = document.getElementById(iden).getAttribute('src');
+       /*  var capa =document.getElementById(iden);
+
+        var MOSTRARimagen2 = document.getElementById(iden).getAttribute('src');
+
         console.log (imagen2);
-        Name = document.getElementById(iden).getAttribute('name');
-        console.log (Name);
+
+
+        var MOSTRARName = document.getElementById(iden).getAttribute('name');
+        console.log (Name); */
         /* console.log (document.getElementById("bombilla").src.split("/"));
         imagen = capa.src.split("/").pop().split(".")[0]; 
         console.log(imagen);*/
         //if (imagen == 'bombilla-off'){
-        if (document.getElementById('boton').innerHTML=='ON') {   
+        const boton = document.getElementById("boton");
+        const bombilla = document.getElementById(iden);
+        if (boton.innerHTML=='ON') {   
         //if (imagen2 == 'img/bombilla-off.gif'){   
-            document.getElementById(iden).src="img/bombilla-on.gif";
-            document.getElementById(iden).name="on";
-            document.getElementById(iden).title="Bombilla encendida";
-            document.getElementById('boton').innerHTML="OFF";
-            document.getElementById('boton').className='encendida'; 
+            bombilla.src="img/bombilla-on.gif";
+            bombilla.name="on";
+            bombilla.title="Bombilla encendida";
+            boton.innerHTML="OFF";
+            boton.className='encendida'; 
            
         } else {
-            document.getElementById(iden).src="img/bombilla-off.gif";
-            document.getElementById(iden).name="off";
-            document.getElementById(iden).title="Bombilla Apagada";
-            document.getElementById('boton').innerHTML="ON";
-            document.getElementById('boton').className='apagada';
+            bombilla.src="img/bombilla-off.gif";
+            bombilla.name="off";
+            bombilla.title="Bombilla Apagada";
+            boton.innerHTML="ON";
+            boton.className='apagada';
         }
 
     }
