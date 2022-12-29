@@ -40,6 +40,38 @@
                }
            }
       
+
+            /* con else if */
+
+            if (color == "verde"){
+                document.write("<p>Puedes pasar, está en VERDE </p>");               
+            }else if (color == "rojo"){
+                document.write("<p>No puedes pasar, está ROJO!</p>");               
+            }else if (color == "naranja"){
+                document.write("<p>Todavía no, está en NARANJA, queda poco</p>");
+            }else{
+                document.write("<p>¿¿ "+color+" ?? Solo puedes escribir verde, rojo o naranja.</p>");
+            }
+
+
+            /*  con switch case (mejor opción) */
+
+            switch(color){
+                case "verde":
+                    document.write("<p>Puedes pasar, está en VERDE </p>");
+                    break;
+                case "rojo":
+                    ocument.write("<p>No puedes pasar, está ROJO!</p>");  
+                    break;
+                case "naranja":
+                    document.write("<p>Todavía no, está en NARANJA, queda poco</p>");
+                    break;
+                default:
+                    document.write("<p>¿¿ "+color+" ?? Solo puedes escribir verde, rojo o naranja.</p>");
+                    break;
+            }
+
+
        
        </script>
 
